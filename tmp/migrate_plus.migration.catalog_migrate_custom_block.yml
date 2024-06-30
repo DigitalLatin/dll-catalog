@@ -1,0 +1,45 @@
+uuid: 0e230af4-1ff5-4665-899d-ca7026a51d38
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QQSLgLj41urtnQXYFotgotUPtFj_b_C1C8NaRUF0Lqw
+id: catalog_migrate_custom_block
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: catalog_migrate
+label: 'Content blocks'
+source:
+  plugin: d7_block_custom
+process:
+  id:
+    -
+      plugin: get
+      source: bid
+  info:
+    -
+      plugin: get
+      source: info
+  body/format:
+    -
+      plugin: migration_lookup
+      migration: catalog_migrate_filter_format
+      source: format
+  body/value:
+    -
+      plugin: get
+      source: body
+destination:
+  plugin: 'entity:block_content'
+  default_bundle: basic
+  no_stub: true
+migration_dependencies:
+  required:
+    - catalog_migrate_filter_format
+    - upgrade_block_content_body_field
+  optional:
+    - catalog_migrate_filter_format

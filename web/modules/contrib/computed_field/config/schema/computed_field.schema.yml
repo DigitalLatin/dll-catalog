@@ -1,0 +1,121 @@
+field.storage_settinsgs.computed_decimal:
+  type: mapping
+  label: 'Computed decimal settings'
+  mapping:
+    unsigned:
+      type: boolean
+      label: 'Unsigned'
+    size:
+      type: string
+      label: 'Size'
+    precision:
+      type: integer
+      label: 'Precision'
+    scale:
+      type: integer
+      label: 'Scale'
+
+field.storage_settings.computed_integer:
+  type: mapping
+  label: 'Computed integer settings'
+  mapping:
+    unsigned:
+      type: boolean
+      label: 'Unsigned'
+    size:
+      type: string
+      label: 'Size'
+
+field.storage_settings.computed_float:
+  type: mapping
+  label: 'Computed float settings'
+  mapping:
+    unsigned:
+      type: boolean
+      label: 'Unsigned'
+    size:
+      type: string
+      label: 'Size'
+
+field.storage_settings.computed_string:
+  type: mapping
+  label: 'Computed string settings'
+  mapping:
+    case_sensitive:
+      type: boolean
+      label: 'Case sensitive'
+    max_length:
+      type: integer
+      label: 'Max length'
+    is_ascii:
+      type: boolean
+      label: 'Is ASCII'
+
+field.storage_settings.computed_string_long:
+  type: mapping
+  label: 'Computed string long settings'
+  mapping:
+    case_sensitive:
+      type: boolean
+      label: 'Case sensitive'
+    max_length:
+      type: integer
+      label: 'Max length'
+    is_ascii:
+      type: boolean
+      label: 'Is ASCII'
+
+field.field_settings.computed_decimal:
+  type: mapping
+  label: 'Computed decimal settings'
+  mapping:
+    prefix:
+      type: string
+      label: 'Prefix'
+    suffix:
+      type: string
+      label: 'Suffix'
+
+field.field_settings.computed_float:
+  type: mapping
+  label: 'Computed float settings'
+  mapping:
+    prefix:
+      type: string
+      label: 'Prefix'
+    suffix:
+      type: string
+      label: 'Suffix'
+
+field.field_settings.computed_integer:
+  type: mapping
+  label: 'Computed integer settings'
+  mapping:
+    prefix:
+      type: string
+      label: 'Prefix'
+    suffix:
+      type: string
+      label: 'Suffix'
+
+field.field_settings.computed_string:
+  type: mapping
+  label: 'Computed string settings'
+  mapping:
+    prefix:
+      type: string
+      label: 'Prefix'
+    suffix:
+      type: string
+      label: 'Suffix'
+
+field.field_settings.computed_string_long:
+  type: mapping
+  label: 'Computed string long settings'
+  mapping:
+    prefix:
+      type: string
+      label: 'Prefix'
+    suffix:
+      type: string
+      label: 'Suffix'

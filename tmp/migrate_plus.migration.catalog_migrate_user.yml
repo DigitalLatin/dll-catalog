@@ -1,0 +1,102 @@
+uuid: 9785a304-e95f-4e05-bd24-db849933d1d2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NrR6WaBpvy-KcYqIuL--I8XgMPnsgUDTotOHAF4G8s4
+id: catalog_migrate_user
+class: Drupal\user\Plugin\migrate\User
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: catalog_migrate
+label: 'User accounts'
+source:
+  plugin: d7_user
+process:
+  uid:
+    -
+      plugin: get
+      source: uid
+  name:
+    -
+      plugin: get
+      source: name
+  pass:
+    -
+      plugin: get
+      source: pass
+  mail:
+    -
+      plugin: get
+      source: mail
+  created:
+    -
+      plugin: get
+      source: created
+  access:
+    -
+      plugin: get
+      source: access
+  login:
+    -
+      plugin: get
+      source: login
+  status:
+    -
+      plugin: get
+      source: status
+  timezone:
+    -
+      plugin: get
+      source: timezone
+  langcode:
+    -
+      plugin: user_langcode
+      source: entity_language
+      fallback_to_site_default: false
+  preferred_langcode:
+    -
+      plugin: user_langcode
+      source: language
+      fallback_to_site_default: true
+  preferred_admin_langcode:
+    -
+      plugin: user_langcode
+      source: language
+      fallback_to_site_default: true
+  init:
+    -
+      plugin: get
+      source: init
+  roles:
+    -
+      plugin: migration_lookup
+      migration: catalog_migrate_user_role
+      source: roles
+  user_picture:
+    -
+      plugin: default_value
+      source: picture
+      default_value: null
+    -
+      plugin: migration_lookup
+      migration: catalog_migrate_file
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity:user'
+migration_dependencies:
+  required:
+    - catalog_migrate_user_role
+  optional:
+    - catalog_migrate_field_instance
+    - catalog_migrate_file
+    - upgrade_user_picture_field_instance
+    - upgrade_user_picture_entity_display
+    - upgrade_user_picture_entity_form_display
+    - catalog_migrate_user_role

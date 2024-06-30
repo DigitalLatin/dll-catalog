@@ -1,0 +1,38 @@
+uuid: 98e81377-b5db-4ee1-8bd6-ac70a8c60207
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_catalog_migrate_node_settings
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Node configuration'
+source:
+  key: migrate
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-catalog-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: variable
+  variables:
+    - node_admin_theme
+  source_module: node
+process:
+  use_admin_theme:
+    -
+      plugin: get
+      source: node_admin_theme
+destination:
+  plugin: config
+  config_name: node.settings
+migration_dependencies:
+  required: {  }
+  optional: {  }

@@ -1,0 +1,49 @@
+uuid: 921f3da8-dc61-4cba-96ef-6061b9f24c21
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_catalog_migrate_system_performance
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Drupal 7 performance configuration'
+source:
+  key: migrate
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-catalog-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: variable
+  variables:
+    - preprocess_css
+    - preprocess_js
+    - cache_lifetime
+    - page_compression
+  source_module: system
+process:
+  css/preprocess:
+    -
+      plugin: get
+      source: preprocess_css
+  js/preprocess:
+    -
+      plugin: get
+      source: preprocess_js
+  cache/page/max_age:
+    -
+      plugin: get
+      source: cache_lifetime
+destination:
+  plugin: config
+  config_name: system.performance
+migration_dependencies:
+  required: {  }
+  optional: {  }

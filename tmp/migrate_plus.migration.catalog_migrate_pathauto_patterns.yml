@@ -1,0 +1,55 @@
+uuid: 0c4643b3-fe03-4adb-96c9-c4349a54c86c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: K2T9XHsbKDXicVk3JOdzRtg24cifpyqsX7LEHbeweoM
+id: catalog_migrate_pathauto_patterns
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: catalog_migrate
+label: 'Pathauto patterns'
+source:
+  plugin: pathauto_pattern
+  constants:
+    status: true
+    selection_logic: and
+process:
+  status:
+    -
+      plugin: get
+      source: constants/status
+  id:
+    -
+      plugin: get
+      source: id
+  label:
+    -
+      plugin: get
+      source: label
+  type:
+    -
+      plugin: get
+      source: type
+  pattern:
+    -
+      plugin: get
+      source: pattern
+  selection_criteria:
+    -
+      plugin: get
+      source: selection_criteria
+  selection_logic:
+    -
+      plugin: get
+      source: constants/selection_logic
+destination:
+  plugin: 'entity:pathauto_pattern'
+migration_dependencies:
+  required: {  }
+  optional:
+    - catalog_migrate_node_type

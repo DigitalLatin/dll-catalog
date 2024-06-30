@@ -1,0 +1,120 @@
+uuid: 23937282-c240-487b-9390-5d21ee3ce879
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: S628ucUMGbDPTvENapPrfv8PnNwwSj-AdZQ7U-SRXXg
+id: catalog_migrate_field_instance
+class: Drupal\migrate_drupal\Plugin\migrate\FieldMigration
+field_plugin_method: alterFieldInstanceMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: catalog_migrate
+label: 'Field instance configuration'
+source:
+  plugin: d7_field_instance
+  constants:
+    status: true
+process:
+  type:
+    -
+      plugin: static_map
+      source: type
+      map:
+        d7_text: text
+        taxonomy_term_reference: taxonomy_term_reference
+        image: image
+        link_field: link_field
+        entityreference: entityreference
+        list: list
+        number_default: number_default
+        computed: text
+  entity_type:
+    -
+      plugin: get
+      source: entity_type
+  field_name:
+    -
+      plugin: get
+      source: field_name
+  bundle_mapped:
+    -
+      plugin: static_map
+      source: bundle
+      bypass: true
+      map:
+        comment_node_forum: comment_forum
+  bundle:
+    -
+      plugin: field_bundle
+      source:
+        - entity_type
+        - '@bundle_mapped'
+  label:
+    -
+      plugin: get
+      source: label
+  description:
+    -
+      plugin: get
+      source: description
+  required:
+    -
+      plugin: get
+      source: required
+  status:
+    -
+      plugin: get
+      source: constants/status
+  allowed_values:
+    -
+      plugin: sub_process
+      source: allowed_vid
+      process:
+        -
+          plugin: migration_lookup
+          migration: catalog_migrate_taxonomy_vocabulary
+          source: vid
+  settings:
+    0:
+      plugin: d7_field_instance_settings
+      source:
+        - settings
+        - widget
+        - field_definition
+    inline_entity_form:
+      plugin: inline_entity_form_field_instance_settings
+  default_value_function:
+    -
+      plugin: get
+      source: ''
+  default_value:
+    -
+      plugin: d7_field_instance_defaults
+      source:
+        - default_value
+        - widget
+  translatable:
+    -
+      plugin: get
+      source: translatable
+  settings/title:
+    -
+      plugin: static_map
+      source: settings/title
+      bypass: true
+      map:
+        disabled: 0
+        optional: 1
+        required: 2
+destination:
+  plugin: 'entity:field_config'
+migration_dependencies:
+  required:
+    - catalog_migrate_field
+  optional:
+    - catalog_migrate_node_type
+    - catalog_migrate_comment_type
+    - catalog_migrate_taxonomy_vocabulary

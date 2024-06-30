@@ -1,0 +1,11 @@
+type: module
+name: Catalog D7 to D10 Migration Module
+description: 'A module for migrating content from a legacy site to a new one.'
+package: Custom
+core: 10.x
+core_version_requirement: ^10
+dependencies:
+  - drupal:migrate
+  - drupal:migrate_drupal
+  - drupal:migrate_plus
+  - drupal:migrate_tools

@@ -1,0 +1,33 @@
+uuid: d2651bc5-152c-4f7f-ab89-eb27841a4c72
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: OUyYJME-dUAemJvF8_r5fRWEWar1R7M9v839_UrYpB0
+id: catalog_migrate_system_authorize
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: catalog_migrate
+label: 'Drupal 7 file transfer authorize configuration'
+source:
+  plugin: variable
+  variables:
+    - authorize_filetransfer_default
+  source_module: system
+process:
+  filetransfer_default:
+    -
+      plugin: skip_on_empty
+      method: row
+      source: empty
+destination:
+  plugin: config
+  config_name: null
+  destination_module: system
+migration_dependencies:
+  required: {  }
+  optional: {  }

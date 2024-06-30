@@ -1,0 +1,51 @@
+uuid: 0ceccf08-2cf8-4285-8c1a-37da337d3fef
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_catalog_migrate_custom_block
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Content blocks'
+source:
+  key: migrate
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-catalog-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: d7_block_custom
+process:
+  id:
+    -
+      plugin: get
+      source: bid
+  info:
+    -
+      plugin: get
+      source: info
+  body/format:
+    -
+      plugin: migration_lookup
+      migration: upgrade_catalog_migrate_filter_format
+      source: format
+  body/value:
+    -
+      plugin: get
+      source: body
+destination:
+  plugin: 'entity:block_content'
+  default_bundle: basic
+  no_stub: true
+migration_dependencies:
+  required:
+    - upgrade_catalog_migrate_filter_format
+  optional:
+    - upgrade_catalog_migrate_filter_format

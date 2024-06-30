@@ -1,0 +1,38 @@
+uuid: 5a5e009e-881d-4d47-9274-ac7f5245a671
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ygaC1uzVNXz_LhI_wQPfasqyFbCGf0MxtfGx3vJ_6Vc
+id: catalog_migrate_shortcut_set
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: catalog_migrate
+label: 'Shortcut sets'
+source:
+  plugin: d7_shortcut_set
+process:
+  id:
+    -
+      plugin: static_map
+      bypass: true
+      source: set_name
+      map:
+        shortcut-set-1: default
+    -
+      plugin: machine_name
+      field: id
+      replace_pattern: '/[^a-z0-9-]+/'
+  label:
+    -
+      plugin: get
+      source: title
+destination:
+  plugin: 'entity:shortcut_set'
+migration_dependencies:
+  required: {  }
+  optional: {  }

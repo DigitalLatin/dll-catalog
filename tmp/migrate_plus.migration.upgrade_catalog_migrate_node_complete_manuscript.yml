@@ -1,0 +1,174 @@
+uuid: cd5f3c8d-5226-4041-8500-b1e4f1972eb7
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_catalog_migrate_node_complete_manuscript
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Manuscript)'
+source:
+  key: migrate
+  database:
+    driver: mysql
+    username: db
+    password: db
+    host: ddev-catalog-db
+    port: ''
+    database: db
+    prefix: null
+  plugin: d7_node_complete
+  node_type: manuscript
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_manuscript/0/status:
+    -
+      plugin: get
+      source: comment
+  field_siglum:
+    -
+      plugin: get
+      source: field_siglum
+  field_reference_edition:
+    -
+      plugin: get
+      source: field_reference_edition
+  field_id_number:
+    -
+      plugin: get
+      source: field_id_number
+  field_alternative_id:
+    -
+      plugin: get
+      source: field_alternative_id
+  field_contents:
+    -
+      plugin: get
+      source: field_contents
+  field_length_mm_:
+    -
+      plugin: get
+      source: field_length_mm_
+  field_width_mm_:
+    -
+      plugin: get
+      source: field_width_mm_
+  field_number_of_leaves:
+    -
+      plugin: get
+      source: field_number_of_leaves
+  field_object_description:
+    -
+      plugin: get
+      source: field_object_description
+  field_hand_note:
+    -
+      plugin: get
+      source: field_hand_note
+  field_not_before:
+    -
+      plugin: get
+      source: field_not_before
+  field_not_after:
+    -
+      plugin: get
+      source: field_not_after
+  field_manuscript_date:
+    -
+      plugin: get
+      source: field_manuscript_date
+  field_other_sigla:
+    -
+      plugin: get
+      source: field_other_sigla
+  field_link_to_the_images_of_the_:
+    -
+      plugin: field_link
+      source: field_link_to_the_images_of_the_
+  field_dll_authors:
+    -
+      plugin: get
+      source: field_dll_authors
+  field_dll_works:
+    -
+      plugin: get
+      source: field_dll_works
+  field_notes_ms:
+    -
+      plugin: get
+      source: field_notes_ms
+  field_metatag:
+    -
+      plugin: d7_metatag_entities
+      source: pseudo_metatag_entities
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: manuscript
+migration_dependencies:
+  required:
+    - upgrade_catalog_migrate_user
+    - upgrade_catalog_migrate_node_type
+  optional:
+    - upgrade_catalog_migrate_field_instance
+    - upgrade_catalog_migrate_comment_field_instance
