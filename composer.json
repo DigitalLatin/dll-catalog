@@ -18,6 +18,7 @@
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
         "drupal/auto_entitylabel": "^3.2",
+        "drupal/bootstrap5": "^4.0",
         "drupal/computed_field": "^3.0",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
@@ -66,6 +67,9 @@
             },
             "drupal/computed_field": {
                 "Provide a drupal 7 field migration plugin": "https://www.drupal.org/files/issues/2022-01-05/3255031-computed_field-migrate-7.patch"
+            },
+            "drupal/core": {
+                "Don't hide permissions local tasks on bundles when no permissions are defined": "https://www.drupal.org/files/issues/2023-09-01/3384600-5.patch"
             }
         },
         "installer-paths": {

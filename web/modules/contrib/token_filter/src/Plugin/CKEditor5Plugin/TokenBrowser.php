@@ -43,7 +43,7 @@ class TokenBrowser extends CKEditor5PluginDefault implements CKEditor5PluginConf
     string $plugin_id,
     CKEditor5PluginDefinition $plugin_definition,
     Token $token_service,
-    CsrfTokenGenerator $csrf_token_generator
+    CsrfTokenGenerator $csrf_token_generator,
   ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->tokenService = $token_service;
