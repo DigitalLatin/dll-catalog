@@ -5,6 +5,7 @@ web/sites/default/~settings.local.php
 
 #ignore services.yml
 web/sites/default/services.yml
+web/sites/default/default.services.yml
 
 #ignore aliases
 # sites/*.ecplatinum.dev
