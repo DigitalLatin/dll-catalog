@@ -507,6 +507,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/twig_tweak' => array(
+            'pretty_version' => '3.3.0',
+            'version' => '3.3.0.0',
+            'reference' => '3.3.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/twig_tweak',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/views_bulk_operations' => array(
             'pretty_version' => '4.2.7',
             'version' => '4.2.7.0',
