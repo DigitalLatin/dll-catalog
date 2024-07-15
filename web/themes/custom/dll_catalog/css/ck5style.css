@@ -23,6 +23,31 @@
   /* rtl:end:ignore */
   /* rtl:begin:remove */
   /* rtl:end:remove */
+  /* ======================================================================== 
+      Buttons
+     ======================================================================== */
+  /* ======================================================================== 
+      Links
+     ======================================================================== */
+  /* ======================================================================== 
+      Navbar
+     ======================================================================== */
+  /* Cribbed from https://stackoverflow.com/a/43382283 */
+  /* change the background color */
+  /* change the link color */
+  /* change the color of active or hovered links */
+  /* Change the appearance of the site's name */
+  /* Media query for large screens */
+  /* ======================================================================== 
+      Layout
+     ======================================================================== */
+  /* insert space between navbar and breadcrumbs */
+  /* insert space between page title and breadcrumbs */
+  /* ======================================================================== 
+      Content types
+     ======================================================================== */
+  /* add some space between the heading and the content */
+  /* Media query for large screens */
 }
 .ck-content :root,
 .ck-content [data-bs-theme=light] {
@@ -1002,51 +1027,51 @@ a > .ck-content code {
     margin-left: 91.66666667%;
   }
   .ck-content .g-sm-0,
-.ck-content .gx-sm-0 {
+  .ck-content .gx-sm-0 {
     --bs-gutter-x: 0;
   }
   .ck-content .g-sm-0,
-.ck-content .gy-sm-0 {
+  .ck-content .gy-sm-0 {
     --bs-gutter-y: 0;
   }
   .ck-content .g-sm-1,
-.ck-content .gx-sm-1 {
+  .ck-content .gx-sm-1 {
     --bs-gutter-x: 0.25rem;
   }
   .ck-content .g-sm-1,
-.ck-content .gy-sm-1 {
+  .ck-content .gy-sm-1 {
     --bs-gutter-y: 0.25rem;
   }
   .ck-content .g-sm-2,
-.ck-content .gx-sm-2 {
+  .ck-content .gx-sm-2 {
     --bs-gutter-x: 0.5rem;
   }
   .ck-content .g-sm-2,
-.ck-content .gy-sm-2 {
+  .ck-content .gy-sm-2 {
     --bs-gutter-y: 0.5rem;
   }
   .ck-content .g-sm-3,
-.ck-content .gx-sm-3 {
+  .ck-content .gx-sm-3 {
     --bs-gutter-x: 1rem;
   }
   .ck-content .g-sm-3,
-.ck-content .gy-sm-3 {
+  .ck-content .gy-sm-3 {
     --bs-gutter-y: 1rem;
   }
   .ck-content .g-sm-4,
-.ck-content .gx-sm-4 {
+  .ck-content .gx-sm-4 {
     --bs-gutter-x: 1.5rem;
   }
   .ck-content .g-sm-4,
-.ck-content .gy-sm-4 {
+  .ck-content .gy-sm-4 {
     --bs-gutter-y: 1.5rem;
   }
   .ck-content .g-sm-5,
-.ck-content .gx-sm-5 {
+  .ck-content .gx-sm-5 {
     --bs-gutter-x: 3rem;
   }
   .ck-content .g-sm-5,
-.ck-content .gy-sm-5 {
+  .ck-content .gy-sm-5 {
     --bs-gutter-y: 3rem;
   }
 }
@@ -1171,51 +1196,51 @@ a > .ck-content code {
     margin-left: 91.66666667%;
   }
   .ck-content .g-md-0,
-.ck-content .gx-md-0 {
+  .ck-content .gx-md-0 {
     --bs-gutter-x: 0;
   }
   .ck-content .g-md-0,
-.ck-content .gy-md-0 {
+  .ck-content .gy-md-0 {
     --bs-gutter-y: 0;
   }
   .ck-content .g-md-1,
-.ck-content .gx-md-1 {
+  .ck-content .gx-md-1 {
     --bs-gutter-x: 0.25rem;
   }
   .ck-content .g-md-1,
-.ck-content .gy-md-1 {
+  .ck-content .gy-md-1 {
     --bs-gutter-y: 0.25rem;
   }
   .ck-content .g-md-2,
-.ck-content .gx-md-2 {
+  .ck-content .gx-md-2 {
     --bs-gutter-x: 0.5rem;
   }
   .ck-content .g-md-2,
-.ck-content .gy-md-2 {
+  .ck-content .gy-md-2 {
     --bs-gutter-y: 0.5rem;
   }
   .ck-content .g-md-3,
-.ck-content .gx-md-3 {
+  .ck-content .gx-md-3 {
     --bs-gutter-x: 1rem;
   }
   .ck-content .g-md-3,
-.ck-content .gy-md-3 {
+  .ck-content .gy-md-3 {
     --bs-gutter-y: 1rem;
   }
   .ck-content .g-md-4,
-.ck-content .gx-md-4 {
+  .ck-content .gx-md-4 {
     --bs-gutter-x: 1.5rem;
   }
   .ck-content .g-md-4,
-.ck-content .gy-md-4 {
+  .ck-content .gy-md-4 {
     --bs-gutter-y: 1.5rem;
   }
   .ck-content .g-md-5,
-.ck-content .gx-md-5 {
+  .ck-content .gx-md-5 {
     --bs-gutter-x: 3rem;
   }
   .ck-content .g-md-5,
-.ck-content .gy-md-5 {
+  .ck-content .gy-md-5 {
     --bs-gutter-y: 3rem;
   }
 }
@@ -1340,51 +1365,51 @@ a > .ck-content code {
     margin-left: 91.66666667%;
   }
   .ck-content .g-lg-0,
-.ck-content .gx-lg-0 {
+  .ck-content .gx-lg-0 {
     --bs-gutter-x: 0;
   }
   .ck-content .g-lg-0,
-.ck-content .gy-lg-0 {
+  .ck-content .gy-lg-0 {
     --bs-gutter-y: 0;
   }
   .ck-content .g-lg-1,
-.ck-content .gx-lg-1 {
+  .ck-content .gx-lg-1 {
     --bs-gutter-x: 0.25rem;
   }
   .ck-content .g-lg-1,
-.ck-content .gy-lg-1 {
+  .ck-content .gy-lg-1 {
     --bs-gutter-y: 0.25rem;
   }
   .ck-content .g-lg-2,
-.ck-content .gx-lg-2 {
+  .ck-content .gx-lg-2 {
     --bs-gutter-x: 0.5rem;
   }
   .ck-content .g-lg-2,
-.ck-content .gy-lg-2 {
+  .ck-content .gy-lg-2 {
     --bs-gutter-y: 0.5rem;
   }
   .ck-content .g-lg-3,
-.ck-content .gx-lg-3 {
+  .ck-content .gx-lg-3 {
     --bs-gutter-x: 1rem;
   }
   .ck-content .g-lg-3,
-.ck-content .gy-lg-3 {
+  .ck-content .gy-lg-3 {
     --bs-gutter-y: 1rem;
   }
   .ck-content .g-lg-4,
-.ck-content .gx-lg-4 {
+  .ck-content .gx-lg-4 {
     --bs-gutter-x: 1.5rem;
   }
   .ck-content .g-lg-4,
-.ck-content .gy-lg-4 {
+  .ck-content .gy-lg-4 {
     --bs-gutter-y: 1.5rem;
   }
   .ck-content .g-lg-5,
-.ck-content .gx-lg-5 {
+  .ck-content .gx-lg-5 {
     --bs-gutter-x: 3rem;
   }
   .ck-content .g-lg-5,
-.ck-content .gy-lg-5 {
+  .ck-content .gy-lg-5 {
     --bs-gutter-y: 3rem;
   }
 }
@@ -1509,51 +1534,51 @@ a > .ck-content code {
     margin-left: 91.66666667%;
   }
   .ck-content .g-xl-0,
-.ck-content .gx-xl-0 {
+  .ck-content .gx-xl-0 {
     --bs-gutter-x: 0;
   }
   .ck-content .g-xl-0,
-.ck-content .gy-xl-0 {
+  .ck-content .gy-xl-0 {
     --bs-gutter-y: 0;
   }
   .ck-content .g-xl-1,
-.ck-content .gx-xl-1 {
+  .ck-content .gx-xl-1 {
     --bs-gutter-x: 0.25rem;
   }
   .ck-content .g-xl-1,
-.ck-content .gy-xl-1 {
+  .ck-content .gy-xl-1 {
     --bs-gutter-y: 0.25rem;
   }
   .ck-content .g-xl-2,
-.ck-content .gx-xl-2 {
+  .ck-content .gx-xl-2 {
     --bs-gutter-x: 0.5rem;
   }
   .ck-content .g-xl-2,
-.ck-content .gy-xl-2 {
+  .ck-content .gy-xl-2 {
     --bs-gutter-y: 0.5rem;
   }
   .ck-content .g-xl-3,
-.ck-content .gx-xl-3 {
+  .ck-content .gx-xl-3 {
     --bs-gutter-x: 1rem;
   }
   .ck-content .g-xl-3,
-.ck-content .gy-xl-3 {
+  .ck-content .gy-xl-3 {
     --bs-gutter-y: 1rem;
   }
   .ck-content .g-xl-4,
-.ck-content .gx-xl-4 {
+  .ck-content .gx-xl-4 {
     --bs-gutter-x: 1.5rem;
   }
   .ck-content .g-xl-4,
-.ck-content .gy-xl-4 {
+  .ck-content .gy-xl-4 {
     --bs-gutter-y: 1.5rem;
   }
   .ck-content .g-xl-5,
-.ck-content .gx-xl-5 {
+  .ck-content .gx-xl-5 {
     --bs-gutter-x: 3rem;
   }
   .ck-content .g-xl-5,
-.ck-content .gy-xl-5 {
+  .ck-content .gy-xl-5 {
     --bs-gutter-y: 3rem;
   }
 }
@@ -1678,51 +1703,51 @@ a > .ck-content code {
     margin-left: 91.66666667%;
   }
   .ck-content .g-xxl-0,
-.ck-content .gx-xxl-0 {
+  .ck-content .gx-xxl-0 {
     --bs-gutter-x: 0;
   }
   .ck-content .g-xxl-0,
-.ck-content .gy-xxl-0 {
+  .ck-content .gy-xxl-0 {
     --bs-gutter-y: 0;
   }
   .ck-content .g-xxl-1,
-.ck-content .gx-xxl-1 {
+  .ck-content .gx-xxl-1 {
     --bs-gutter-x: 0.25rem;
   }
   .ck-content .g-xxl-1,
-.ck-content .gy-xxl-1 {
+  .ck-content .gy-xxl-1 {
     --bs-gutter-y: 0.25rem;
   }
   .ck-content .g-xxl-2,
-.ck-content .gx-xxl-2 {
+  .ck-content .gx-xxl-2 {
     --bs-gutter-x: 0.5rem;
   }
   .ck-content .g-xxl-2,
-.ck-content .gy-xxl-2 {
+  .ck-content .gy-xxl-2 {
     --bs-gutter-y: 0.5rem;
   }
   .ck-content .g-xxl-3,
-.ck-content .gx-xxl-3 {
+  .ck-content .gx-xxl-3 {
     --bs-gutter-x: 1rem;
   }
   .ck-content .g-xxl-3,
-.ck-content .gy-xxl-3 {
+  .ck-content .gy-xxl-3 {
     --bs-gutter-y: 1rem;
   }
   .ck-content .g-xxl-4,
-.ck-content .gx-xxl-4 {
+  .ck-content .gx-xxl-4 {
     --bs-gutter-x: 1.5rem;
   }
   .ck-content .g-xxl-4,
-.ck-content .gy-xxl-4 {
+  .ck-content .gy-xxl-4 {
     --bs-gutter-y: 1.5rem;
   }
   .ck-content .g-xxl-5,
-.ck-content .gx-xxl-5 {
+  .ck-content .gx-xxl-5 {
     --bs-gutter-x: 3rem;
   }
   .ck-content .g-xxl-5,
-.ck-content .gy-xxl-5 {
+  .ck-content .gy-xxl-5 {
     --bs-gutter-y: 3rem;
   }
 }
@@ -4272,27 +4297,27 @@ a > .ck-content code {
     border-bottom-right-radius: 0;
   }
   .ck-content .card-group > .card:not(:last-child) .card-img-top, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .card-img-top, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) .card-img-top,
-.ck-content .card-group > .card:not(:last-child) .card-header,
-.ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .card-header,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) .card-header,
-.ck-content .card-group > .card:not(:last-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-library-select-form,
-.ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-library-select-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card:not(:last-child) .views-field-media-library-select-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .views-field-media-library-select-form,
-.ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid:not(:last-child) .views-field-media-library-select-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) .views-field-media-library-select-form,
-.ck-content .card-group > .card:not(:last-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-bulk-form,
-.ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-bulk-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card:not(:last-child) .views-field-media-bulk-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .views-field-media-bulk-form,
-.ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid:not(:last-child) .views-field-media-bulk-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) .views-field-media-bulk-form {
+  .ck-content .card-group > .card:not(:last-child) .card-header,
+  .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .card-header,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) .card-header,
+  .ck-content .card-group > .card:not(:last-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-library-select-form,
+  .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-library-select-form,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card:not(:last-child) .views-field-media-library-select-form,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .views-field-media-library-select-form,
+  .ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid:not(:last-child) .views-field-media-library-select-form,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) .views-field-media-library-select-form,
+  .ck-content .card-group > .card:not(:last-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-bulk-form,
+  .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-bulk-form,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card:not(:last-child) .views-field-media-bulk-form,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .views-field-media-bulk-form,
+  .ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid:not(:last-child) .views-field-media-bulk-form,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) .views-field-media-bulk-form {
     border-top-right-radius: 0;
   }
   .ck-content .card-group > .card:not(:last-child) .card-img-bottom, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .card-img-bottom, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) .card-img-bottom,
-.ck-content .card-group > .card:not(:last-child) .card-footer,
-.ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .card-footer,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) .card-footer {
+  .ck-content .card-group > .card:not(:last-child) .card-footer,
+  .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:last-child) .card-footer,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:last-child) .card-footer {
     border-bottom-right-radius: 0;
   }
   .ck-content .card-group > .card:not(:first-child), .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child), .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) {
@@ -4300,27 +4325,27 @@ a > .ck-content code {
     border-bottom-left-radius: 0;
   }
   .ck-content .card-group > .card:not(:first-child) .card-img-top, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .card-img-top, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) .card-img-top,
-.ck-content .card-group > .card:not(:first-child) .card-header,
-.ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .card-header,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) .card-header,
-.ck-content .card-group > .card:not(:first-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-library-select-form,
-.ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-library-select-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card:not(:first-child) .views-field-media-library-select-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .views-field-media-library-select-form,
-.ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid:not(:first-child) .views-field-media-library-select-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) .views-field-media-library-select-form,
-.ck-content .card-group > .card:not(:first-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-bulk-form,
-.ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-bulk-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card:not(:first-child) .views-field-media-bulk-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .views-field-media-bulk-form,
-.ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid:not(:first-child) .views-field-media-bulk-form,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) .views-field-media-bulk-form {
+  .ck-content .card-group > .card:not(:first-child) .card-header,
+  .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .card-header,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) .card-header,
+  .ck-content .card-group > .card:not(:first-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-library-select-form,
+  .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-library-select-form,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card:not(:first-child) .views-field-media-library-select-form,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .views-field-media-library-select-form,
+  .ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid:not(:first-child) .views-field-media-library-select-form,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) .views-field-media-library-select-form,
+  .ck-content .card-group > .card:not(:first-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-bulk-form,
+  .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .view-media-library .media-library-views-form .media-library-item--grid .views-field-media-bulk-form,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .card:not(:first-child) .views-field-media-bulk-form,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .views-field-media-bulk-form,
+  .ck-content .media-library-selection .view-media-library .media-library-views-form .media-library-item--grid .card-group > .media-library-item.media-library-item--grid:not(:first-child) .views-field-media-bulk-form,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) .views-field-media-bulk-form {
     border-top-left-radius: 0;
   }
   .ck-content .card-group > .card:not(:first-child) .card-img-bottom, .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .card-img-bottom, .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) .card-img-bottom,
-.ck-content .card-group > .card:not(:first-child) .card-footer,
-.ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .card-footer,
-.ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) .card-footer {
+  .ck-content .card-group > .card:not(:first-child) .card-footer,
+  .ck-content .media-library-selection .card-group > .media-library-item.media-library-item--grid:not(:first-child) .card-footer,
+  .ck-content .view-media-library .media-library-views-form .media-library-item--grid .card-group > .views-field-rendered-entity:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
 }
@@ -5323,7 +5348,7 @@ a > .ck-content code {
 }
 @media (min-width: 992px) {
   .ck-content .modal-lg,
-.ck-content .modal-xl {
+  .ck-content .modal-xl {
     --bs-modal-width: 800px;
   }
 }
@@ -5363,7 +5388,7 @@ a > .ck-content code {
     border-radius: 0;
   }
   .ck-content .modal-fullscreen-sm-down .modal-header,
-.ck-content .modal-fullscreen-sm-down .modal-footer {
+  .ck-content .modal-fullscreen-sm-down .modal-footer {
     border-radius: 0;
   }
   .ck-content .modal-fullscreen-sm-down .modal-body {
@@ -5383,7 +5408,7 @@ a > .ck-content code {
     border-radius: 0;
   }
   .ck-content .modal-fullscreen-md-down .modal-header,
-.ck-content .modal-fullscreen-md-down .modal-footer {
+  .ck-content .modal-fullscreen-md-down .modal-footer {
     border-radius: 0;
   }
   .ck-content .modal-fullscreen-md-down .modal-body {
@@ -5403,7 +5428,7 @@ a > .ck-content code {
     border-radius: 0;
   }
   .ck-content .modal-fullscreen-lg-down .modal-header,
-.ck-content .modal-fullscreen-lg-down .modal-footer {
+  .ck-content .modal-fullscreen-lg-down .modal-footer {
     border-radius: 0;
   }
   .ck-content .modal-fullscreen-lg-down .modal-body {
@@ -5423,7 +5448,7 @@ a > .ck-content code {
     border-radius: 0;
   }
   .ck-content .modal-fullscreen-xl-down .modal-header,
-.ck-content .modal-fullscreen-xl-down .modal-footer {
+  .ck-content .modal-fullscreen-xl-down .modal-footer {
     border-radius: 0;
   }
   .ck-content .modal-fullscreen-xl-down .modal-body {
@@ -5443,7 +5468,7 @@ a > .ck-content code {
     border-radius: 0;
   }
   .ck-content .modal-fullscreen-xxl-down .modal-header,
-.ck-content .modal-fullscreen-xxl-down .modal-footer {
+  .ck-content .modal-fullscreen-xxl-down .modal-footer {
     border-radius: 0;
   }
   .ck-content .modal-fullscreen-xxl-down .modal-body {
@@ -5753,9 +5778,9 @@ a > .ck-content code {
 }
 @media (prefers-reduced-motion: reduce) {
   .ck-content .carousel-fade .active.carousel-item-start, .ck-content .carousel-fade .media-library-view--widget .view-header a.carousel-item-start.is-active, .ck-content .media-library-view--widget .view-header .carousel-fade a.carousel-item-start.is-active,
-.ck-content .carousel-fade .active.carousel-item-end,
-.ck-content .carousel-fade .media-library-view--widget .view-header a.carousel-item-end.is-active,
-.ck-content .media-library-view--widget .view-header .carousel-fade a.carousel-item-end.is-active {
+  .ck-content .carousel-fade .active.carousel-item-end,
+  .ck-content .carousel-fade .media-library-view--widget .view-header a.carousel-item-end.is-active,
+  .ck-content .media-library-view--widget .view-header .carousel-fade a.carousel-item-end.is-active {
     transition: none;
   }
 }
@@ -5779,7 +5804,7 @@ a > .ck-content code {
 }
 @media (prefers-reduced-motion: reduce) {
   .ck-content .carousel-control-prev,
-.ck-content .carousel-control-next {
+  .ck-content .carousel-control-next {
     transition: none;
   }
 }
@@ -5935,7 +5960,7 @@ a > .ck-content code {
 }
 @media (prefers-reduced-motion: reduce) {
   .ck-content .spinner-border,
-.ck-content .spinner-grow {
+  .ck-content .spinner-grow {
     --bs-spinner-animation-speed: 1.5s;
   }
 }
@@ -5982,8 +6007,6 @@ a > .ck-content code {
     border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(-100%);
   }
-}
-@media (max-width: 575.98px) {
   .ck-content .offcanvas-sm.offcanvas-end {
     top: 0;
     right: 0;
@@ -5991,8 +6014,6 @@ a > .ck-content code {
     border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(100%);
   }
-}
-@media (max-width: 575.98px) {
   .ck-content .offcanvas-sm.offcanvas-top {
     top: 0;
     right: 0;
@@ -6002,8 +6023,6 @@ a > .ck-content code {
     border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(-100%);
   }
-}
-@media (max-width: 575.98px) {
   .ck-content .offcanvas-sm.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6012,13 +6031,9 @@ a > .ck-content code {
     border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(100%);
   }
-}
-@media (max-width: 575.98px) {
   .ck-content .offcanvas-sm.showing, .ck-content .offcanvas-sm.show:not(.hiding) {
     transform: none;
   }
-}
-@media (max-width: 575.98px) {
   .ck-content .offcanvas-sm.showing, .ck-content .offcanvas-sm.hiding, .ck-content .offcanvas-sm.show {
     visibility: visible;
   }
@@ -6069,8 +6084,6 @@ a > .ck-content code {
     border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(-100%);
   }
-}
-@media (max-width: 767.98px) {
   .ck-content .offcanvas-md.offcanvas-end {
     top: 0;
     right: 0;
@@ -6078,8 +6091,6 @@ a > .ck-content code {
     border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(100%);
   }
-}
-@media (max-width: 767.98px) {
   .ck-content .offcanvas-md.offcanvas-top {
     top: 0;
     right: 0;
@@ -6089,8 +6100,6 @@ a > .ck-content code {
     border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(-100%);
   }
-}
-@media (max-width: 767.98px) {
   .ck-content .offcanvas-md.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6099,13 +6108,9 @@ a > .ck-content code {
     border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(100%);
   }
-}
-@media (max-width: 767.98px) {
   .ck-content .offcanvas-md.showing, .ck-content .offcanvas-md.show:not(.hiding) {
     transform: none;
   }
-}
-@media (max-width: 767.98px) {
   .ck-content .offcanvas-md.showing, .ck-content .offcanvas-md.hiding, .ck-content .offcanvas-md.show {
     visibility: visible;
   }
@@ -6156,8 +6161,6 @@ a > .ck-content code {
     border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(-100%);
   }
-}
-@media (max-width: 991.98px) {
   .ck-content .offcanvas-lg.offcanvas-end {
     top: 0;
     right: 0;
@@ -6165,8 +6168,6 @@ a > .ck-content code {
     border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(100%);
   }
-}
-@media (max-width: 991.98px) {
   .ck-content .offcanvas-lg.offcanvas-top {
     top: 0;
     right: 0;
@@ -6176,8 +6177,6 @@ a > .ck-content code {
     border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(-100%);
   }
-}
-@media (max-width: 991.98px) {
   .ck-content .offcanvas-lg.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6186,13 +6185,9 @@ a > .ck-content code {
     border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(100%);
   }
-}
-@media (max-width: 991.98px) {
   .ck-content .offcanvas-lg.showing, .ck-content .offcanvas-lg.show:not(.hiding) {
     transform: none;
   }
-}
-@media (max-width: 991.98px) {
   .ck-content .offcanvas-lg.showing, .ck-content .offcanvas-lg.hiding, .ck-content .offcanvas-lg.show {
     visibility: visible;
   }
@@ -6243,8 +6238,6 @@ a > .ck-content code {
     border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(-100%);
   }
-}
-@media (max-width: 1199.98px) {
   .ck-content .offcanvas-xl.offcanvas-end {
     top: 0;
     right: 0;
@@ -6252,8 +6245,6 @@ a > .ck-content code {
     border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(100%);
   }
-}
-@media (max-width: 1199.98px) {
   .ck-content .offcanvas-xl.offcanvas-top {
     top: 0;
     right: 0;
@@ -6263,8 +6254,6 @@ a > .ck-content code {
     border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(-100%);
   }
-}
-@media (max-width: 1199.98px) {
   .ck-content .offcanvas-xl.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6273,13 +6262,9 @@ a > .ck-content code {
     border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(100%);
   }
-}
-@media (max-width: 1199.98px) {
   .ck-content .offcanvas-xl.showing, .ck-content .offcanvas-xl.show:not(.hiding) {
     transform: none;
   }
-}
-@media (max-width: 1199.98px) {
   .ck-content .offcanvas-xl.showing, .ck-content .offcanvas-xl.hiding, .ck-content .offcanvas-xl.show {
     visibility: visible;
   }
@@ -6330,8 +6315,6 @@ a > .ck-content code {
     border-right: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(-100%);
   }
-}
-@media (max-width: 1399.98px) {
   .ck-content .offcanvas-xxl.offcanvas-end {
     top: 0;
     right: 0;
@@ -6339,8 +6322,6 @@ a > .ck-content code {
     border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateX(100%);
   }
-}
-@media (max-width: 1399.98px) {
   .ck-content .offcanvas-xxl.offcanvas-top {
     top: 0;
     right: 0;
@@ -6350,8 +6331,6 @@ a > .ck-content code {
     border-bottom: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(-100%);
   }
-}
-@media (max-width: 1399.98px) {
   .ck-content .offcanvas-xxl.offcanvas-bottom {
     right: 0;
     left: 0;
@@ -6360,13 +6339,9 @@ a > .ck-content code {
     border-top: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
     transform: translateY(100%);
   }
-}
-@media (max-width: 1399.98px) {
   .ck-content .offcanvas-xxl.showing, .ck-content .offcanvas-xxl.show:not(.hiding) {
     transform: none;
   }
-}
-@media (max-width: 1399.98px) {
   .ck-content .offcanvas-xxl.showing, .ck-content .offcanvas-xxl.hiding, .ck-content .offcanvas-xxl.show {
     visibility: visible;
   }
@@ -11829,7 +11804,7 @@ a > .ck-content code {
 }
 @media (min-width: 768px) {
   .ck-content .media-library-view--widget .view-filters .form--inline > div,
-.ck-content .view-media-library .view-filters .form--inline > div {
+  .ck-content .view-media-library .view-filters .form--inline > div {
     flex: 0 0 auto;
     width: auto;
     margin-bottom: 1rem;
@@ -11886,6 +11861,154 @@ a > .ck-content code {
 }
 .ck-content code {
   overflow-y: auto;
+}
+.ck-content .button {
+  background-color: #A33701;
+}
+.ck-content .btn:hover, .ck-content button.link:hover, .ck-content .button:hover, .ck-content .node-preview-container .node-preview-backlink:hover {
+  background-color: #005cb9;
+}
+.ck-content a {
+  color: #005cb9;
+}
+.ck-content .social-icon {
+  text-decoration: none;
+  border: 0;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  margin: 3px;
+  color: #fff;
+}
+.ck-content footer.footer-dark a:hover,
+.ck-content .social-icon a:hover {
+  color: #A33701;
+}
+.ck-content .navbar-custom {
+  background-color: #005cb9;
+}
+.ck-content .navbar-custom .navbar-nav .nav-link, .ck-content .navbar-custom .navbar-nav .media-library-view--widget .view-header a, .ck-content .media-library-view--widget .view-header .navbar-custom .navbar-nav a {
+  color: #fff;
+}
+.ck-content .navbar-custom .nav-item.active .nav-link, .ck-content .navbar-custom .media-library-view--widget .view-header a.nav-item.is-active .nav-link, .ck-content .media-library-view--widget .view-header .navbar-custom a.nav-item.is-active .nav-link, .ck-content .navbar-custom .nav-item.active .media-library-view--widget .view-header a, .ck-content .media-library-view--widget .view-header .navbar-custom .nav-item.active a, .ck-content .navbar-custom .media-library-view--widget .view-header a.nav-item.is-active a, .ck-content .media-library-view--widget .view-header .navbar-custom a.nav-item.is-active a,
+.ck-content .navbar-custom .nav-item:focus .nav-link,
+.ck-content .navbar-custom .nav-item:focus .media-library-view--widget .view-header a,
+.ck-content .media-library-view--widget .view-header .navbar-custom .nav-item:focus a,
+.ck-content .navbar-custom .nav-item:hover .nav-link,
+.ck-content .navbar-custom .nav-item:hover .media-library-view--widget .view-header a,
+.ck-content .media-library-view--widget .view-header .navbar-custom .nav-item:hover a {
+  color: #A33701;
+}
+.ck-content .navbar-brand .site-title {
+  font-size: larger;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  text-transform: none;
+}
+@media (min-width: 992px) {
+  .ck-content .navbar-brand .site-title {
+    font-size: 2rem;
+  }
+}
+.ck-content .region-breadcrumb {
+  margin-top: 1.25rem;
+}
+.ck-content #block-dll-catalog-page-title {
+  margin-top: 1.75rem;
+}
+.ck-content .node--type-author-authorities,
+.ck-content .node--type-dll-work,
+.ck-content .node--type-repository-item,
+.ck-content .node--type-web-page {
+  margin: 2.75rem 0 1.5rem 0;
+}
+.ck-content h1, .ck-content .h1 {
+  color: #A33701;
+}
+.ck-content #author-authority-title,
+.ck-content #dll-work-title,
+.ck-content #item-record-title,
+.ck-content #web-page-title {
+  margin-bottom: 2rem;
+  background-repeat: no-repeat;
+  padding: 0.25rem 0 1rem 3.75rem;
+}
+@media (min-width: 992px) {
+  .ck-content #author-authority-title,
+  .ck-content #dll-work-title,
+  .ck-content #item-record-title,
+  .ck-content #web-page-title {
+    background-size: 2.75rem 2.75rem;
+    background-position: left 6px;
+  }
+}
+.ck-content #author-authority-title {
+  background-image: url(/themes/custom/dll_catalog/images/authority-record-on-orange.svg);
+}
+.ck-content #dll-work-title {
+  background-image: url(/themes/custom/dll_catalog/images/dll-work-on-orange.svg);
+}
+.ck-content #item-record-title {
+  background-image: url(/themes/custom/dll_catalog/images/item-record-on-orange.svg);
+}
+.ck-content #web-page-title {
+  background-image: url(/themes/custom/dll_catalog/images/webpage-on-orange.svg);
+}
+.ck-content #author-data,
+.ck-content #work-data {
+  background-color: #eaf7fb;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+.ck-content #author-data .field,
+.ck-content #work-data .field,
+.ck-content #item-record .field,
+.ck-content #web-page .field {
+  margin-bottom: 1rem;
+}
+.ck-content #author-data .field__label,
+.ck-content #work-data .field__label,
+.ck-content #item-record .field__label,
+.ck-content #web-page .field__label {
+  text-transform: uppercase;
+}
+.ck-content #author-contextual-views > div,
+.ck-content #work-contextual-views > div {
+  margin-bottom: 3.5rem;
+}
+.ck-content #author-data h3, .ck-content #author-data .h3,
+.ck-content #author-contextual-views h3,
+.ck-content #author-contextual-views .h3,
+.ck-content #work-data h3,
+.ck-content #work-data .h3,
+.ck-content #work-contextual-views h3,
+.ck-content #work-contextual-views .h3 {
+  border-bottom: thin solid gray;
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding: 0 0 0.75rem 3rem;
+}
+.ck-content #author-data h3, .ck-content #author-data .h3 {
+  background-image: url(/themes/custom/dll_catalog/images/authority-record-on-blue.svg);
+}
+.ck-content #work-data h3, .ck-content #work-data .h3 {
+  background-image: url(/themes/custom/dll_catalog/images/dll-work-on-blue.svg);
+}
+.ck-content #author-works .views-field-title {
+  margin-bottom: 1rem;
+}
+.ck-content #author-works h3, .ck-content #author-works .h3 {
+  background-image: url(/themes/custom/dll_catalog/images/dll-work-on-blue.svg);
+}
+.ck-content #author-item-records h3, .ck-content #author-item-records .h3,
+.ck-content #work-item-records h3,
+.ck-content #work-item-records .h3 {
+  background-image: url(/themes/custom/dll_catalog/images/item-record-on-blue.svg);
+}
+.ck-content #author-web-pages h3, .ck-content #author-web-pages .h3,
+.ck-content #work-web-pages h3,
+.ck-content #work-web-pages .h3 {
+  background-image: url(/themes/custom/dll_catalog/images/webpage-on-blue.svg);
 }
 
 /*# sourceMappingURL=ck5style.css.map */

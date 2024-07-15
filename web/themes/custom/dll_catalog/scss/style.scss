@@ -7,3 +7,204 @@
 
 // Include bootstrap.
 @import '../../../../themes/contrib/bootstrap5/scss/style';
+
+/* ======================================================================== 
+    Buttons
+   ======================================================================== */
+
+.button {
+    background-color:#A33701;
+}
+
+.btn:hover {
+    background-color:#005cb9;
+}
+/* ======================================================================== 
+    Links
+   ======================================================================== */
+
+a {
+    color:#005cb9;
+}
+
+.social-icon {
+   text-decoration:none;
+   border:0;
+   width:36px;
+   height:36px;
+   padding:0;
+   margin:3px;
+   color:#fff;
+}
+
+footer.footer-dark a:hover, 
+.social-icon a:hover {
+    color:#A33701;
+}
+
+/* ======================================================================== 
+    Navbar
+   ======================================================================== */
+
+/* Cribbed from https://stackoverflow.com/a/43382283 */
+/* change the background color */
+.navbar-custom {
+    background-color: #005cb9;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #fff;
+}
+
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #A33701;
+}
+
+/* Change the appearance of the site's name */
+
+.navbar-brand .site-title {
+    font-size: larger;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    text-transform: none;
+}
+
+/* Media query for large screens */
+@media (min-width: 992px) {
+    .navbar-brand .site-title {
+        font-size: 2rem;
+    }
+}
+
+/* ======================================================================== 
+    Layout
+   ======================================================================== */
+
+/* insert space between navbar and breadcrumbs */
+.region-breadcrumb {
+    margin-top: 1.25rem;
+}
+
+/* insert space between page title and breadcrumbs */
+#block-dll-catalog-page-title {
+    margin-top: 1.75rem;
+}
+
+/* ======================================================================== 
+    Content types
+   ======================================================================== */
+
+/* add some space between the heading and the content */
+
+.node--type-author-authorities,
+.node--type-dll-work,
+.node--type-repository-item,
+.node--type-web-page {
+    margin: 2.75rem 0 1.5rem 0;
+}
+
+h1 {
+    color:#A33701;
+}
+
+#author-authority-title,
+#dll-work-title,
+#item-record-title,
+#web-page-title {
+    margin-bottom: 2rem;
+    background-repeat: no-repeat;
+    padding: 0.25rem 0 1rem 3.75rem;
+}
+
+/* Media query for large screens */
+@media (min-width: 992px) {
+    #author-authority-title,
+    #dll-work-title,
+    #item-record-title,
+    #web-page-title {
+        background-size: 2.75rem 2.75rem;
+        background-position: left 6px;
+    }
+}
+
+#author-authority-title {
+    background-image: url(/themes/custom/dll_catalog/images/authority-record-on-orange.svg);
+}
+
+#dll-work-title {
+    background-image: url(/themes/custom/dll_catalog/images/dll-work-on-orange.svg);
+}
+
+#item-record-title {
+    background-image: url(/themes/custom/dll_catalog/images/item-record-on-orange.svg);
+}
+
+#web-page-title {
+    background-image: url(/themes/custom/dll_catalog/images/webpage-on-orange.svg);
+}
+
+#author-data,
+#work-data {
+   background-color:#eaf7fb;
+   padding-top: 1rem;
+   margin-bottom: 1rem;
+}
+
+#author-data .field,
+#work-data .field,
+#item-record .field,
+#web-page .field {
+    margin-bottom: 1rem;
+}
+
+#author-data .field__label,
+#work-data .field__label,
+#item-record .field__label,
+#web-page .field__label {
+    text-transform: uppercase;
+}
+
+#author-contextual-views > div,
+#work-contextual-views > div {
+    margin-bottom: 3.5rem;
+}
+
+#author-data h3,
+#author-contextual-views h3,
+#work-data h3,
+#work-contextual-views h3 {
+    border-bottom: thin solid gray;
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding: 0 0 0.75rem 3rem;
+}
+
+#author-data h3 {
+    background-image: url(/themes/custom/dll_catalog/images/authority-record-on-blue.svg);
+}
+
+#work-data h3 {
+    background-image: url(/themes/custom/dll_catalog/images/dll-work-on-blue.svg);
+}
+
+#author-works .views-field-title {
+    margin-bottom: 1rem;
+}
+
+#author-works h3 {
+    background-image: url(/themes/custom/dll_catalog/images/dll-work-on-blue.svg);
+}
+
+#author-item-records h3,
+#work-item-records h3 {
+    background-image: url(/themes/custom/dll_catalog/images/item-record-on-blue.svg);
+}
+
+#author-web-pages h3,
+#work-web-pages h3 {
+    background-image: url(/themes/custom/dll_catalog/images/webpage-on-blue.svg);
+}
