@@ -33,21 +33,19 @@
       Navbar
      ======================================================================== */
   /* Cribbed from https://stackoverflow.com/a/43382283 */
-  /* change the background color */
-  /* change the link color */
-  /* change the color of active or hovered links */
   /* Change the appearance of the site's name */
-  /* Media query for large screens */
+  /* ======================================================================== 
+      Info Menu
+     ======================================================================== */
   /* ======================================================================== 
       Layout
      ======================================================================== */
-  /* insert space between navbar and breadcrumbs */
-  /* insert space between page title and breadcrumbs */
   /* ======================================================================== 
       Content types
      ======================================================================== */
-  /* add some space between the heading and the content */
-  /* Media query for large screens */
+  /* ======================================================================== 
+      Search page
+     ======================================================================== */
 }
 .ck-content :root,
 .ck-content [data-bs-theme=light] {
@@ -11910,11 +11908,42 @@ a > .ck-content code {
     font-size: 2rem;
   }
 }
+.ck-content #info-menu > ul {
+  list-style: none;
+}
+.ck-content #info-menu li {
+  padding-bottom: 1.25rem;
+}
+.ck-content #info-menu ul ul > li:first-child {
+  padding-top: 1.25rem;
+}
+.ck-content #info-menu a {
+  color: #005cb9;
+}
+.ck-content #info-menu a:hover {
+  color: #A33701;
+}
+.ck-content #info-menu h3, .ck-content #info-menu .h3 {
+  border-bottom: thin solid;
+  padding-bottom: 0.25rem;
+}
 .ck-content .region-breadcrumb {
   margin-top: 1.25rem;
 }
+.ck-content .region-content {
+  padding: 0 0.5rem 3.75rem 0.5rem;
+}
 .ck-content #block-dll-catalog-page-title {
   margin-top: 1.75rem;
+}
+.ck-content #about-search tr {
+  padding: 1rem 0;
+}
+.ck-content #about-search td {
+  padding: 1rem;
+}
+.ck-content table {
+  width: 100%;
 }
 .ck-content .node--type-author-authorities,
 .ck-content .node--type-dll-work,
@@ -11922,7 +11951,13 @@ a > .ck-content code {
 .ck-content .node--type-web-page {
   margin: 2.75rem 0 1.5rem 0;
 }
-.ck-content h1, .ck-content .h1 {
+.ck-content h1, .ck-content .h1,
+.ck-content h2,
+.ck-content .h2,
+.ck-content h3,
+.ck-content .h3,
+.ck-content h4,
+.ck-content .h4 {
   color: #A33701;
 }
 .ck-content #author-authority-title,
@@ -11955,10 +11990,12 @@ a > .ck-content code {
   background-image: url(/themes/custom/dll_catalog/images/webpage-on-orange.svg);
 }
 .ck-content #author-data,
-.ck-content #work-data {
+.ck-content #work-data,
+.ck-content #info-menu {
   background-color: #eaf7fb;
   padding-top: 1rem;
   margin-bottom: 1rem;
+  height: fit-content;
 }
 .ck-content #author-data .field,
 .ck-content #work-data .field,
@@ -12009,6 +12046,89 @@ a > .ck-content code {
 .ck-content #work-web-pages h3,
 .ck-content #work-web-pages .h3 {
   background-image: url(/themes/custom/dll_catalog/images/webpage-on-blue.svg);
+}
+.ck-content .authority-icon,
+.ck-content .dll-work-icon,
+.ck-content .item-icon,
+.ck-content .webpage-icon,
+.ck-content .ms-icon {
+  background-position: unset;
+  margin-top: 2.75rem;
+  background-repeat: no-repeat;
+  padding: 0.25rem 0 1rem 3.75rem;
+}
+.ck-content .authority-icon {
+  background-image: url(/themes/custom/dll_catalog/images/authority-record-on-orange.svg);
+}
+.ck-content .dll-work-icon {
+  background-image: url(/themes/custom/dll_catalog/images/dll-work-on-orange.svg);
+}
+.ck-content .item-icon {
+  background-image: url(/themes/custom/dll_catalog/images/item-record-on-orange.svg);
+}
+.ck-content .webpage-icon {
+  background-image: url(/themes/custom/dll_catalog/images/webpage-on-orange.svg);
+}
+.ck-content .ms-icon {
+  background-image: url(/themes/custom/dll_catalog/images/manuscript-on-orange.svg);
+}
+.ck-content .node__meta {
+  border-bottom: thin solid;
+  margin-bottom: 1.75rem;
+  padding: 0;
+}
+.ck-content .node__submitted {
+  font-size: smaller;
+  font-style: italic;
+}
+.ck-content article.node--view-mode-teaser {
+  border: thin solid grey;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+.ck-content .view-id-updates ul > li:first-child {
+  margin-top: 2.5rem;
+}
+.ck-content .block-views-exposed-filter-blockmain-solr-search-search h1, .ck-content .block-views-exposed-filter-blockmain-solr-search-search .h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.ck-content .form--inline .form-item.form-type-search-api-autocomplete {
+  float: none;
+  width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ck-content #views-exposed-form-main-solr-search-search,
+.ck-content #views-exposed-form-main-solr-search-search input {
+  text-align: center;
+}
+.ck-content .search-container {
+  margin-top: 2.75rem;
+}
+.ck-content .search-sidebar {
+  background: #eaf7fb;
+  padding: 2rem 0.5rem 1.5rem 1rem;
+}
+.ck-content .search-sidebar h3, .ck-content .search-sidebar .h3 {
+  border-bottom: solid thin grey;
+  padding-bottom: 0.5rem;
+  margin-right: 2rem;
+  margin-bottom: 1.25rem;
+}
+.ck-content .search-sidebar li {
+  padding: 0;
+  display: block;
+  margin-left: 0;
+}
+.ck-content .search-sidebar label {
+  margin-left: 0.5rem;
+}
+.ck-content #views-bootstrap-main-solr-search-search--2 article {
+  border: thin solid grey;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=ck5style.css.map */

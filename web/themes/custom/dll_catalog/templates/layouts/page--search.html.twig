@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Template for the search page.
+ */
+#}
+{% extends 'page.html.twig' %}
+    {% block content %}
+		{% if page.content %}
+			<div class="page__content">
+				{# Place the search form block #}
+				{{ drupal_block('views_exposed_filter_block:main_solr_search-search') }}
+
+				{# Don't display search results if there aren't any #}
+                {% if drupal_view_result('main_solr_search', 'search') is empty %}
+					<div></div>
+				{% else %}
+					<div class="container search-container">
+						<div class="row">
+							{# Render the facets #}
+							<div class="col-sm-3">
+								<div class="search-sidebar">
+									<h3>Filter(s)</h3>
+									<h4>Content type</h4>
+									{{ drupal_block('facet_block:content_type') }}
+									<h4>Time period</h4>
+									{{ drupal_block('facet_block:time_period') }}
+								</div>
+							</div>
+							
+							{# Render the search results #}
+							<div class="col-sm-9">
+							<h3>Search Results</h3>
+                                {{ drupal_view('main_solr_search', 'search') }}
+							</div>
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		{% endif %}
+    {% endblock %}

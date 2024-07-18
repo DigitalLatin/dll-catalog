@@ -12845,17 +12845,14 @@ footer.footer-dark a:hover,
     Navbar
    ======================================================================== */
 /* Cribbed from https://stackoverflow.com/a/43382283 */
-/* change the background color */
 .navbar-custom {
   background-color: #005cb9;
 }
 
-/* change the link color */
 .navbar-custom .navbar-nav .nav-link, .navbar-custom .navbar-nav .media-library-view--widget .view-header a, .media-library-view--widget .view-header .navbar-custom .navbar-nav a {
   color: #fff;
 }
 
-/* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link, .navbar-custom .media-library-view--widget .view-header a.nav-item.is-active .nav-link, .media-library-view--widget .view-header .navbar-custom a.nav-item.is-active .nav-link, .navbar-custom .nav-item.active .media-library-view--widget .view-header a, .media-library-view--widget .view-header .navbar-custom .nav-item.active a, .navbar-custom .media-library-view--widget .view-header a.nav-item.is-active a, .media-library-view--widget .view-header .navbar-custom a.nav-item.is-active a,
 .navbar-custom .nav-item:focus .nav-link,
 .navbar-custom .nav-item:focus .media-library-view--widget .view-header a,
@@ -12874,29 +12871,69 @@ footer.footer-dark a:hover,
   text-transform: none;
 }
 
-/* Media query for large screens */
 @media (min-width: 992px) {
   .navbar-brand .site-title {
     font-size: 2rem;
   }
 }
 /* ======================================================================== 
+    Info Menu
+   ======================================================================== */
+#info-menu > ul {
+  list-style: none;
+}
+
+#info-menu li {
+  padding-bottom: 1.25rem;
+}
+
+#info-menu ul ul > li:first-child {
+  padding-top: 1.25rem;
+}
+
+#info-menu a {
+  color: #005cb9;
+}
+
+#info-menu a:hover {
+  color: #A33701;
+}
+
+#info-menu h3, #info-menu .h3 {
+  border-bottom: thin solid;
+  padding-bottom: 0.25rem;
+}
+
+/* ======================================================================== 
     Layout
    ======================================================================== */
-/* insert space between navbar and breadcrumbs */
 .region-breadcrumb {
   margin-top: 1.25rem;
 }
 
-/* insert space between page title and breadcrumbs */
+.region-content {
+  padding: 0 0.5rem 3.75rem 0.5rem;
+}
+
 #block-dll-catalog-page-title {
   margin-top: 1.75rem;
+}
+
+#about-search tr {
+  padding: 1rem 0;
+}
+
+#about-search td {
+  padding: 1rem;
+}
+
+table {
+  width: 100%;
 }
 
 /* ======================================================================== 
     Content types
    ======================================================================== */
-/* add some space between the heading and the content */
 .node--type-author-authorities,
 .node--type-dll-work,
 .node--type-repository-item,
@@ -12904,7 +12941,13 @@ footer.footer-dark a:hover,
   margin: 2.75rem 0 1.5rem 0;
 }
 
-h1, .h1 {
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
   color: #A33701;
 }
 
@@ -12917,7 +12960,6 @@ h1, .h1 {
   padding: 0.25rem 0 1rem 3.75rem;
 }
 
-/* Media query for large screens */
 @media (min-width: 992px) {
   #author-authority-title,
   #dll-work-title,
@@ -12944,10 +12986,12 @@ h1, .h1 {
 }
 
 #author-data,
-#work-data {
+#work-data,
+#info-menu {
   background-color: #eaf7fb;
   padding-top: 1rem;
   margin-bottom: 1rem;
+  height: fit-content;
 }
 
 #author-data .field,
@@ -13008,6 +13052,111 @@ h1, .h1 {
 #work-web-pages h3,
 #work-web-pages .h3 {
   background-image: url(/themes/custom/dll_catalog/images/webpage-on-blue.svg);
+}
+
+.authority-icon,
+.dll-work-icon,
+.item-icon,
+.webpage-icon,
+.ms-icon {
+  background-position: unset;
+  margin-top: 2.75rem;
+  background-repeat: no-repeat;
+  padding: 0.25rem 0 1rem 3.75rem;
+}
+
+.authority-icon {
+  background-image: url(/themes/custom/dll_catalog/images/authority-record-on-orange.svg);
+}
+
+.dll-work-icon {
+  background-image: url(/themes/custom/dll_catalog/images/dll-work-on-orange.svg);
+}
+
+.item-icon {
+  background-image: url(/themes/custom/dll_catalog/images/item-record-on-orange.svg);
+}
+
+.webpage-icon {
+  background-image: url(/themes/custom/dll_catalog/images/webpage-on-orange.svg);
+}
+
+.ms-icon {
+  background-image: url(/themes/custom/dll_catalog/images/manuscript-on-orange.svg);
+}
+
+.node__meta {
+  border-bottom: thin solid;
+  margin-bottom: 1.75rem;
+  padding: 0;
+}
+
+.node__submitted {
+  font-size: smaller;
+  font-style: italic;
+}
+
+article.node--view-mode-teaser {
+  border: thin solid grey;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.view-id-updates ul > li:first-child {
+  margin-top: 2.5rem;
+}
+
+/* ======================================================================== 
+    Search page
+   ======================================================================== */
+.block-views-exposed-filter-blockmain-solr-search-search h1, .block-views-exposed-filter-blockmain-solr-search-search .h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form--inline .form-item.form-type-search-api-autocomplete {
+  float: none;
+  width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#views-exposed-form-main-solr-search-search,
+#views-exposed-form-main-solr-search-search input {
+  text-align: center;
+}
+
+.search-container {
+  margin-top: 2.75rem;
+}
+
+.search-sidebar {
+  background: #eaf7fb;
+  padding: 2rem 0.5rem 1.5rem 1rem;
+}
+
+.search-sidebar h3, .search-sidebar .h3 {
+  border-bottom: solid thin grey;
+  padding-bottom: 0.5rem;
+  margin-right: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.search-sidebar li {
+  padding: 0;
+  display: block;
+  margin-left: 0;
+}
+
+.search-sidebar label {
+  margin-left: 0.5rem;
+}
+
+#views-bootstrap-main-solr-search-search--2 article {
+  border: thin solid grey;
+  padding: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -47,17 +47,17 @@ footer.footer-dark a:hover,
    ======================================================================== */
 
 /* Cribbed from https://stackoverflow.com/a/43382283 */
-/* change the background color */
+// change the background color
 .navbar-custom {
     background-color: #005cb9;
 }
 
-/* change the link color */
+// change the link color
 .navbar-custom .navbar-nav .nav-link {
     color: #fff;
 }
 
-/* change the color of active or hovered links */
+// change the color of active or hovered links
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:focus .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
@@ -73,7 +73,7 @@ footer.footer-dark a:hover,
     text-transform: none;
 }
 
-/* Media query for large screens */
+// Media query for large screens
 @media (min-width: 992px) {
     .navbar-brand .site-title {
         font-size: 2rem;
@@ -81,24 +81,77 @@ footer.footer-dark a:hover,
 }
 
 /* ======================================================================== 
+    Info Menu
+   ======================================================================== */
+
+// Remove the bullet from the top-level list
+#info-menu > ul {
+    list-style: none;
+}
+
+// Add space after each item
+#info-menu li {
+    padding-bottom: 1.25rem;
+}
+
+// Pad the top of the first item in the submenu
+#info-menu ul ul > li:first-child {
+    padding-top: 1.25rem;
+}
+
+// Set the color of the links
+#info-menu a {
+    color:#005cb9;
+}
+
+#info-menu a:hover {
+    color:#A33701;
+}
+
+// Give the heading a border and some space
+#info-menu h3 {
+    border-bottom: thin solid;
+    padding-bottom: 0.25rem;
+}
+
+/* ======================================================================== 
     Layout
    ======================================================================== */
 
-/* insert space between navbar and breadcrumbs */
+// Insert space between navbar and breadcrumbs
 .region-breadcrumb {
     margin-top: 1.25rem;
 }
 
-/* insert space between page title and breadcrumbs */
+// Space around the main content
+.region-content {
+    padding: 0 0.5rem 3.75rem 0.5rem;
+}
+
+// Insert space between page title and breadcrumbs
 #block-dll-catalog-page-title {
     margin-top: 1.75rem;
+}
+
+// Table on "About" page
+#about-search tr {
+    padding: 1rem 0;
+}
+
+#about-search td {
+    padding: 1rem;
+}
+
+// Table width
+table {
+    width: 100%;
 }
 
 /* ======================================================================== 
     Content types
    ======================================================================== */
 
-/* add some space between the heading and the content */
+// Add some space between the heading and the content
 
 .node--type-author-authorities,
 .node--type-dll-work,
@@ -107,10 +160,15 @@ footer.footer-dark a:hover,
     margin: 2.75rem 0 1.5rem 0;
 }
 
-h1 {
+// Set the color for all headings
+h1,
+h2,
+h3,
+h4 {
     color:#A33701;
 }
 
+// Add some space around the title
 #author-authority-title,
 #dll-work-title,
 #item-record-title,
@@ -120,7 +178,7 @@ h1 {
     padding: 0.25rem 0 1rem 3.75rem;
 }
 
-/* Media query for large screens */
+// Media query for large screens
 @media (min-width: 992px) {
     #author-authority-title,
     #dll-work-title,
@@ -131,6 +189,7 @@ h1 {
     }
 }
 
+// Icons for titles
 #author-authority-title {
     background-image: url(/themes/custom/dll_catalog/images/authority-record-on-orange.svg);
 }
@@ -147,13 +206,17 @@ h1 {
     background-image: url(/themes/custom/dll_catalog/images/webpage-on-orange.svg);
 }
 
+// Styling the column that holds author and work data
 #author-data,
-#work-data {
+#work-data,
+#info-menu {
    background-color:#eaf7fb;
    padding-top: 1rem;
    margin-bottom: 1rem;
+   height:fit-content;
 }
 
+// Space between fields in author and work data columns
 #author-data .field,
 #work-data .field,
 #item-record .field,
@@ -161,6 +224,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
+// Uppercase field labels
 #author-data .field__label,
 #work-data .field__label,
 #item-record .field__label,
@@ -168,11 +232,13 @@ h1 {
     text-transform: uppercase;
 }
 
+// Space between divs in contextual views
 #author-contextual-views > div,
 #work-contextual-views > div {
     margin-bottom: 3.5rem;
 }
 
+// Subheadings in author and work pages
 #author-data h3,
 #author-contextual-views h3,
 #work-data h3,
@@ -183,6 +249,7 @@ h1 {
     padding: 0 0 0.75rem 3rem;
 }
 
+// Icons for subheadings in author and work pages
 #author-data h3 {
     background-image: url(/themes/custom/dll_catalog/images/authority-record-on-blue.svg);
 }
@@ -207,4 +274,121 @@ h1 {
 #author-web-pages h3,
 #work-web-pages h3 {
     background-image: url(/themes/custom/dll_catalog/images/webpage-on-blue.svg);
+}
+
+// Basic page styles
+
+.authority-icon,
+.dll-work-icon,
+.item-icon,
+.webpage-icon,
+.ms-icon {
+    background-position: unset;
+    margin-top: 2.75rem;
+    background-repeat: no-repeat;
+    padding: 0.25rem 0 1rem 3.75rem;
+}
+
+.authority-icon {
+    background-image: url(/themes/custom/dll_catalog/images/authority-record-on-orange.svg);
+}
+
+.dll-work-icon {
+    background-image: url(/themes/custom/dll_catalog/images/dll-work-on-orange.svg);
+}
+
+.item-icon {
+    background-image: url(/themes/custom/dll_catalog/images/item-record-on-orange.svg);
+}
+
+.webpage-icon {
+    background-image: url(/themes/custom/dll_catalog/images/webpage-on-orange.svg);
+}
+
+.ms-icon {
+    background-image: url(/themes/custom/dll_catalog/images/manuscript-on-orange.svg);
+}
+
+// Article styles
+
+.node__meta {
+    border-bottom: thin solid;
+    margin-bottom: 1.75rem;
+    padding: 0;
+}
+.node__submitted {
+    font-size: smaller;
+    font-style: italic;
+}
+
+article.node--view-mode-teaser {
+    border: thin solid grey;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.view-id-updates ul > li:first-child {
+    margin-top: 2.5rem;
+}
+/* ======================================================================== 
+    Search page
+   ======================================================================== */
+
+// Center the heading
+.block-views-exposed-filter-blockmain-solr-search-search h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+// Center the search box
+.form--inline .form-item.form-type-search-api-autocomplete {
+    float: none;
+    width: 75%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Center the search terms
+#views-exposed-form-main-solr-search-search,
+#views-exposed-form-main-solr-search-search input {
+    text-align: center;
+}
+
+// Space above the search container
+.search-container {
+    margin-top: 2.75rem;
+}
+
+// Search Sidebar (facets)
+.search-sidebar {
+    background: #eaf7fb;
+    padding: 2rem 0.5rem 1.5rem 1rem;
+}
+
+// Search sidebar h3 style
+.search-sidebar h3 {
+    border-bottom: solid thin grey;
+    padding-bottom: 0.5rem;
+    margin-right: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+// Remove bullets from facet checkboxes
+.search-sidebar li {
+  padding: 0;
+  display: block;
+  margin-left: 0;
+}
+
+// Add some space between facet checkboxes and labels
+.search-sidebar label {
+  margin-left: 0.5rem;
+}
+
+// Search results
+#views-bootstrap-main-solr-search-search--2 article {
+    border: thin solid grey;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
