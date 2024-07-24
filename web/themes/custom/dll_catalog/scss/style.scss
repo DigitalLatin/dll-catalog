@@ -118,6 +118,45 @@ footer.footer-dark a:hover,
     Layout
    ======================================================================== */
 
+// Front search box
+#front-search {
+    background-color: #eaf7fb;
+    border: thin solid #005cb9;
+    padding: 1rem;
+    margin-top: 2rem;
+    @media (min-width: 992px) {
+        width: 80%;
+    }
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Front page content margins
+#front-content,
+#browse-content {
+    margin-top: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+    @media (min-width: 992px) {
+        width: 75%;
+    }
+}
+
+// Front page heading
+#front-content #block-dll-catalog-page-title h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+// Space between heading and text body
+#front-node-text {
+    margin-top: 1.5rem;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
 // Insert space between navbar and breadcrumbs
 .region-breadcrumb {
     margin-top: 1.25rem;
@@ -148,15 +187,214 @@ table {
 }
 
 /* ======================================================================== 
+    Browse views
+   ======================================================================== */
+
+// Space at bottom of the page
+.browse {
+    margin-bottom: 3rem;
+}
+
+// Icon to the left of the heading
+.block-views-exposed-filter-blockbrowse-authors-browse-authors h2,
+.block-views-exposed-filter-blockbrowse-dll-work-records-browse-works h2,
+.block-views-exposed-filter-blockbrowse-item-records-browse-item-records h2,
+.block-views-exposed-filter-blockbrowse-web-pages-browse-web-pages h2 {
+    margin-bottom: 2rem;
+    background-repeat: no-repeat;
+    padding: 0.25rem 0 1rem 3.75rem;
+    // Media query for large screens
+    @media (min-width: 992px) {
+        background-size: 2.75rem 2.75rem;
+        background-position: left 6px;
+    }
+}
+
+.block-views-exposed-filter-blockbrowse-authors-browse-authors h2 {
+    background-image: url(/themes/custom/dll_catalog/images/authority-record-on-orange.svg);
+}
+
+.block-views-exposed-filter-blockbrowse-dll-work-records-browse-works h2 {
+    background-image: url(/themes/custom/dll_catalog/images/dll-work-on-orange.svg);
+}
+
+.block-views-exposed-filter-blockbrowse-item-records-browse-item-records h2 {
+    background-image: url(/themes/custom/dll_catalog/images/item-record-on-orange.svg);
+}
+
+.block-views-exposed-filter-blockbrowse-web-pages-browse-web-pages h2 {
+    background-image: url(/themes/custom/dll_catalog/images/webpage-on-orange.svg);
+}
+// Basic style for the search form
+#views-exposed-form-browse-authors-browse-authors,
+#views-exposed-form-browse-dll-work-records-browse-works,
+#views-exposed-form-browse-item-records-browse-item-records,
+#views-exposed-form-browse-web-pages-browse-web-pages {
+    background-color: #eaf7fb;
+    border: thin solid #005cb9;
+    @media (min-width: 992px) {
+        width: max-content;
+    }
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+// Move the buttons to the side of the search form
+#views-exposed-form-browse-authors-browse-authors .form--inline .form-actions,
+#views-exposed-form-browse-dll-work-records-browse-works .form--inline .form-actions,
+#views-exposed-form-browse-item-records-browse-item-records .form--inline .form-actions,
+#views-exposed-form-browse-web-pages-browse-web-pages .form--inline .form-actions {
+    @media (min-width: 992px) {
+        float: right;
+        clear: none;
+        margin-left: 3rem;
+        line-height: 6rem;
+    }
+}
+
+// Label for the search form
+#views-exposed-form-browse-authors-browse-authors label,
+#views-exposed-form-browse-dll-work-records-browse-works label,
+#views-exposed-form-browse-item-records-browse-item-records label,
+#views-exposed-form-browse-web-pages-browse-web-pages label {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+// Space for the form description
+#views-exposed-form-browse-authors-browse-authors #edit-search-api-fulltext--2--description,
+#views-exposed-form-browse-dll-work-records-browse-works #edit-search-api-fulltext--2--description,
+#views-exposed-form-browse-item-records-browse-item-records #edit-search-api-fulltext--2--description,
+#views-exposed-form-browse-web-pages-browse-web-pages #edit-search-api-fulltext--2--description {
+    margin-top: 0.5rem;
+}
+
+// Change the color of the reset button
+#views-exposed-form-browse-authors-browse-authors .btn:last-child,
+#views-exposed-form-browse-dll-work-records-browse-works .btn:last-child,
+#views-exposed-form-browse-item-records-browse-item-records .btn:last-child,
+#views-exposed-form-browse-web-pages-browse-web-pages .btn:last-child {
+    background-color: grey;
+}
+
+.browse .views-row {
+    margin-bottom: 1rem;
+}
+
+// Styles for item record browse view
+.view-browse-item-records .views-label,
+.view-browse-web-pages .views-label {
+    font-weight: bold;
+}
+
+.view-browse-item-records .views-field,
+.view-browse-web-pages .views-field {
+    margin-bottom: 1rem;
+}
+
+.view-browse-item-records .views-row,
+.view-browse-web-pages .views-row {
+    padding: 1rem;
+}
+
+.view-browse-item-records .views-row:nth-of-type(odd),
+.view-browse-web-pages .views-row:nth-of-type(odd) {
+    background-color: #F6F7F8;
+}
+
+/* ======================================================================== 
+    Browse Page
+   ======================================================================== */
+
+div.leaf {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2rem;
+    padding: 0;
+    border: 1px solid $blue;
+    position: relative;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+div.leaf.author {
+    background-image: url('/themes/custom/dll_catalog/images/authority-record-blue.svg');
+    background-position: 3rem center;
+    @media screen and (max-width: 950px) {
+        background-size: 4rem 6rem;
+    }
+}
+
+div.leaf.work {
+    background-image: url('/themes/custom/dll_catalog/images/dll-work-blue.svg');
+    background-position: 2.8rem center;
+    @media screen and (max-width: 950px) {
+        background-size: 4.2rem 4.8rem;
+    }
+}
+
+div.leaf.item-record {
+    background-image: url('/themes/custom/dll_catalog/images/item-record-blue.svg');
+    background-position: 3.3rem center;
+    @media screen and (max-width: 950px) {
+        background-size: 3.3rem 4.2rem;
+    }
+}
+
+div.leaf.webpage {
+    background-image: url('/themes/custom/dll_catalog/images/webpage-blue.svg');
+    background-position: 2.6rem center;
+    // background-position: 3.4rem center; spacing for manuscript
+    @media screen and (max-width: 950px) {
+        //background-size: 3.3rem 5.8rem;  spacing for manuscript
+        background-size: 4.4rem;
+    }
+}
+
+
+div.leaf a:hover {
+    color: #A33701;
+}
+    
+    
+div.leaf a {
+    font-size: 2.25rem;
+    font-weight: 300;
+    padding: 4rem 3rem 4rem 13rem;
+    @media screen and (max-width: 950px) {
+        padding: 3rem 2rem 3rem 12rem;
+        font-size: 2rem;
+    }
+    display: block;
+
+    &:before {
+        width: 11rem;
+        display: block;
+        height: 5rem;
+        content: 'icon';
+        color: transparent;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        border-right: 1px solid $blue;
+        @media screen and (max-width: 950px) {
+            width: 10rem;
+        }
+    }
+}
+
+
+/* ======================================================================== 
     Content types
    ======================================================================== */
 
 // Add some space between the heading and the content
 
-.node--type-author-authorities,
-.node--type-dll-work,
-.node--type-repository-item,
-.node--type-web-page {
+.node--view-mode-full {
     margin: 2.75rem 0 1.5rem 0;
 }
 
@@ -176,14 +414,8 @@ h4 {
     margin-bottom: 2rem;
     background-repeat: no-repeat;
     padding: 0.25rem 0 1rem 3.75rem;
-}
-
-// Media query for large screens
-@media (min-width: 992px) {
-    #author-authority-title,
-    #dll-work-title,
-    #item-record-title,
-    #web-page-title {
+    // Media query for large screens
+    @media (min-width: 992px) {
         background-size: 2.75rem 2.75rem;
         background-position: left 6px;
     }
@@ -384,11 +616,14 @@ article.node--view-mode-teaser {
 // Add some space between facet checkboxes and labels
 .search-sidebar label {
   margin-left: 0.5rem;
+  display: inline;
 }
 
 // Search results
+#views-bootstrap-main-solr-search-search--2 li.list-group-item:nth-of-type(odd) {
+    background-color: #F6F7F8;    
+}
+
 #views-bootstrap-main-solr-search-search--2 article {
-    border: thin solid grey;
     padding: 1rem;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }

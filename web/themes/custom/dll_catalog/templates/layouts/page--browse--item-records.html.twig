@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Template for the browse item records page.
+ */
+#}
+{% extends 'page.html.twig' %}
+{% block content %}
+	{% if page.content %}
+		<div
+			class="page__content">
+			{# Place the search form block #}
+            {{ drupal_block('views_exposed_filter_block:browse_item_records-browse_item_records') }}
+
+			{# Render the list of authors #}
+			<div class="browse">
+				{{ drupal_view('browse_item_records', 'browse_item_records') }}
+			</div>
+		</div>
+	{% endif %}
+{% endblock %}

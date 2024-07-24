@@ -2,3 +2,8 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+searchjs:
+  js:
+    js/search.js: {}
+  dependencies:
+    - core/jquery

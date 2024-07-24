@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Template for the browse web pages page.
+ */
+#}
+{% extends 'page.html.twig' %}
+{% block content %}
+	{% if page.content %}
+		<div
+			class="page__content">
+			{# Place the search form block #}
+                {{ drupal_block('views_exposed_filter_block:browse_web_pages-browse_web_pages') }}
+
+			{# Render the list of authors #}
+			<div class="browse">
+                {{ drupal_view('browse_web_pages', 'browse_web_pages') }}
+			</div>
+		</div>
+	{% endif %}
+{% endblock %}

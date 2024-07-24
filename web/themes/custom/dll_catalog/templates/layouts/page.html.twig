@@ -84,7 +84,6 @@ set footer_classes = ' ' ~
 	<main role="main">
 		<a id="main-content" tabindex="-1"></a>
 		{# link is in html.html.twig #}
-
 		{%
   set sidebar_first_classes = (page.sidebar_first and page.sidebar_second) ? 'col-12 col-sm-6 col-lg-3' : 'col-12 col-lg-3'
   %}
@@ -109,9 +108,10 @@ set footer_classes = ' ' ~
 					</div>
 				{% endif %}
 				<div class="order-1 order-lg-2 {{ content_classes }}">
-          {% block content %}
-            {{ page.content }}
-          {% endblock %}
+					{{ drupal_block('system_messages_block') }}
+					{% block content %}						
+						{{ page.content }}
+					{% endblock %}
 				</div>
 				{% if page.sidebar_second %}
 					<div class="order-3 {{ sidebar_second_classes }}">

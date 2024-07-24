@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Template for the search page.
+ */
+#}
+{% extends 'page.html.twig' %}
+{% block content %}
+	{% if page.content %}
+		<div class="page__content">
+			<div id="front-search">
+                {# Place the search form block #}
+                {{ drupal_block('views_exposed_filter_block:main_solr_search-search') }}
+            </div>
+			<div id="front-content">
+                {{ page.content }}
+            </div>
+		</div>
+	{% endif %}
+{% endblock %}
+

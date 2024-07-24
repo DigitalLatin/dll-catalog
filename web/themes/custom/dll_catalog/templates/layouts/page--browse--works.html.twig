@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Template for the browse works page.
+ */
+#}
+{% extends 'page.html.twig' %}
+{% block content %}
+	{% if page.content %}
+		<div
+			class="page__content">
+			{# Place the search form block #}
+            {{ drupal_block('views_exposed_filter_block:browse_dll_work_records-browse_works') }}
+
+			{# Render the list of authors #}
+			<div class="browse">
+            {{ drupal_view('browse_dll_work_records', 'browse_works') }}
+			</div>
+		</div>
+	{% endif %}
+{% endblock %}
+

@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display the FAQ page.
+ * Theme override to display the front page.
  *
  * Available variables:
  * - node: The node entity with limited access to object properties and methods.
@@ -80,29 +80,11 @@
 {{ attach_library('bootstrap5/node') }}
 <article{{attributes.addClass(classes)}}>
 
-	{{ title_prefix }}
-	{% if label and not page %}
-		<h2{{title_attributes}}>
-			<a href="{{ url }}" rel="bookmark">{{ label }}</a>
-		</h2>
-	{% endif %}
-	{{ title_suffix }}
-
-    <div{{content_attributes.addClass('node__content')}}>
-        <div class="container">
-            <div class="row">
-                {# Render the Info Menu in a thin column #}
-                <div id="info-menu" class="col-md-4 order-lg-2 order-md-2">
-                    <h3>About the Catalog</h3>
-                    {{ drupal_menu('menu-info-menu') }}
-                </div>
-                {# Render the contextual views in a wider column #}
-                <div id="main-text" class="col-md-8 order-lg-1 order-md-1">
-                    {{ content }}
-                </div>
-            </div>
+	<div{{content_attributes.addClass('node__content')}}>
+        <div id="front-node-text">
+            {{ content }}
         </div>
-    </div>
+	</div>
 
 </article>
 

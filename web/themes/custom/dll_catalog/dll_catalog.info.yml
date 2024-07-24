@@ -5,6 +5,7 @@ core_version_requirement: '^9.4 || ^10'
 'base theme': bootstrap5
 libraries:
   - dll_catalog/global-styling
+  - dll_catalog/searchjs
 ckeditor_stylesheets:
   - css/style.css
 ckeditor5-stylesheets:
