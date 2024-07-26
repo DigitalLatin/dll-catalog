@@ -1,0 +1,19 @@
+{
+    "name": "digitallatin/dll_json_ld",
+    "description": "Provides JSON-LD output for nodes.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "minimum-stability": "dev",
+    "require": {
+        "drupal/core": "^9.4 || ^10"
+    },
+    "authors": [
+        {
+            "name": "Samuel J. Huskey",
+            "email": "samueljhuskey@gmail.com"
+        },
+        {
+            "name": "Chat-GPT"
+        }
+    ]
+}

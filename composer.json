@@ -12,11 +12,16 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/DigitalLatin/dll_json_ld.git"
         }
     ],
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
+        "digitallatin/dll_json_ld": "dev-main",
         "drupal/auto_entitylabel": "^3.2",
         "drupal/bootstrap5": "^4.0",
         "drupal/computed_field": "^3.0",
