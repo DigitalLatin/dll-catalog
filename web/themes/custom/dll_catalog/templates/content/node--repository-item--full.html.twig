@@ -84,7 +84,6 @@
 {{ attach_library('bootstrap5/node') }}
 <article{{attributes.addClass(classes).setAttribute('id',id)}}>
 
-
 	{{ title_prefix }}
 	{% if label and not page %}
 		<h2{{title_attributes}}>
@@ -95,6 +94,7 @@
 
 	<div{{content_attributes.addClass('node__content')}}>
 		{{ content }}
+		<hr/>
 	</div>
 
 </article>

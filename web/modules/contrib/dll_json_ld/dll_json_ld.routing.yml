@@ -1,0 +1,35 @@
+dll_json_ld.json_ld_author_authorities:
+  path: '/dll-author/{id}'
+  defaults:
+    _controller: '\Drupal\dll_json_ld\Controller\JsonLdController::view'
+    _title: 'Author Authorities JSON-LD'
+    content_type: 'author_authorities'
+  requirements:
+    _permission: 'access content'
+
+dll_json_ld.json_ld_work:
+  path: '/dll-work/{id}'
+  defaults:
+    _controller: '\Drupal\dll_json_ld\Controller\JsonLdController::view'
+    _title: 'Work JSON-LD'
+    content_type: 'dll_work'
+  requirements:
+    _permission: 'access content'
+
+dll_json_ld.json_ld_item_record:
+  path: '/dll-item-record/{id}'
+  defaults:
+    _controller: '\Drupal\dll_json_ld\Controller\JsonLdController::view'
+    _title: 'Item Record JSON-LD'
+    content_type: 'repository_item'
+  requirements:
+    _permission: 'access content'
+
+dll_json_ld.json_ld_web_page:
+  path: '/dll-web-page/{id}'
+  defaults:
+    _controller: '\Drupal\dll_json_ld\Controller\JsonLdController::view'
+    _title: 'Web Page JSON-LD'
+    content_type: 'web_page'
+  requirements:
+    _permission: 'access content'

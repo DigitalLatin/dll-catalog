@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Implements hook_entity_view().
+ */
+function dll_json_ld_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity->getEntityTypeId() === 'node' && $view_mode === 'full') {
+    // Check the bundle type.
+    switch ($entity->bundle()) {
+      case 'repository_item':
+      case 'author_authorities':
+      case 'web_page':
+      case 'dll_work':
+        
+        // Add cache context for specific content types.
+        $build['#cache']['contexts'][] = 'url.query_args:format';
+
+        // Ensure your module's code runs and attaches necessary data.
+        \Drupal::logger('dll_json_ld')->info('Running hook_entity_view for bundle: @bundle', ['@bundle' => $entity->bundle()]);
+
+        break;
+    }
+  }
+}

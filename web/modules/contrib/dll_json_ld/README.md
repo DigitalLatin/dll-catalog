@@ -14,28 +14,22 @@ This module was composed by Samuel J. Huskey.
 
 ## File and Directory Structure
 
-```
+```text
 dll_json_ld/
 ├── src/
 │   ├── Controller/
-│   │   ├── AuthorAuthoritiesController.php
-│   │   ├── DllItemRecordController.php
-│   │   ├── DllWebPageController.php
-│   │   └── DllWorkController.php
+│   │   └── JsonLdController.php
 │   ├── EventSubscriber/
 │   │   └── JsonLdRequestSubscriber.php
 │   ├── Routing/
 │   │   └── RouteSubscriber.php
 │   ├── Service/
-│   │   ├── Formatter/
-│   │   │   ├── AuthorAuthoritiesFormatter.php
-│   │   │   ├── DllWorkFormatter.php
-│   │   │   ├── ItemRecordFormatter.php
-│   │   │   └── WebPageFormatter.php
 │   │   └── JsonLdFormatter.php
-│   └── Utility/
-│       └── JsonLdUtility.php
-├── dll_json_ld.routing.yml
+├── composer.json
 ├── dll_json_ld.info.yml
-└── dll_json_ld.services.yml
+├── dll_json_ld.module
+├── dll_json_ld.routing.yml
+├── dll_json_ld.services.yml
+├── LICENSE
+└── README.md
 ```

@@ -29,6 +29,7 @@ class ComposerStaticInit707f7590d632e07d7add8405a30a9cb8
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '9e4824c5afbdc1482b6025ce3d4dfde8' => __DIR__ . '/..' . '/league/csv/src/functions_include.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
+        '3917c79c5052b270641b5a200963dbc2' => __DIR__ . '/..' . '/kint-php/kint/init.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -115,6 +116,10 @@ class ComposerStaticInit707f7590d632e07d7add8405a30a9cb8
             'League\\Container\\' => 17,
             'Laminas\\Stdlib\\' => 15,
         ),
+        'K' => 
+        array (
+            'Kint\\' => 5,
+        ),
         'J' => 
         array (
             'JsonSchema\\' => 11,
@@ -141,9 +146,11 @@ class ComposerStaticInit707f7590d632e07d7add8405a30a9cb8
             'Drupal\\Component\\' => 17,
             'DrupalFinder\\' => 13,
             'DrupalCodeGenerator\\' => 20,
+            'Doctrine\\Persistence\\' => 21,
             'Doctrine\\Deprecations\\' => 22,
             'Doctrine\\Common\\Lexer\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
+            'Doctrine\\Common\\' => 16,
             'Dflydev\\DotAccessData\\' => 22,
         ),
         'C' => 
@@ -390,6 +397,10 @@ class ComposerStaticInit707f7590d632e07d7add8405a30a9cb8
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-stdlib/src',
         ),
+        'Kint\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kint-php/kint/src',
+        ),
         'JsonSchema\\' => 
         array (
             0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
@@ -450,6 +461,10 @@ class ComposerStaticInit707f7590d632e07d7add8405a30a9cb8
         array (
             0 => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src',
         ),
+        'Doctrine\\Persistence\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/persistence/src/Persistence',
+        ),
         'Doctrine\\Deprecations\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/deprecations/lib/Doctrine/Deprecations',
@@ -461,6 +476,11 @@ class ComposerStaticInit707f7590d632e07d7add8405a30a9cb8
         'Doctrine\\Common\\Annotations\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/annotations/lib/Doctrine/Common/Annotations',
+        ),
+        'Doctrine\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/common/src',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/src',
         ),
         'Dflydev\\DotAccessData\\' => 
         array (

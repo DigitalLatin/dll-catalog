@@ -52,6 +52,9 @@
   /* ======================================================================== 
       Search page
      ======================================================================== */
+  /* ======================================================================== 
+      General styles
+     ======================================================================== */
 }
 .ck-content :root,
 .ck-content [data-bs-theme=light] {
@@ -12368,6 +12371,9 @@ a > .ck-content code {
 }
 .ck-content #views-bootstrap-main-solr-search-search--2 article {
   padding: 1rem;
+}
+.ck-content .structured-data {
+  font-size: smaller;
 }
 
 /*# sourceMappingURL=ck5style.css.map */

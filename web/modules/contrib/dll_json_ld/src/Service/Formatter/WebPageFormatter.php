@@ -24,6 +24,7 @@ class WebPageFormatter {
    *   The JSON-LD formatted data.
    */
   public function format(NodeInterface $node) {
+    \Drupal::logger('dll_json_ld')->info('Formatting Web Page node: @nid', ['@nid' => $node->id()]);
     return [
       '@context' => [
         '@base' => 'https://catalog.digitallatin.org',

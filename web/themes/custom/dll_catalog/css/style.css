@@ -13426,4 +13426,11 @@ article.node--view-mode-teaser {
   padding: 1rem;
 }
 
+/* ======================================================================== 
+    General styles
+   ======================================================================== */
+.structured-data {
+  font-size: smaller;
+}
+
 /*# sourceMappingURL=style.css.map */

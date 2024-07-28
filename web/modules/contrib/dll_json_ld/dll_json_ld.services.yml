@@ -1,25 +1,10 @@
 services:
-  dll_json_ld.route_subscriber:
-    class: Drupal\dll_json_ld\Routing\RouteSubscriber
-    tags:
-      - { name: event_subscriber }
-  dll_json_ld.author_authorities_formatter:
-    class: Drupal\dll_json_ld\Service\Formatter\AuthorAuthoritiesFormatter
-    arguments: ['@path_alias.manager']
-  dll_json_ld.dll_work_formatter:
-    class: Drupal\dll_json_ld\Service\Formatter\DllWorkFormatter
-    arguments: ['@path_alias.manager']
-  dll_json_ld.item_record_formatter:
-    class: Drupal\dll_json_ld\Service\Formatter\ItemRecordFormatter
-    arguments: ['@path_alias.manager']
-  dll_json_ld.web_page_formatter:
-    class: Drupal\dll_json_ld\Service\Formatter\WebPageFormatter
-    arguments: ['@path_alias.manager']
   dll_json_ld.json_ld_formatter:
     class: Drupal\dll_json_ld\Service\JsonLdFormatter
     arguments: ['@path_alias.manager']
+
   dll_json_ld.json_ld_request_subscriber:
     class: Drupal\dll_json_ld\EventSubscriber\JsonLdRequestSubscriber
-    arguments: ['@entity_type.manager', '@dll_json_ld.author_authorities_formatter', '@dll_json_ld.dll_work_formatter', '@dll_json_ld.item_record_formatter', '@dll_json_ld.web_page_formatter', '@path_alias.manager', '@logger.channel.default']
+    arguments: ['@entity_type.manager', '@dll_json_ld.json_ld_formatter', '@path_alias.manager', '@logger.factory', '@renderer']
     tags:
       - { name: event_subscriber }
