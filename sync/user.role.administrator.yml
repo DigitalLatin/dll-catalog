@@ -1,0 +1,116 @@
+uuid: 9a91b462-bf3d-4dd0-a534-80dd10f93239
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - filter.format.php_code
+    - node.type.article
+    - node.type.author_authorities
+    - node.type.dll_work
+    - node.type.manuscript
+    - node.type.page
+    - node.type.panel
+    - node.type.repository_item
+  module:
+    - announcements_feed
+    - block
+    - contact
+    - contextual
+    - filter
+    - image
+    - metatag
+    - node
+    - path
+    - pathauto
+    - shortcut
+    - system
+    - taxonomy
+    - toolbar
+    - views_ui
+_core:
+  default_config_hash: OeKGIkmZA_c-t6QLH81WNQx8gDCc1MRmxaTuQgxBByU
+id: administrator
+label: administrator
+weight: 7
+is_admin: true
+permissions:
+  - 'access administration pages'
+  - 'access announcements'
+  - 'access content'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access site-wide contact form'
+  - 'access toolbar'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'administer blocks'
+  - 'administer contact forms'
+  - 'administer content types'
+  - 'administer filters'
+  - 'administer image styles'
+  - 'administer menu'
+  - 'administer meta tags'
+  - 'administer modules'
+  - 'administer nodes'
+  - 'administer pathauto'
+  - 'administer permissions'
+  - 'administer shortcuts'
+  - 'administer site configuration'
+  - 'administer software updates'
+  - 'administer taxonomy'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'administer views'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'create article content'
+  - 'create author_authorities content'
+  - 'create dll_work content'
+  - 'create manuscript content'
+  - 'create page content'
+  - 'create panel content'
+  - 'create repository_item content'
+  - 'create url aliases'
+  - 'customize shortcut links'
+  - 'delete any article content'
+  - 'delete any author_authorities content'
+  - 'delete any dll_work content'
+  - 'delete any manuscript content'
+  - 'delete any page content'
+  - 'delete any panel content'
+  - 'delete any repository_item content'
+  - 'delete own article content'
+  - 'delete own author_authorities content'
+  - 'delete own dll_work content'
+  - 'delete own manuscript content'
+  - 'delete own page content'
+  - 'delete own panel content'
+  - 'delete own repository_item content'
+  - 'edit any article content'
+  - 'edit any author_authorities content'
+  - 'edit any dll_work content'
+  - 'edit any manuscript content'
+  - 'edit any page content'
+  - 'edit any panel content'
+  - 'edit any repository_item content'
+  - 'edit own article content'
+  - 'edit own author_authorities content'
+  - 'edit own dll_work content'
+  - 'edit own manuscript content'
+  - 'edit own page content'
+  - 'edit own panel content'
+  - 'edit own repository_item content'
+  - 'notify of path changes'
+  - 'select account cancellation method'
+  - 'switch shortcut sets'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'use text format php_code'
+  - 'view own unpublished content'
+  - 'view the administration theme'

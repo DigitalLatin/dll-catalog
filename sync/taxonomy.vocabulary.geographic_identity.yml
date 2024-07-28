@@ -1,0 +1,9 @@
+uuid: 2394a1d8-0a7e-4319-abfd-5f417aadd00c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Geographic Identity'
+vid: geographic_identity
+description: 'geographic terms imported by feeds from authorized author master'
+weight: 0
+new_revision: false

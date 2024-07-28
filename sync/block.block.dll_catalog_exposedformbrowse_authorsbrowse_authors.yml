@@ -1,0 +1,28 @@
+uuid: a5059c4c-017b-4c1c-8292-9ebe6b2c2a43
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.browse_authors
+  module:
+    - system
+    - views
+  theme:
+    - dll_catalog
+id: dll_catalog_exposedformbrowse_authorsbrowse_authors
+theme: dll_catalog
+region: content
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:browse_authors-browse_authors'
+settings:
+  id: 'views_exposed_filter_block:browse_authors-browse_authors'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/browse/authors\r\n/browse/authors/*"

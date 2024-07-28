@@ -1,0 +1,19 @@
+uuid: ee87dccc-ab70-4fac-b3f7-a0ed52b4e76d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pagination
+    - node.type.repository_item
+id: node.repository_item.field_pagination
+field_name: field_pagination
+entity_type: node
+bundle: repository_item
+label: Pagination
+description: 'The pagination of an item, usually only used for items published in a journal or other work.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

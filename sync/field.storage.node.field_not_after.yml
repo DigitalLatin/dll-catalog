@@ -1,0 +1,20 @@
+uuid: b475d44b-b961-44c0-9a0a-501db14abfdc
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_not_after
+field_name: field_not_after
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

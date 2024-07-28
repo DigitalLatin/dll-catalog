@@ -1,0 +1,19 @@
+uuid: d7205dc4-f85f-47c6-99f7-c1abb32f0e94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_identifier
+    - node.type.web_page
+id: node.web_page.field_identifier
+field_name: field_identifier
+entity_type: node
+bundle: web_page
+label: identifier
+description: 'The identifier by which this record is known in the original source.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

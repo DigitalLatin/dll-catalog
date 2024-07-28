@@ -1,0 +1,19 @@
+uuid: 808db868-7bf4-4f7e-8d07-92d2e2dd6edd
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_dll_authors
+field_name: field_dll_authors
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

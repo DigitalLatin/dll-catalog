@@ -1,0 +1,21 @@
+uuid: 23942919-592e-45d3-b242-798b7ce2887f
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_creator
+field_name: field_creator
+entity_type: node
+type: string
+settings:
+  max_length: 2000
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

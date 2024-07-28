@@ -1,0 +1,230 @@
+uuid: ae8bd1f1-0ed8-40ba-b64e-89aa96441d08
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dll_work.comment_node_dll_work
+    - field.field.node.dll_work.field_alternative_title
+    - field.field.node.dll_work.field_attributed_to
+    - field.field.node.dll_work.field_author
+    - field.field.node.dll_work.field_cts_urn
+    - field.field.node.dll_work.field_description
+    - field.field.node.dll_work.field_digiliblt_number
+    - field.field.node.dll_work.field_dll_identifier
+    - field.field.node.dll_work.field_dll_number
+    - field.field.node.dll_work.field_dll_page_link
+    - field.field.node.dll_work.field_dubious_spurious_attributi
+    - field.field.node.dll_work.field_has_part
+    - field.field.node.dll_work.field_identifier
+    - field.field.node.dll_work.field_part_of
+    - field.field.node.dll_work.field_phi_number
+    - field.field.node.dll_work.field_references
+    - field.field.node.dll_work.field_related_to_dll_work
+    - field.field.node.dll_work.field_short_title
+    - field.field.node.dll_work.field_source_id
+    - field.field.node.dll_work.field_source_work
+    - field.field.node.dll_work.field_stoa_number
+    - field.field.node.dll_work.field_work_abbreviated
+    - field.field.node.dll_work.field_work_authority
+    - field.field.node.dll_work.field_work_name
+    - node.type.dll_work
+  module:
+    - computed_field
+    - link
+    - options
+    - text
+    - user
+id: node.dll_work.default
+targetEntityType: node
+bundle: dll_work
+mode: default
+content:
+  field_alternative_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_attributed_to:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_author:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_cts_urn:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_digiliblt_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_dll_identifier:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_dll_page_link:
+    type: computed_string
+    label: above
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      sanitized: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_dubious_spurious_attributi:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_has_part:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_identifier:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_part_of:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_phi_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_references:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_related_to_dll_work:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_short_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_source_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_source_work:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_stoa_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_work_abbreviated:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_work_authority:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_work_name:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 22
+    region: content
+hidden:
+  comment_node_dll_work: true
+  field_dll_number: true
+  langcode: true
+  search_api_excerpt: true

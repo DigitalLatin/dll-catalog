@@ -1,0 +1,433 @@
+uuid: 4bd53ec9-abdf-47b0-9525-091d9c297062
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.author_authorities.comment_node_author_authoritie
+    - field.field.node.author_authorities.field_also_known_as
+    - field.field.node.author_authorities.field_ancient_geographic_identit
+    - field.field.node.author_authorities.field_author_birth_date
+    - field.field.node.author_authorities.field_author_death_date
+    - field.field.node.author_authorities.field_author_name_abbreviations
+    - field.field.node.author_authorities.field_author_name_english
+    - field.field.node.author_authorities.field_author_name_latin
+    - field.field.node.author_authorities.field_author_name_native_languag
+    - field.field.node.author_authorities.field_authorized_name
+    - field.field.node.author_authorities.field_bne_url
+    - field.field.node.author_authorities.field_bnf_url
+    - field.field.node.author_authorities.field_cts_urn
+    - field.field.node.author_authorities.field_digiliblt_number
+    - field.field.node.author_authorities.field_dll_author_number
+    - field.field.node.author_authorities.field_dll_identifier
+    - field.field.node.author_authorities.field_dll_number
+    - field.field.node.author_authorities.field_dll_page_link
+    - field.field.node.author_authorities.field_dnb_url
+    - field.field.node.author_authorities.field_editor
+    - field.field.node.author_authorities.field_floruit_active
+    - field.field.node.author_authorities.field_iccu_url
+    - field.field.node.author_authorities.field_isni_url
+    - field.field.node.author_authorities.field_loc_id
+    - field.field.node.author_authorities.field_locsource
+    - field.field.node.author_authorities.field_lofc_uri
+    - field.field.node.author_authorities.field_modern_geographic_identity
+    - field.field.node.author_authorities.field_other_alternative_name_for
+    - field.field.node.author_authorities.field_perseus_name
+    - field.field.node.author_authorities.field_phi_number
+    - field.field.node.author_authorities.field_source_author
+    - field.field.node.author_authorities.field_stoa_number
+    - field.field.node.author_authorities.field_time_period
+    - field.field.node.author_authorities.field_time_period_authorities
+    - field.field.node.author_authorities.field_viaf_id
+    - field.field.node.author_authorities.field_viaf_source
+    - field.field.node.author_authorities.field_wikidata_url
+    - field.field.node.author_authorities.field_wikipedia
+    - field.field.node.author_authorities.field_worldcat_identity
+    - node.type.author_authorities
+  module:
+    - comment
+    - computed_field
+    - link
+    - path
+    - serial
+id: node.author_authorities.default
+targetEntityType: node
+bundle: author_authorities
+mode: default
+content:
+  comment_node_author_authoritie:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_also_known_as:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ancient_geographic_identit:
+    type: entity_reference_autocomplete
+    weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_author_birth_date:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_author_death_date:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_author_name_abbreviations:
+    type: string_textfield
+    weight: 32
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_author_name_english:
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_author_name_latin:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_author_name_native_languag:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_authorized_name:
+    type: entity_reference_autocomplete
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_bne_url:
+    type: link_default
+    weight: 29
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_bnf_url:
+    type: link_default
+    weight: 26
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_cts_urn:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_digiliblt_number:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dll_author_number:
+    type: serial_default_widget
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dll_identifier:
+    type: string_textfield
+    weight: 34
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dll_number:
+    type: string_textfield
+    weight: 33
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dll_page_link:
+    type: computed_number_widget
+    weight: 38
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dnb_url:
+    type: link_default
+    weight: 27
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_editor:
+    type: boolean_checkbox
+    weight: 31
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_floruit_active:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_iccu_url:
+    type: link_default
+    weight: 28
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_isni_url:
+    type: link_default
+    weight: 25
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_loc_id:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_locsource:
+    type: link_default
+    weight: 14
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_lofc_uri:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_modern_geographic_identity:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_other_alternative_name_for:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_perseus_name:
+    type: string_textfield
+    weight: 20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_phi_number:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_source_author:
+    type: link_default
+    weight: 13
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_stoa_number:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_time_period:
+    type: options_select
+    weight: 37
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_time_period_authorities:
+    type: options_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_viaf_id:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_viaf_source:
+    type: link_default
+    weight: 15
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_wikidata_url:
+    type: link_default
+    weight: 24
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_wikipedia:
+    type: link_default
+    weight: 23
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_worldcat_identity:
+    type: link_default
+    weight: 30
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

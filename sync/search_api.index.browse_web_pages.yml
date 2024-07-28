@@ -1,0 +1,232 @@
+uuid: cd634ecc-f18d-45e1-9d80-aeaaebd1d7b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_access_date
+    - field.storage.node.field_author
+    - field.storage.node.field_work_reference
+    - field.storage.node.field_contributor
+    - field.storage.node.field_creator
+    - field.storage.node.field_dll_creator
+    - field.storage.node.field_dll_identifier
+    - field.storage.node.field_publisher
+    - field.storage.node.field_record_title
+    - field.storage.node.field_repository_source
+    - field.storage.node.field_rights
+    - field.storage.node.field_work_name
+    - search_api.server.dllcatalog
+  module:
+    - search_api_solr
+    - node
+    - search_api
+third_party_settings:
+  search_api_solr:
+    finalize: false
+    commit_before_finalize: false
+    commit_after_finalize: false
+    debug_finalize: false
+    highlighter:
+      maxAnalyzedChars: 51200
+      fragmenter: gap
+      usePhraseHighlighter: true
+      highlightMultiTerm: true
+      preserveMulti: false
+      regex:
+        slop: 0.5
+        pattern: blank
+        maxAnalyzedChars: 10000
+      highlight:
+        mergeContiguous: false
+        requireFieldMatch: false
+        snippets: 3
+        fragsize: 0
+    mlt:
+      mintf: 1
+      mindf: 1
+      maxdf: 0
+      maxdfpct: 0
+      minwl: 0
+      maxwl: 0
+      maxqt: 100
+      maxntp: 2000
+      boost: false
+      interestingTerms: none
+    term_modifiers:
+      slop: 3
+      fuzzy: 1
+      fuzzy_analyzer: true
+    advanced:
+      index_prefix: ''
+      collection: ''
+      timezone: ''
+    multilingual:
+      limit_to_content_language: false
+      include_language_independent: true
+      use_language_undefined_as_fallback_language: false
+      specific_languages:
+        en: '0'
+      use_universal_collation: false
+id: browse_web_pages
+name: 'Web Pages'
+description: 'Search index for Web Pages.'
+read_only: false
+field_settings:
+  field_access_date:
+    label: 'Access Date'
+    datasource_id: 'entity:node'
+    property_path: field_access_date
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_access_date
+  field_author:
+    label: 'DLL Work Reference » Content » Creator'
+    datasource_id: 'entity:node'
+    property_path: 'field_work_reference:entity:field_author'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_author
+        - field.storage.node.field_work_reference
+      module:
+        - node
+  field_contributor:
+    label: 'DLL Work Reference » Content » Contributor'
+    datasource_id: 'entity:node'
+    property_path: 'field_work_reference:entity:field_contributor'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_contributor
+        - field.storage.node.field_work_reference
+      module:
+        - node
+  field_creator:
+    label: Creator
+    datasource_id: 'entity:node'
+    property_path: field_creator
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_creator
+  field_dll_creator:
+    label: 'DLL Author'
+    datasource_id: 'entity:node'
+    property_path: field_dll_creator
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_dll_creator
+  field_dll_identifier:
+    label: 'DLL Identifier'
+    datasource_id: 'entity:node'
+    property_path: field_dll_identifier
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_dll_identifier
+  field_publisher:
+    label: Publisher
+    datasource_id: 'entity:node'
+    property_path: field_publisher
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_publisher
+  field_record_title:
+    label: 'Record title'
+    datasource_id: 'entity:node'
+    property_path: field_record_title
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_record_title
+  field_repository_source:
+    label: 'Repository Source'
+    datasource_id: 'entity:node'
+    property_path: field_repository_source
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_repository_source
+  field_rights:
+    label: rights
+    datasource_id: 'entity:node'
+    property_path: field_rights
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_rights
+  field_work_name:
+    label: 'DLL Work Reference » Content » Work Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_work_reference:entity:field_work_name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_work_name
+        - field.storage.node.field_work_reference
+      module:
+        - node
+  field_work_reference:
+    label: 'DLL Work Reference'
+    datasource_id: 'entity:node'
+    property_path: field_work_reference
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_work_reference
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - web_page
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  auto_aggregated_fulltext_field: {  }
+  custom_value: {  }
+  entity_status: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  solr_date_range:
+    weights:
+      preprocess_index: 0
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  index_directly: true
+  track_changes_in_references: true
+server: dllcatalog

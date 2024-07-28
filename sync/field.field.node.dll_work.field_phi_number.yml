@@ -1,0 +1,19 @@
+uuid: 77c1c2a5-43e2-49cc-8af9-2f74f2941bed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phi_number
+    - node.type.dll_work
+id: node.dll_work.field_phi_number
+field_name: field_phi_number
+entity_type: node
+bundle: dll_work
+label: 'PHI Number'
+description: "Enter the number assigned to this work in the Packard Humanities Institute's Classical Latin Texts database (http://latin.packhum.org)."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

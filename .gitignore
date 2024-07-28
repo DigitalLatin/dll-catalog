@@ -10,14 +10,6 @@ web/sites/default/default.services.yml
 #ignore aliases
 # sites/*.ecplatinum.dev
 
-# ** Only works in OSs that support newer versions of fnmatch (Bash 4+)
-web/sites/default/files
-private
-
-web/sites/default/files
-private
-files
-
 #ignore ddev
 .ddev
 web/sites/default/settings.ddev.php

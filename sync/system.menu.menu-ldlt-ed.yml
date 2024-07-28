@@ -1,0 +1,8 @@
+uuid: 4a497e28-9faf-4702-9d75-2ee01b5fb27f
+langcode: en
+status: true
+dependencies: {  }
+id: menu-ldlt-ed
+label: 'LDLT Edition Bibliography'
+description: 'Contains dynamic links to bibliography related to an LDLT edition.'
+locked: false

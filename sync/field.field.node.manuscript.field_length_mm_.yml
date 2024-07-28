@@ -1,0 +1,23 @@
+uuid: 6e7a71df-ef5c-409a-9b9b-63daf21ebaa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_length_mm_
+    - node.type.manuscript
+id: node.manuscript.field_length_mm_
+field_name: field_length_mm_
+entity_type: node
+bundle: manuscript
+label: 'Length (mm.)'
+description: 'Record the length of the manuscript in millimeters.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

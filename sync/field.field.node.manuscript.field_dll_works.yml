@@ -1,0 +1,30 @@
+uuid: 97dc572d-4490-40d9-aa4d-77ef4a03ff71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dll_works
+    - node.type.dll_work
+    - node.type.manuscript
+id: node.manuscript.field_dll_works
+field_name: field_dll_works
+entity_type: node
+bundle: manuscript
+label: 'DLL Works'
+description: 'Associate this manuscript with DLL Work records to facilitate searching and finding related materials.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dll_work: dll_work
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

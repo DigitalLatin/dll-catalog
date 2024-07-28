@@ -1,0 +1,22 @@
+uuid: 2b46d835-e31e-435d-8417-b63b8e9fa898
+langcode: und
+status: true
+dependencies:
+  module:
+    - computed_field
+    - node
+id: node.field_dll_page_link
+field_name: field_dll_page_link
+entity_type: node
+type: computed_string
+settings:
+  case_sensitive: false
+  max_length: 255
+  is_ascii: false
+module: computed_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

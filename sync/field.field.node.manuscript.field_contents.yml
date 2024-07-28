@@ -1,0 +1,22 @@
+uuid: a82efd4d-d49f-44a9-96b6-79598175d47d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contents
+    - node.type.manuscript
+  module:
+    - text
+id: node.manuscript.field_contents
+field_name: field_contents
+entity_type: node
+bundle: manuscript
+label: Contents
+description: 'List the contents of this manuscript, with page or folio numbers (if known).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

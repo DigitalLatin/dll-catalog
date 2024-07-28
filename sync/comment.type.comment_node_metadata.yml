@@ -1,0 +1,8 @@
+uuid: 403b819f-0ba6-4fd3-b6cd-d20b8a86326a
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_metadata
+label: 'Repository Item comment'
+target_entity_type_id: node
+description: null

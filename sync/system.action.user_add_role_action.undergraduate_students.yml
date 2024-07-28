@@ -1,0 +1,14 @@
+uuid: 342e99b2-99d1-40c7-a8b7-eef6669e8919
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.undergraduate_students
+  module:
+    - user
+id: user_add_role_action.undergraduate_students
+label: 'Add the Undergraduate Students role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: undergraduate_students

@@ -1,0 +1,8 @@
+uuid: c322c5a6-b851-4e7a-9452-a5019da12147
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_book
+label: 'Book page comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,29 @@
+uuid: 9e87ad24-0e0f-4cb8-afe2-589eca995fe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_to_dll_work
+    - node.type.dll_work
+id: node.dll_work.field_related_to_dll_work
+field_name: field_related_to_dll_work
+entity_type: node
+bundle: dll_work
+label: 'Related to DLL Work'
+description: 'If this work is part of a collection, or if it is itself a collection of other works, enter the names of the works to which it is related.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dll_work: dll_work
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

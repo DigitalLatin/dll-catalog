@@ -1,0 +1,8 @@
+uuid: 553d710b-8b4f-4538-b865-04f45f18dff7
+langcode: en
+status: true
+dependencies: {  }
+id: menu-browse
+label: Browse
+description: 'The buttons for the content types on the "Browse the Catalog" page.'
+locked: false

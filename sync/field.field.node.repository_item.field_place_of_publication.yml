@@ -1,0 +1,19 @@
+uuid: 81018534-2196-4247-918c-11fd5920dcce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_place_of_publication
+    - node.type.repository_item
+id: node.repository_item.field_place_of_publication
+field_name: field_place_of_publication
+entity_type: node
+bundle: repository_item
+label: 'Place of Publication'
+description: 'The place of publication.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

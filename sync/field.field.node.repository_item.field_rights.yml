@@ -1,0 +1,19 @@
+uuid: d3e8a351-a0fe-45e8-ace9-e3c49c44857a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rights
+    - node.type.repository_item
+id: node.repository_item.field_rights
+field_name: field_rights
+entity_type: node
+bundle: repository_item
+label: rights
+description: 'Indicate the license and/or restrictions under which this item may be used.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

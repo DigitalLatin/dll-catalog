@@ -1,0 +1,12 @@
+uuid: a7a06949-88cf-4089-ac67-1f200cc92b40
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: test_user
+label: 'test user'
+weight: 3
+is_admin: null
+permissions:
+  - 'access content'

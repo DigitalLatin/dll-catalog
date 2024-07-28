@@ -1,0 +1,9 @@
+uuid: 43794abb-0064-4112-996d-e0210cb2b200
+langcode: en
+status: true
+dependencies: {  }
+name: 'Publication Title'
+vid: publication_title
+description: 'A taxonomy for parent publications (e.g., journal title) in LDLT Bibliography.'
+weight: 0
+new_revision: false

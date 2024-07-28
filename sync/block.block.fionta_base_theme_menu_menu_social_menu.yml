@@ -1,0 +1,18 @@
+uuid: 8f0b4e8b-439d-4945-8a4d-f8a33ce042bb
+langcode: en
+status: true
+dependencies:
+  theme:
+    - olivero
+id: fionta_base_theme_menu_menu_social_menu
+theme: olivero
+region: content
+weight: -30
+provider: null
+plugin: 'system_menu_block:menu-social-menu'
+settings:
+  id: broken
+  label: 'Find us Online'
+  label_display: visible
+  provider: core
+visibility: {  }

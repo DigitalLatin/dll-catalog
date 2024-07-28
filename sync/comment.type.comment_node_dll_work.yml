@@ -1,0 +1,8 @@
+uuid: 9cbee80a-9d05-43d5-bf56-82fff9f7c725
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_dll_work
+label: 'DLL Work comment'
+target_entity_type_id: node
+description: null

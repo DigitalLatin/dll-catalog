@@ -1,0 +1,8 @@
+uuid: bf408dc6-2c22-4023-8f63-fddcd7b2f253
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_repository_item
+label: 'Item Record comment'
+target_entity_type_id: node
+description: null

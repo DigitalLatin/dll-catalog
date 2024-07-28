@@ -1,0 +1,22 @@
+uuid: 9de551e0-7a1f-4653-b6bb-fa96e1c9abb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dll_catalog
+_core:
+  default_config_hash: UarMph_WmE0vp9VtvrORLjIliJY9TP4AhHs4eyGSeNk
+id: dll_catalog_powered_by_drupal
+theme: dll_catalog
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

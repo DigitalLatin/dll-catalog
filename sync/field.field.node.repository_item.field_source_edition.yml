@@ -1,0 +1,19 @@
+uuid: c663e10e-3604-4364-ad3c-fde2c119baa5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_edition
+    - node.type.repository_item
+id: node.repository_item.field_source_edition
+field_name: field_source_edition
+entity_type: node
+bundle: repository_item
+label: 'Source Edition'
+description: 'Insert bibliographical information for the edition that is the source of an online text, if it is known.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

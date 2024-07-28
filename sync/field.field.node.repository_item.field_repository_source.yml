@@ -1,0 +1,19 @@
+uuid: f3135573-2fd0-4682-bbca-440eb8348b8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_repository_source
+    - node.type.repository_item
+id: node.repository_item.field_repository_source
+field_name: field_repository_source
+entity_type: node
+bundle: repository_item
+label: 'Repository Source'
+description: 'Enter the name of the repository where this item can be found (e.g., PHI, HathiTrust, etc.).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

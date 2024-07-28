@@ -1,0 +1,72 @@
+uuid: 51256082-5e8c-44ce-a230-1dbfd8207525
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.metadata.body
+    - field.field.node.metadata.comment_node_metadata
+    - field.field.node.metadata.field_contributor
+    - field.field.node.metadata.field_coverage
+    - field.field.node.metadata.field_creator
+    - field.field.node.metadata.field_date
+    - field.field.node.metadata.field_dll_contributor
+    - field.field.node.metadata.field_dll_creator
+    - field.field.node.metadata.field_format
+    - field.field.node.metadata.field_identifier
+    - field.field.node.metadata.field_language
+    - field.field.node.metadata.field_publisher
+    - field.field.node.metadata.field_record_title
+    - field.field.node.metadata.field_relation
+    - field.field.node.metadata.field_repository_source
+    - field.field.node.metadata.field_rights
+    - field.field.node.metadata.field_source
+    - field.field.node.metadata.field_subject
+    - field.field.node.metadata.field_type
+    - field.field.node.metadata.field_unique_identifier
+    - field.field.node.metadata.field_work_reference
+    - node.type.metadata
+  module:
+    - text
+    - user
+id: node.metadata.teaser
+targetEntityType: node
+bundle: metadata
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_metadata: true
+  field_contributor: true
+  field_coverage: true
+  field_creator: true
+  field_date: true
+  field_dll_contributor: true
+  field_dll_creator: true
+  field_format: true
+  field_identifier: true
+  field_language: true
+  field_publisher: true
+  field_record_title: true
+  field_relation: true
+  field_repository_source: true
+  field_rights: true
+  field_source: true
+  field_subject: true
+  field_type: true
+  field_unique_identifier: true
+  field_work_reference: true
+  langcode: true
+  search_api_excerpt: true

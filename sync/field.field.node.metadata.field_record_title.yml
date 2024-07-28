@@ -1,0 +1,19 @@
+uuid: 292444d3-5c8e-41bd-9d13-80b2749c4515
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_record_title
+    - node.type.metadata
+id: node.metadata.field_record_title
+field_name: field_record_title
+entity_type: node
+bundle: metadata
+label: 'Record title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

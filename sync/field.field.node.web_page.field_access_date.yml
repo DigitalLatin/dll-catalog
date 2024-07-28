@@ -1,0 +1,19 @@
+uuid: 9d2312f9-2d8a-44d2-8203-c6593c96588b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_access_date
+    - node.type.web_page
+id: node.web_page.field_access_date
+field_name: field_access_date
+entity_type: node
+bundle: web_page
+label: 'Access Date'
+description: 'The date when the web page was accessed for cataloging. Use the format YYYY-MM-DD (e.g., 2017-11-30 for November 30, 2017).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

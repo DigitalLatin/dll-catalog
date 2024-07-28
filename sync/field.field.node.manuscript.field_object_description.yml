@@ -1,0 +1,22 @@
+uuid: b6610ab0-650a-4ba2-880c-614aa2471c43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_object_description
+    - node.type.manuscript
+  module:
+    - text
+id: node.manuscript.field_object_description
+field_name: field_object_description
+entity_type: node
+bundle: manuscript
+label: 'Object description'
+description: 'Write a prose description of the manuscript: measurements, layout of the page, number of lines per page, etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

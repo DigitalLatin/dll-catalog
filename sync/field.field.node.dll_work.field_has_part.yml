@@ -1,0 +1,29 @@
+uuid: 47e25159-9eb6-438c-a734-2be103deb628
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_part
+    - node.type.dll_work
+id: node.dll_work.field_has_part
+field_name: field_has_part
+entity_type: node
+bundle: dll_work
+label: 'Has Part'
+description: "If this work collects other works enter the names of the works it collects. For example, Cornelius Nepos' De Viris Illustribus collects a number of lives of famous people. Those individual lives are parts of his work, so they should be listed here."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dll_work: dll_work
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

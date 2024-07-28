@@ -1,0 +1,18 @@
+uuid: da945750-6a66-4edc-a137-ecc0690ea720
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api_autocomplete.search.main_solr_search
+  module:
+    - search_api_autocomplete
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'use search_api_autocomplete for main_solr_search'

@@ -1,0 +1,21 @@
+uuid: d96ddd7d-59b9-4620-a28b-6bbb11c86497
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_dll_work
+    - field.field.comment.comment_node_dll_work.comment_body
+id: comment.comment_node_dll_work.default
+targetEntityType: comment
+bundle: comment_node_dll_work
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_body: true
+  langcode: true
+  search_api_excerpt: true

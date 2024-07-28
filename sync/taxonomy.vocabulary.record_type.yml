@@ -1,0 +1,9 @@
+uuid: be531132-406a-4c5e-b66e-4c54cc4204ef
+langcode: en
+status: true
+dependencies: {  }
+name: 'Record Type'
+vid: record_type
+description: 'Type of bibliographical record (critical edition, incunable, etc.)'
+weight: 0
+new_revision: false

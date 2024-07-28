@@ -1,0 +1,18 @@
+uuid: 455d4d59-3cb2-4ad5-a81e-9a630de5b70d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - olivero
+id: fionta_base_theme_menu_menu_secondary_menu
+theme: olivero
+region: content
+weight: -33
+provider: null
+plugin: 'system_menu_block:menu-secondary-menu'
+settings:
+  id: broken
+  label: '<none>'
+  label_display: '0'
+  provider: core
+visibility: {  }

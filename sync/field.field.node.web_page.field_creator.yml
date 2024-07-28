@@ -1,0 +1,19 @@
+uuid: e4510d43-6859-4fe1-bbf6-aba7188a5d26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creator
+    - node.type.web_page
+id: node.web_page.field_creator
+field_name: field_creator
+entity_type: node
+bundle: web_page
+label: Creator
+description: 'The name of the author as listed in the original source (i.e., not necessarily the DLL authorized name).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,28 @@
+uuid: 4ff45f2c-04f9-4307-9189-9be0198aabae
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.browse_item_records
+  module:
+    - system
+    - views
+  theme:
+    - dll_catalog
+id: dll_catalog_exposedformbrowse_item_recordsbrowse_item_records
+theme: dll_catalog
+region: content
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:browse_item_records-browse_item_records'
+settings:
+  id: 'views_exposed_filter_block:browse_item_records-browse_item_records'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: 'Browse Item Records'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/browse/item-records\r\n/browse/item-records/*"

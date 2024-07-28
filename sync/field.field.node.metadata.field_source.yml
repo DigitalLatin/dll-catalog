@@ -1,0 +1,19 @@
+uuid: c724fda8-9e84-4850-895c-907f701c5efd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source
+    - node.type.metadata
+id: node.metadata.field_source
+field_name: field_source
+entity_type: node
+bundle: metadata
+label: source
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

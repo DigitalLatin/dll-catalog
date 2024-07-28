@@ -1,0 +1,19 @@
+uuid: 4b482977-e774-49bb-ba4d-d3935ed4621f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_identifier
+    - node.type.dll_work
+id: node.dll_work.field_identifier
+field_name: field_identifier
+entity_type: node
+bundle: dll_work
+label: Identifier
+description: 'The primary identifier for this work, whether PHI, DigilibLT, Stoa, or some other identifier.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

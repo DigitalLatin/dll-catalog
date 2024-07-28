@@ -1,0 +1,20 @@
+uuid: 66d1b018-7a98-4761-9aa2-da710a528684
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_length_mm_
+field_name: field_length_mm_
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 1
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

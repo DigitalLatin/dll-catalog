@@ -1,0 +1,23 @@
+uuid: 5f6650ea-8397-4324-b261-f2d5df009bd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_author
+    - node.type.author_authorities
+  module:
+    - link
+id: node.author_authorities.field_source_author
+field_name: field_source_author
+entity_type: node
+bundle: author_authorities
+label: Source
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 0
+  link_type: 17
+field_type: link

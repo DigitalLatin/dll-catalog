@@ -1,0 +1,14 @@
+uuid: 879f3a1c-7a51-4e67-9ba6-18e11aed724b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.mellon
+  module:
+    - user
+id: user_remove_role_action.mellon
+label: 'Remove the Mellon role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: mellon

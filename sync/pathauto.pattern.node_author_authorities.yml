@@ -1,0 +1,22 @@
+uuid: 95ef531f-2ed2-4314-a374-eefeb7f22dbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_author_authorities
+label: 'Content - Author Authorities'
+type: 'canonical_entities:node'
+pattern: 'dll-author/[node:field_dll_identifier]'
+selection_criteria:
+  77290b8e-82ec-476e-ba42-652d8eb3f184:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 77290b8e-82ec-476e-ba42-652d8eb3f184
+    context_mapping:
+      node: node
+    bundles:
+      author_authorities: author_authorities
+selection_logic: and
+weight: 0
+relationships: {  }

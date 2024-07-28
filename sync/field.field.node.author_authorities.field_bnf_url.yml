@@ -1,0 +1,23 @@
+uuid: 5200da2c-7ad2-48ff-9965-4d46fc53ddb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bnf_url
+    - node.type.author_authorities
+  module:
+    - link
+id: node.author_authorities.field_bnf_url
+field_name: field_bnf_url
+entity_type: node
+bundle: author_authorities
+label: 'BNF URL'
+description: 'Enter the French name form and the URL from the Bibliothèque nationale de France (http://catalogue.bnf.fr).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

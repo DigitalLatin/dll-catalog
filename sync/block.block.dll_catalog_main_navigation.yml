@@ -1,0 +1,27 @@
+uuid: 507b9b2e-1d45-4de7-b75d-5cb39f0b5e19
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - dll_catalog
+_core:
+  default_config_hash: S9Kufn0uhB9ZFs6Gq-JAKbQlgzdzocTH-9smBhjlQ5U
+id: dll_catalog_main_navigation
+theme: dll_catalog
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

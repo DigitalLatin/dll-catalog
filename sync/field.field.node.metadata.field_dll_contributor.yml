@@ -1,0 +1,30 @@
+uuid: 317230b9-f80f-4f61-8a1c-d85c8d877653
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dll_contributor
+    - node.type.author_authorities
+    - node.type.metadata
+id: node.metadata.field_dll_contributor
+field_name: field_dll_contributor
+entity_type: node
+bundle: metadata
+label: 'DLL Contributor'
+description: 'Use this entity reference field to insert editors, printers, commentators, etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      author_authorities: author_authorities
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

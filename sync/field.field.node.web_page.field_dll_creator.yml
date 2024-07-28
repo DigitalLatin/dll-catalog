@@ -1,0 +1,30 @@
+uuid: 3f875d23-f503-47a2-a831-f8c7b6125496
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dll_creator
+    - node.type.author_authorities
+    - node.type.web_page
+id: node.web_page.field_dll_creator
+field_name: field_dll_creator
+entity_type: node
+bundle: web_page
+label: 'DLL Author'
+description: 'An entity reference to the Author Authority record for the author(s) of this work.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      author_authorities: author_authorities
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

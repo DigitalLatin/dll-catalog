@@ -1,0 +1,19 @@
+uuid: 7049e1d0-efe0-4461-9ed0-49ad5b14455e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_perseus_name
+    - node.type.author_authorities
+id: node.author_authorities.field_perseus_name
+field_name: field_perseus_name
+entity_type: node
+bundle: author_authorities
+label: 'Perseus Name'
+description: "Enter the form of the author's name as it appears in the Perseus spreadsheet of authors."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

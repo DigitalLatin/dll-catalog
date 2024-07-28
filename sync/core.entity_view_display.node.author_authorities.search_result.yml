@@ -1,0 +1,100 @@
+uuid: 9f7121ff-5086-4958-8ed6-2323eb6bfa58
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.author_authorities.comment_node_author_authoritie
+    - field.field.node.author_authorities.field_also_known_as
+    - field.field.node.author_authorities.field_ancient_geographic_identit
+    - field.field.node.author_authorities.field_author_birth_date
+    - field.field.node.author_authorities.field_author_death_date
+    - field.field.node.author_authorities.field_author_name_abbreviations
+    - field.field.node.author_authorities.field_author_name_english
+    - field.field.node.author_authorities.field_author_name_latin
+    - field.field.node.author_authorities.field_author_name_native_languag
+    - field.field.node.author_authorities.field_authorized_name
+    - field.field.node.author_authorities.field_bne_url
+    - field.field.node.author_authorities.field_bnf_url
+    - field.field.node.author_authorities.field_cts_urn
+    - field.field.node.author_authorities.field_digiliblt_number
+    - field.field.node.author_authorities.field_dll_author_number
+    - field.field.node.author_authorities.field_dll_identifier
+    - field.field.node.author_authorities.field_dll_number
+    - field.field.node.author_authorities.field_dll_page_link
+    - field.field.node.author_authorities.field_dnb_url
+    - field.field.node.author_authorities.field_editor
+    - field.field.node.author_authorities.field_floruit_active
+    - field.field.node.author_authorities.field_iccu_url
+    - field.field.node.author_authorities.field_isni_url
+    - field.field.node.author_authorities.field_loc_id
+    - field.field.node.author_authorities.field_locsource
+    - field.field.node.author_authorities.field_lofc_uri
+    - field.field.node.author_authorities.field_modern_geographic_identity
+    - field.field.node.author_authorities.field_other_alternative_name_for
+    - field.field.node.author_authorities.field_perseus_name
+    - field.field.node.author_authorities.field_phi_number
+    - field.field.node.author_authorities.field_source_author
+    - field.field.node.author_authorities.field_stoa_number
+    - field.field.node.author_authorities.field_time_period
+    - field.field.node.author_authorities.field_time_period_authorities
+    - field.field.node.author_authorities.field_viaf_id
+    - field.field.node.author_authorities.field_viaf_source
+    - field.field.node.author_authorities.field_wikidata_url
+    - field.field.node.author_authorities.field_wikipedia
+    - field.field.node.author_authorities.field_worldcat_identity
+    - node.type.author_authorities
+  module:
+    - user
+id: node.author_authorities.search_result
+targetEntityType: node
+bundle: author_authorities
+mode: search_result
+content:
+  search_api_excerpt:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  comment_node_author_authoritie: true
+  field_also_known_as: true
+  field_ancient_geographic_identit: true
+  field_author_birth_date: true
+  field_author_death_date: true
+  field_author_name_abbreviations: true
+  field_author_name_english: true
+  field_author_name_latin: true
+  field_author_name_native_languag: true
+  field_authorized_name: true
+  field_bne_url: true
+  field_bnf_url: true
+  field_cts_urn: true
+  field_digiliblt_number: true
+  field_dll_author_number: true
+  field_dll_identifier: true
+  field_dll_number: true
+  field_dll_page_link: true
+  field_dnb_url: true
+  field_editor: true
+  field_floruit_active: true
+  field_iccu_url: true
+  field_isni_url: true
+  field_loc_id: true
+  field_locsource: true
+  field_lofc_uri: true
+  field_modern_geographic_identity: true
+  field_other_alternative_name_for: true
+  field_perseus_name: true
+  field_phi_number: true
+  field_source_author: true
+  field_stoa_number: true
+  field_time_period: true
+  field_time_period_authorities: true
+  field_viaf_id: true
+  field_viaf_source: true
+  field_wikidata_url: true
+  field_wikipedia: true
+  field_worldcat_identity: true
+  langcode: true
+  links: true

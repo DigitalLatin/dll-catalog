@@ -1,0 +1,18 @@
+uuid: e656f8d4-e9b4-4707-88f9-4e6b398d1747
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'DLL Work'
+type: dll_work
+description: 'Nodes in this content type represent the concept of a text, not a manifestation of it. For example, unless one specifies a specific edition, translation, or other version of the text, "<em>Aeneid</em>" is a concept that people use to refer to an epic poem written by Vergil. A specific edition of the <em>Aeneid</em> should be catalogued in the Item Record content type. The DLL Work record is used for organizational purposes and to identify a work unambiguously.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

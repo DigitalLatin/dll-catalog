@@ -1,0 +1,21 @@
+uuid: 8075f86d-0308-4d93-9c27-67e66ab75900
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - serial
+id: node.field_item_id
+field_name: field_item_id
+entity_type: node
+type: serial
+settings:
+  start_value: 1
+  init_existing_entities: 0
+module: serial
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

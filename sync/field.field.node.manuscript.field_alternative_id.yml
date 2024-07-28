@@ -1,0 +1,19 @@
+uuid: d2f954dc-6c41-4e3c-8843-d42de0f8ce2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternative_id
+    - node.type.manuscript
+id: node.manuscript.field_alternative_id
+field_name: field_alternative_id
+entity_type: node
+bundle: manuscript
+label: 'Alternative ID'
+description: 'Enter any alternative shelf marks or other identifiers used for this manuscript.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: b2a66881-0e92-4453-a197-a167df54ebb7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dll_catalog
+_core:
+  default_config_hash: xEOX1p9DmV0BiKFbXyGAGHZzdX_vGQgv3_8EilGe9OA
+id: dll_catalog_local_tasks
+theme: dll_catalog
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

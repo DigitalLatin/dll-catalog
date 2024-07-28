@@ -1,0 +1,19 @@
+uuid: a123c600-5c97-4c0b-88b7-7874df83c8f2
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_hand_note
+field_name: field_hand_note
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

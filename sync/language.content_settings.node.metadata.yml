@@ -1,0 +1,11 @@
+uuid: fd4c3eae-6235-4ad1-b2d8-f33ab4f4d216
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.metadata
+id: node.metadata
+target_entity_type_id: node
+target_bundle: metadata
+default_langcode: site_default
+language_alterable: false

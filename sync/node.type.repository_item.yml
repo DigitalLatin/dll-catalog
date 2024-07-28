@@ -1,0 +1,18 @@
+uuid: d8930586-a3ae-4cc7-826f-f18eeb1bbc77
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Item Record'
+type: repository_item
+description: "This content type contains information about actual physical or digital representations of a DLL Work. DLL Work is the concept of a particular text (e.g., \"Vergil's <em>Aeneid</em>,\" but an Item Record points to a manifestation of that concept (e.g., Conington and Nettleship's 1871 edition of Vergil's works in PDF form at archive.org)."
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

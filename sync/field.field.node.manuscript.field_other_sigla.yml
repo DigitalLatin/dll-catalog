@@ -1,0 +1,19 @@
+uuid: 4470a26a-016a-4f59-b6dc-e3656885732c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_other_sigla
+    - node.type.manuscript
+id: node.manuscript.field_other_sigla
+field_name: field_other_sigla
+entity_type: node
+bundle: manuscript
+label: 'Other sigla'
+description: 'Enter sigla used to refer to this manuscript in other editions. Include the name of the editor. E.g., B (Glaeser).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: ef4c4317-2221-4a02-a63d-a95e9155c1e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - olivero
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: fionta_base_theme_system_powered_by
+theme: olivero
+region: content
+weight: -22
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: ''
+  label_display: '0'
+  provider: system
+visibility: {  }

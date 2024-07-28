@@ -1,0 +1,19 @@
+uuid: ae92cd6d-e7c8-4971-941a-a12bb024cb12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stoa_number
+    - node.type.author_authorities
+id: node.author_authorities.field_stoa_number
+field_name: field_stoa_number
+entity_type: node
+bundle: author_authorities
+label: 'Stoa Number'
+description: 'Enter the Stoa number for this author, if one exists. Use the Perseus Catalog (http://catalog.perseus.org) to find the Stoa number.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

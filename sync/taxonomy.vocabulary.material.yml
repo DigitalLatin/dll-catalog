@@ -1,0 +1,9 @@
+uuid: 8d2efc6f-6040-4633-9d23-6269c65a53c5
+langcode: en
+status: true
+dependencies: {  }
+name: Material
+vid: material
+description: 'The material used for a manuscript.'
+weight: 0
+new_revision: false

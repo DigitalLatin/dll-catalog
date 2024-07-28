@@ -1,0 +1,23 @@
+uuid: 53deaf71-3aa5-4564-ba43-448197033b9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_editor
+    - node.type.author_authorities
+id: node.author_authorities.field_editor
+field_name: field_editor
+entity_type: node
+bundle: author_authorities
+label: Editor
+description: 'Use this boolean field to indicate whether or not the person is also an editor of texts.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

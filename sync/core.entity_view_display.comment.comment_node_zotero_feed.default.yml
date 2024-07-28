@@ -1,0 +1,29 @@
+uuid: 9c19ed59-84da-4063-8609-2e1f7a07fae1
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_zotero_feed
+    - field.field.comment.comment_node_zotero_feed.comment_body
+  module:
+    - text
+id: comment.comment_node_zotero_feed.default
+targetEntityType: comment
+bundle: comment_node_zotero_feed
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,22 @@
+uuid: 5c01b3fb-9079-4a0f-8ece-fb30a75259ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_repository_item
+label: 'Content - Item Record'
+type: 'canonical_entities:node'
+pattern: 'dll-item-record/[node:field_dll_identifier]'
+selection_criteria:
+  c6f3c69a-d1b1-43cd-a420-072a5220e395:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: c6f3c69a-d1b1-43cd-a420-072a5220e395
+    context_mapping:
+      node: node
+    bundles:
+      repository_item: repository_item
+selection_logic: and
+weight: 0
+relationships: {  }

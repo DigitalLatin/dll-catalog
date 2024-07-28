@@ -1,0 +1,19 @@
+uuid: ecd9c8be-a9fa-4087-b560-04de5c43aa35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_number_of_leaves
+    - node.type.manuscript
+id: node.manuscript.field_number_of_leaves
+field_name: field_number_of_leaves
+entity_type: node
+bundle: manuscript
+label: 'Number of leaves'
+description: 'Record the number of leaves.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

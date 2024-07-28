@@ -1,0 +1,11 @@
+uuid: 4a5d0cf6-759b-41ec-af19-b750d8fd1ef9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.repository_item
+id: node.repository_item
+target_entity_type_id: node
+target_bundle: repository_item
+default_langcode: site_default
+language_alterable: false

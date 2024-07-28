@@ -1,0 +1,30 @@
+uuid: 38e6acf0-40c9-4660-b8ad-7f67f449c419
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dll_creator
+    - node.type.author_authorities
+    - node.type.repository_item
+id: node.repository_item.field_dll_creator
+field_name: field_dll_creator
+entity_type: node
+bundle: repository_item
+label: 'DLL Author'
+description: 'This is an entity reference to the author authority record(s) related to this item.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      author_authorities: author_authorities
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

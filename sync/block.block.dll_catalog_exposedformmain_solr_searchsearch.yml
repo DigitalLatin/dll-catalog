@@ -1,0 +1,28 @@
+uuid: bf3370ca-5d82-4397-bfb1-b0acf220b29b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.main_solr_search
+  module:
+    - system
+    - views
+  theme:
+    - dll_catalog
+id: dll_catalog_exposedformmain_solr_searchsearch
+theme: dll_catalog
+region: content
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:main_solr_search-search'
+settings:
+  id: 'views_exposed_filter_block:main_solr_search-search'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: Search
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/search\r\n/search/*"

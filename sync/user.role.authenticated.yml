@@ -1,0 +1,23 @@
+uuid: 0bb75eb2-3896-475f-b7d9-45db749607c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+    - search_api_autocomplete.search.main_solr_search
+  module:
+    - filter
+    - fontawesome
+    - search_api_autocomplete
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access fontawesome additional settings'
+  - 'use search_api_autocomplete for main_solr_search'
+  - 'use text format filtered_html'

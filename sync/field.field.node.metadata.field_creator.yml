@@ -1,0 +1,19 @@
+uuid: 113de1e6-c37c-4e0a-b8dd-d6985a6aa172
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creator
+    - node.type.metadata
+id: node.metadata.field_creator
+field_name: field_creator
+entity_type: node
+bundle: metadata
+label: Creator
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

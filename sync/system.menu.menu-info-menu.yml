@@ -1,0 +1,8 @@
+uuid: e4fa25b4-3d94-478d-a5f7-ee74d679777a
+langcode: en
+status: true
+dependencies: {  }
+id: menu-info-menu
+label: 'Info Menu'
+description: 'This menu includes links for the items in the info directory, providing general information about the catalog.'
+locked: false

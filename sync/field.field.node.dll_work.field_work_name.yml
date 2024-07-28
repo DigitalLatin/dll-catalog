@@ -1,0 +1,19 @@
+uuid: 9a326893-89d5-40be-bfb1-4b19435ea499
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_work_name
+    - node.type.dll_work
+id: node.dll_work.field_work_name
+field_name: field_work_name
+entity_type: node
+bundle: dll_work
+label: 'Work Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

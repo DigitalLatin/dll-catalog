@@ -1,0 +1,19 @@
+uuid: 0e05f480-946c-4105-a564-0e49961b316d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_viaf_id
+    - node.type.author_authorities
+id: node.author_authorities.field_viaf_id
+field_name: field_viaf_id
+entity_type: node
+bundle: author_authorities
+label: 'VIAF ID'
+description: 'Enter the VIAF ID, not the URL.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

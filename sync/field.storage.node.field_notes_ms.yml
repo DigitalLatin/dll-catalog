@@ -1,0 +1,19 @@
+uuid: 1ca6728b-d8f6-4cb7-9481-1b183f01df45
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_notes_ms
+field_name: field_notes_ms
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

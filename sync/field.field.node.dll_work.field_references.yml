@@ -1,0 +1,29 @@
+uuid: 33aaa93e-ebd4-43e8-b518-7e42bacf2092
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_references
+    - node.type.dll_work
+id: node.dll_work.field_references
+field_name: field_references
+entity_type: node
+bundle: dll_work
+label: References
+description: "Use this field to indicate a work that this work is related to in some way other than collecting it or being a part of it. For example, Servius' commentary of Vergil's Aeneid is not a part of the Aeneid, nor does it contain the Aeneid, but it is related to it."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dll_work: dll_work
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

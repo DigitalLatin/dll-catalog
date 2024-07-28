@@ -1,0 +1,19 @@
+uuid: 1e57ca0a-db73-46ca-9533-587d1300782e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_manuscript_date
+    - node.type.manuscript
+id: node.manuscript.field_manuscript_date
+field_name: field_manuscript_date
+entity_type: node
+bundle: manuscript
+label: 'Manuscript Date'
+description: 'Enter the roman numeral of the century when this manuscript was written (if known).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

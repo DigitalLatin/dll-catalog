@@ -1,0 +1,14 @@
+uuid: 47f09cec-e350-4efa-9b01-aa211422b1bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.undergraduate_students
+  module:
+    - user
+id: user_remove_role_action.undergraduate_students
+label: 'Remove the Undergraduate Students role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: undergraduate_students

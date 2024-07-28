@@ -1,0 +1,30 @@
+uuid: 1a07eacc-0173-448c-9035-67eb1cb4d2df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dll_authors
+    - node.type.author_authorities
+    - node.type.manuscript
+id: node.manuscript.field_dll_authors
+field_name: field_dll_authors
+entity_type: node
+bundle: manuscript
+label: 'DLL Authors'
+description: 'Associate this manuscript with an author authority record to facilitate searching and finding related materials. Multiple values are allowed.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      author_authorities: author_authorities
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

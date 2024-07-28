@@ -1,0 +1,257 @@
+uuid: 43da9d97-dbc1-4fc5-8461-172414055fbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_repository_item.default
+    - field.field.node.repository_item.comment_node_repository_item
+    - field.field.node.repository_item.field_contributor
+    - field.field.node.repository_item.field_coverage
+    - field.field.node.repository_item.field_creator
+    - field.field.node.repository_item.field_date
+    - field.field.node.repository_item.field_dll_contributor
+    - field.field.node.repository_item.field_dll_creator
+    - field.field.node.repository_item.field_dll_identifier
+    - field.field.node.repository_item.field_dll_number
+    - field.field.node.repository_item.field_dll_page_link
+    - field.field.node.repository_item.field_format
+    - field.field.node.repository_item.field_identifier
+    - field.field.node.repository_item.field_item_id
+    - field.field.node.repository_item.field_pagination
+    - field.field.node.repository_item.field_place_of_publication
+    - field.field.node.repository_item.field_preview_page
+    - field.field.node.repository_item.field_publication_title
+    - field.field.node.repository_item.field_publisher
+    - field.field.node.repository_item.field_record_title
+    - field.field.node.repository_item.field_relation
+    - field.field.node.repository_item.field_repository_source
+    - field.field.node.repository_item.field_rights
+    - field.field.node.repository_item.field_source_edition
+    - field.field.node.repository_item.field_source_work
+    - field.field.node.repository_item.field_tags
+    - field.field.node.repository_item.field_type
+    - field.field.node.repository_item.field_volume
+    - field.field.node.repository_item.field_work_reference
+    - node.type.repository_item
+  module:
+    - comment
+    - computed_field
+    - link
+    - user
+id: node.repository_item.default
+targetEntityType: node
+bundle: repository_item
+mode: default
+content:
+  comment_node_repository_item:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_contributor:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_coverage:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_creator:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_date:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_dll_contributor:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_dll_creator:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_dll_identifier:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_dll_page_link:
+    type: computed_decimal
+    label: above
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_identifier:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_pagination:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_place_of_publication:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_publication_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_publisher:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_record_title:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_relation:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_repository_source:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_rights:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_source_edition:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_source_work:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_type:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_volume:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_work_reference:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_dll_number: true
+  field_format: true
+  field_item_id: true
+  field_preview_page: true
+  langcode: true
+  search_api_excerpt: true

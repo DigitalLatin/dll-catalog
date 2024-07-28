@@ -1,0 +1,21 @@
+uuid: 54a192b0-99a0-4d06-9094-66fdc92b24ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dubious_spurious_attributi
+    - node.type.dll_work
+  module:
+    - options
+id: node.dll_work.field_dubious_spurious_attributi
+field_name: field_dubious_spurious_attributi
+entity_type: node
+bundle: dll_work
+label: 'Dubious/Spurious Attribution'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,22 @@
+uuid: b55f5552-9d78-49c9-991d-45a718b9eab1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_notes_ms
+    - node.type.manuscript
+  module:
+    - text
+id: node.manuscript.field_notes_ms
+field_name: field_notes_ms
+entity_type: node
+bundle: manuscript
+label: Notes
+description: 'Enter any extra information that does not belong in any of the fields above.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

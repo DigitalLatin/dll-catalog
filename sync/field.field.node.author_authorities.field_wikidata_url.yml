@@ -1,0 +1,23 @@
+uuid: cbc5818f-a401-421a-ade2-1facf0aed539
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_wikidata_url
+    - node.type.author_authorities
+  module:
+    - link
+id: node.author_authorities.field_wikidata_url
+field_name: field_wikidata_url
+entity_type: node
+bundle: author_authorities
+label: 'Wikidata URL'
+description: 'Enter the URL from https://www.wikidata.org for this author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

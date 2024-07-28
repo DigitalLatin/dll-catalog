@@ -1,0 +1,21 @@
+uuid: e2f6a333-6190-45b5-b248-11a926784265
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dll_author_number
+    - node.type.author_authorities
+  module:
+    - serial
+id: node.author_authorities.field_dll_author_number
+field_name: field_dll_author_number
+entity_type: node
+bundle: author_authorities
+label: 'DLL Author Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: serial

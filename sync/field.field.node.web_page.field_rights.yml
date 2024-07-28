@@ -1,0 +1,19 @@
+uuid: 7ccf23a6-a8c9-455e-83ee-dc01aefd51a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rights
+    - node.type.web_page
+id: node.web_page.field_rights
+field_name: field_rights
+entity_type: node
+bundle: web_page
+label: rights
+description: 'Information about the rights for this work.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

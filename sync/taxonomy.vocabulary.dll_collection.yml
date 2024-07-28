@@ -1,0 +1,9 @@
+uuid: 6172011a-24ab-4711-a53f-23d3d7f4e3af
+langcode: en
+status: true
+dependencies: {  }
+name: 'DLL Collection'
+vid: dll_collection
+description: 'Use terms in this taxonomy to label items from a particular cataloging project (e.g., Aldus, Teubner, etc.)'
+weight: 0
+new_revision: false

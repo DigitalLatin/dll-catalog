@@ -1,0 +1,19 @@
+uuid: 58a761d6-d8c2-4777-a9bc-d6cc9f447263
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternative_title
+    - node.type.dll_work
+id: node.dll_work.field_alternative_title
+field_name: field_alternative_title
+entity_type: node
+bundle: dll_work
+label: 'Alternative Title'
+description: "If this work is also commonly known by another title, enter the alternative title here. For example, Lucan's <em>Bellum Civile</em> is also known as <em>Pharsalia</em>, but <em>Bellum Civile</em> is the preferred title, so <em>Pharsalia</em> should appear in the Alternative Title field."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

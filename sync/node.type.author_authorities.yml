@@ -1,0 +1,18 @@
+uuid: 0607c94c-b95f-4684-9b26-79edafc1f2c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Author Authority'
+type: author_authorities
+description: 'This content type serves as the DLL''s authority file for author names. Nodes in this content type represent an author and provide a means of connecting Item Record content with a known author in the database. That is, the DLL''s author authority is an unambiguous way for the DLL to identify the author of a work. For example, the DLL author authority for Vergil will have a stable URI and identifying information about Vergil, but an item ingested from an external repository might identify this author as "Virgil." The DLL author authority record helps to reconcile the variation in names.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,19 @@
+uuid: 62ce129f-ddd9-4fa6-9070-0d63db7a7786
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_siglum
+    - node.type.manuscript
+id: node.manuscript.field_siglum
+field_name: field_siglum
+entity_type: node
+bundle: manuscript
+label: Siglum
+description: 'Enter the siglum used to refer to this manuscript in the reference edition. You may enter sigla from other editions in the space below.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

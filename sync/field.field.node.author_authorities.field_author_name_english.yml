@@ -1,0 +1,19 @@
+uuid: 8a9dcd6b-b79a-4af3-8581-08a935f11f14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author_name_english
+    - node.type.author_authorities
+id: node.author_authorities.field_author_name_english
+field_name: field_author_name_english
+entity_type: node
+bundle: author_authorities
+label: 'Author Name English'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

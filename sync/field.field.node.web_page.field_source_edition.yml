@@ -1,0 +1,19 @@
+uuid: 588565e2-f491-42cf-a231-f4a9f5db320d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_edition
+    - node.type.web_page
+id: node.web_page.field_source_edition
+field_name: field_source_edition
+entity_type: node
+bundle: web_page
+label: 'Source Edition'
+description: 'Bibliographical information for the edition that is the source of this online text, if it is known.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

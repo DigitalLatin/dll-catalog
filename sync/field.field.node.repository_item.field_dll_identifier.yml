@@ -1,0 +1,19 @@
+uuid: accad03f-e756-4072-b7bb-6fda9aeebecb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dll_identifier
+    - node.type.repository_item
+id: node.repository_item.field_dll_identifier
+field_name: field_dll_identifier
+entity_type: node
+bundle: repository_item
+label: 'DLL Identifier'
+description: "This value of this field is generated on the working site by a computed field that adds a prefix to the DLL Number value that varies according to the content type. For example, an Author Authorities node will have the prefix 'dllA'."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

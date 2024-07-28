@@ -1,0 +1,24 @@
+uuid: f4d61b63-5423-4ac6-8952-a236a3470438
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_dubious_spurious_attributi
+field_name: field_dubious_spurious_attributi
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Dubium
+      label: 'Dubiously/Spuriously Attributed'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

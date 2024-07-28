@@ -1,0 +1,30 @@
+uuid: 052b85f2-d1ae-4079-b550-1a4b3f970c54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attributed_to
+    - node.type.author_authorities
+    - node.type.dll_work
+id: node.dll_work.field_attributed_to
+field_name: field_attributed_to
+entity_type: node
+bundle: dll_work
+label: 'Attributed to'
+description: 'Enter the name of an author to whom this work has been dubiously or falsely attributed, if relevant.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      author_authorities: author_authorities
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

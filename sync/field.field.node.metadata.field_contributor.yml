@@ -1,0 +1,19 @@
+uuid: 0eca681c-cf1f-47fe-89cf-397c481ee668
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contributor
+    - node.type.metadata
+id: node.metadata.field_contributor
+field_name: field_contributor
+entity_type: node
+bundle: metadata
+label: Contributor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

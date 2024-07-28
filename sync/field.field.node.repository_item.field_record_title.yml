@@ -1,0 +1,19 @@
+uuid: 2685c973-deb8-4e80-9576-cd1dcf70cc02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_record_title
+    - node.type.repository_item
+id: node.repository_item.field_record_title
+field_name: field_record_title
+entity_type: node
+bundle: repository_item
+label: 'Record title'
+description: 'This field collects the title of the item.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

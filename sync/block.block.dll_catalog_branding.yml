@@ -1,0 +1,25 @@
+uuid: 6e414930-1a2e-432b-9034-606b73608bd5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dll_catalog
+_core:
+  default_config_hash: AiXU2Z9tzw6kNGEQ1oSKHf57ffJu9TcbRbHosYb7J4o
+id: dll_catalog_branding
+theme: dll_catalog
+region: nav_branding
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

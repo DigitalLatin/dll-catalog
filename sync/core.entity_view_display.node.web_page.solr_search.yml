@@ -1,0 +1,98 @@
+uuid: d2f545af-8d38-496e-9bdc-426e7ad7ae66
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.solr_search
+    - field.field.node.web_page.comment_node_web_page
+    - field.field.node.web_page.field_access_date
+    - field.field.node.web_page.field_creator
+    - field.field.node.web_page.field_dll_creator
+    - field.field.node.web_page.field_dll_identifier
+    - field.field.node.web_page.field_dll_number
+    - field.field.node.web_page.field_dll_page_link
+    - field.field.node.web_page.field_identifier
+    - field.field.node.web_page.field_publisher
+    - field.field.node.web_page.field_record_title
+    - field.field.node.web_page.field_repository_source
+    - field.field.node.web_page.field_rights
+    - field.field.node.web_page.field_source_edition
+    - field.field.node.web_page.field_source_work
+    - field.field.node.web_page.field_work_reference
+    - node.type.web_page
+  module:
+    - link
+    - user
+id: node.web_page.solr_search
+targetEntityType: node
+bundle: web_page
+mode: solr_search
+content:
+  field_dll_creator:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_dll_identifier:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_record_title:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_repository_source:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_source_work:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_work_reference:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  comment_node_web_page: true
+  field_access_date: true
+  field_creator: true
+  field_dll_number: true
+  field_dll_page_link: true
+  field_identifier: true
+  field_publisher: true
+  field_rights: true
+  field_source_edition: true
+  langcode: true
+  search_api_excerpt: true

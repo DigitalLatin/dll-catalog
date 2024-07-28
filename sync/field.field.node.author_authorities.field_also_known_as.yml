@@ -1,0 +1,29 @@
+uuid: 8968aa34-dc24-4369-902d-f294160dd445
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_also_known_as
+    - node.type.author_authorities
+id: node.author_authorities.field_also_known_as
+field_name: field_also_known_as
+entity_type: node
+bundle: author_authorities
+label: 'Related to other DLL Author(s)'
+description: 'Enter the name of any other name by which this author is known. If the name is in the database, it will appear here. If not, please create a new record.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      author_authorities: author_authorities
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

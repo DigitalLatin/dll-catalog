@@ -1,0 +1,30 @@
+uuid: ebb4a7fc-23c6-4820-80c5-eda568b35672
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.author_authorities
+    - node.type.dll_work
+id: node.dll_work.field_author
+field_name: field_author
+entity_type: node
+bundle: dll_work
+label: Creator
+description: 'The author of the work, if known.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      author_authorities: author_authorities
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

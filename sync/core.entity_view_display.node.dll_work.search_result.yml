@@ -1,0 +1,83 @@
+uuid: aebcbcaa-6d3d-4474-9d41-7a76a5dafa9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.dll_work.comment_node_dll_work
+    - field.field.node.dll_work.field_alternative_title
+    - field.field.node.dll_work.field_attributed_to
+    - field.field.node.dll_work.field_author
+    - field.field.node.dll_work.field_cts_urn
+    - field.field.node.dll_work.field_description
+    - field.field.node.dll_work.field_digiliblt_number
+    - field.field.node.dll_work.field_dll_identifier
+    - field.field.node.dll_work.field_dll_number
+    - field.field.node.dll_work.field_dll_page_link
+    - field.field.node.dll_work.field_dubious_spurious_attributi
+    - field.field.node.dll_work.field_has_part
+    - field.field.node.dll_work.field_identifier
+    - field.field.node.dll_work.field_part_of
+    - field.field.node.dll_work.field_phi_number
+    - field.field.node.dll_work.field_references
+    - field.field.node.dll_work.field_related_to_dll_work
+    - field.field.node.dll_work.field_short_title
+    - field.field.node.dll_work.field_source_id
+    - field.field.node.dll_work.field_source_work
+    - field.field.node.dll_work.field_stoa_number
+    - field.field.node.dll_work.field_work_abbreviated
+    - field.field.node.dll_work.field_work_authority
+    - field.field.node.dll_work.field_work_name
+    - node.type.dll_work
+  module:
+    - user
+id: node.dll_work.search_result
+targetEntityType: node
+bundle: dll_work
+mode: search_result
+content:
+  field_author:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_work_name:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_dll_work: true
+  field_alternative_title: true
+  field_attributed_to: true
+  field_cts_urn: true
+  field_description: true
+  field_digiliblt_number: true
+  field_dll_identifier: true
+  field_dll_number: true
+  field_dll_page_link: true
+  field_dubious_spurious_attributi: true
+  field_has_part: true
+  field_identifier: true
+  field_part_of: true
+  field_phi_number: true
+  field_references: true
+  field_related_to_dll_work: true
+  field_short_title: true
+  field_source_id: true
+  field_source_work: true
+  field_stoa_number: true
+  field_work_abbreviated: true
+  field_work_authority: true
+  langcode: true
+  search_api_excerpt: true

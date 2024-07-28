@@ -1,0 +1,9 @@
+uuid: e67e26bb-a9fb-4db1-88b4-e932d19d07c9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Item Type'
+vid: item_type
+description: 'Taxonomy for importing records from Zotero. This corresponds to the ItemType field in Zotero.'
+weight: 0
+new_revision: false

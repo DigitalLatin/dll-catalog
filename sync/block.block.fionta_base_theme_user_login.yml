@@ -1,0 +1,20 @@
+uuid: c340659c-e843-408c-aee4-d05379421935
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - olivero
+id: fionta_base_theme_user_login
+theme: olivero
+region: content
+weight: -35
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  label_display: '0'
+  provider: user
+visibility: {  }

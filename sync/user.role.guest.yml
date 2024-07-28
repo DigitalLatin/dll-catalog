@@ -1,0 +1,9 @@
+uuid: 22ced59a-2c6e-4f6f-84d0-4a62b3b3b452
+langcode: en
+status: true
+dependencies: {  }
+id: guest
+label: Guest
+weight: 6
+is_admin: null
+permissions: {  }

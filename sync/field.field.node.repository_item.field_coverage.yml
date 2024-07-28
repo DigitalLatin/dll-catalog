@@ -1,0 +1,19 @@
+uuid: 8dccb7db-d55c-40ed-96bd-636a76741a2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coverage
+    - node.type.repository_item
+id: node.repository_item.field_coverage
+field_name: field_coverage
+entity_type: node
+bundle: repository_item
+label: coverage
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

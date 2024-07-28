@@ -1,0 +1,19 @@
+uuid: 7c109f7b-bc5b-4e34-9c2a-df4299174d84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_repository_source
+    - node.type.web_page
+id: node.web_page.field_repository_source
+field_name: field_repository_source
+entity_type: node
+bundle: web_page
+label: 'Repository Source'
+description: 'The name of the repository where this item can be found (e.g., PHI, DigilibLT, etc.).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

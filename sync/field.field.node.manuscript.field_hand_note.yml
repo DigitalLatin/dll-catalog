@@ -1,0 +1,22 @@
+uuid: 70d032fa-79b4-4853-b19a-05d57a48b041
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hand_note
+    - node.type.manuscript
+  module:
+    - text
+id: node.manuscript.field_hand_note
+field_name: field_hand_note
+entity_type: node
+bundle: manuscript
+label: 'Hand note'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

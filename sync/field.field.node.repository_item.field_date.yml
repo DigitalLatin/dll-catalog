@@ -1,0 +1,19 @@
+uuid: f167a8f3-169c-4360-bca8-ee2779d2cd18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.repository_item
+id: node.repository_item.field_date
+field_name: field_date
+entity_type: node
+bundle: repository_item
+label: Date
+description: 'Date of publication.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

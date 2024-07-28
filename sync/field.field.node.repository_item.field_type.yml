@@ -1,0 +1,19 @@
+uuid: e683aed7-a836-4825-aa70-05fd4c6b04ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type
+    - node.type.repository_item
+id: node.repository_item.field_type
+field_name: field_type
+entity_type: node
+bundle: repository_item
+label: Type
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

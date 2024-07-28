@@ -1,0 +1,23 @@
+uuid: 8213b5e7-0123-4a10-9056-d77426ae4392
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_not_before
+    - node.type.manuscript
+id: node.manuscript.field_not_before
+field_name: field_not_before
+entity_type: node
+bundle: manuscript
+label: 'Not Before'
+description: 'Enter the year before which this manuscript could not have been written.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

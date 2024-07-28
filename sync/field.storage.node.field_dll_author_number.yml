@@ -1,0 +1,21 @@
+uuid: 53564fd3-1abb-4f85-bd91-d52ff836a3c8
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - serial
+id: node.field_dll_author_number
+field_name: field_dll_author_number
+entity_type: node
+type: serial
+settings:
+  start_value: 1
+  init_existing_entities: 0
+module: serial
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

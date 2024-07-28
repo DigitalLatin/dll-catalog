@@ -1,0 +1,19 @@
+uuid: c522a085-641f-4dbd-aad2-300d586df50c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_id_number
+    - node.type.manuscript
+id: node.manuscript.field_id_number
+field_name: field_id_number
+entity_type: node
+bundle: manuscript
+label: 'ID Number'
+description: 'Enter the "shelf mark" for this manuscript (e.g., plut. 90, 12 inf.)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,389 @@
+uuid: ec5bc002-e648-4b50-855d-ad1b8728681d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.author_authorities.comment_node_author_authoritie
+    - field.field.node.author_authorities.field_also_known_as
+    - field.field.node.author_authorities.field_ancient_geographic_identit
+    - field.field.node.author_authorities.field_author_birth_date
+    - field.field.node.author_authorities.field_author_death_date
+    - field.field.node.author_authorities.field_author_name_abbreviations
+    - field.field.node.author_authorities.field_author_name_english
+    - field.field.node.author_authorities.field_author_name_latin
+    - field.field.node.author_authorities.field_author_name_native_languag
+    - field.field.node.author_authorities.field_authorized_name
+    - field.field.node.author_authorities.field_bne_url
+    - field.field.node.author_authorities.field_bnf_url
+    - field.field.node.author_authorities.field_cts_urn
+    - field.field.node.author_authorities.field_digiliblt_number
+    - field.field.node.author_authorities.field_dll_author_number
+    - field.field.node.author_authorities.field_dll_identifier
+    - field.field.node.author_authorities.field_dll_number
+    - field.field.node.author_authorities.field_dll_page_link
+    - field.field.node.author_authorities.field_dnb_url
+    - field.field.node.author_authorities.field_editor
+    - field.field.node.author_authorities.field_floruit_active
+    - field.field.node.author_authorities.field_iccu_url
+    - field.field.node.author_authorities.field_isni_url
+    - field.field.node.author_authorities.field_loc_id
+    - field.field.node.author_authorities.field_locsource
+    - field.field.node.author_authorities.field_lofc_uri
+    - field.field.node.author_authorities.field_modern_geographic_identity
+    - field.field.node.author_authorities.field_other_alternative_name_for
+    - field.field.node.author_authorities.field_perseus_name
+    - field.field.node.author_authorities.field_phi_number
+    - field.field.node.author_authorities.field_source_author
+    - field.field.node.author_authorities.field_stoa_number
+    - field.field.node.author_authorities.field_time_period
+    - field.field.node.author_authorities.field_time_period_authorities
+    - field.field.node.author_authorities.field_viaf_id
+    - field.field.node.author_authorities.field_viaf_source
+    - field.field.node.author_authorities.field_wikidata_url
+    - field.field.node.author_authorities.field_wikipedia
+    - field.field.node.author_authorities.field_worldcat_identity
+    - node.type.author_authorities
+  module:
+    - computed_field
+    - link
+    - user
+id: node.author_authorities.default
+targetEntityType: node
+bundle: author_authorities
+mode: default
+content:
+  field_also_known_as:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_ancient_geographic_identit:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_author_birth_date:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_author_death_date:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_author_name_abbreviations:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_author_name_english:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_author_name_latin:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_author_name_native_languag:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_authorized_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_bne_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_bnf_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_cts_urn:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_digiliblt_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_dll_identifier:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_dll_page_link:
+    type: computed_string
+    label: above
+    settings:
+      cache_unit: -1
+      cache_duration: 1
+      sanitized: true
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_dnb_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_floruit_active:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_iccu_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_isni_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_loc_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_locsource:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_lofc_uri:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_modern_geographic_identity:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_other_alternative_name_for:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_perseus_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_phi_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_source_author:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_stoa_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_time_period:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_viaf_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_viaf_source:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_wikidata_url:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_wikipedia:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_worldcat_identity:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: false
+      rel: nofollow
+      target: _blank
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 34
+    region: content
+hidden:
+  comment_node_author_authoritie: true
+  field_dll_author_number: true
+  field_dll_number: true
+  field_editor: true
+  field_time_period_authorities: true
+  langcode: true
+  search_api_excerpt: true

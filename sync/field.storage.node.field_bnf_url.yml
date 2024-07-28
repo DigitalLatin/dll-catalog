@@ -1,0 +1,19 @@
+uuid: 4d83bedb-7f7b-44ad-8b2b-f3844af2cc7a
+langcode: und
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_bnf_url
+field_name: field_bnf_url
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: 734fc593-7a85-4ccf-a864-6e4130fc3155
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_dll_work
+label: 'Content - DLL Work'
+type: 'canonical_entities:node'
+pattern: 'dll-work/[node:field_dll_identifier]'
+selection_criteria:
+  6ac3c57d-d739-4b7a-9de8-037c88a4b54f:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 6ac3c57d-d739-4b7a-9de8-037c88a4b54f
+    context_mapping:
+      node: node
+    bundles:
+      dll_work: dll_work
+selection_logic: and
+weight: 0
+relationships: {  }

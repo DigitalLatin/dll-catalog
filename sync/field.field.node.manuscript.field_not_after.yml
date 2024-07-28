@@ -1,0 +1,23 @@
+uuid: eaeea3ed-a981-4685-aa98-e62751b7e7ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_not_after
+    - node.type.manuscript
+id: node.manuscript.field_not_after
+field_name: field_not_after
+entity_type: node
+bundle: manuscript
+label: 'Not After'
+description: 'Enter the date after which this manuscript could not have been written.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

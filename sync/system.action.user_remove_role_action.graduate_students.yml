@@ -1,0 +1,14 @@
+uuid: 442c7fad-3ac7-4725-b494-8cd6610aafde
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.graduate_students
+  module:
+    - user
+id: user_remove_role_action.graduate_students
+label: 'Remove the Graduate Students role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: graduate_students

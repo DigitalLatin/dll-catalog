@@ -1,0 +1,19 @@
+uuid: 66c345f4-ee98-4cac-bc74-fe60c76d4e82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publisher
+    - node.type.web_page
+id: node.web_page.field_publisher
+field_name: field_publisher
+entity_type: node
+bundle: web_page
+label: Publisher
+description: 'The name of the publisher of this online work, if it is a new edition (i.e., not a digitized version of an edition published elsewhere originally).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

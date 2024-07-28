@@ -1,0 +1,12 @@
+uuid: 0ab9d19e-08db-40c4-b754-661736241ddf
+langcode: en
+status: true
+dependencies: {  }
+id: website_feedback
+label: 'Website feedback'
+recipients:
+  - do-not-reply@hobbes.rccc.ou.edu
+reply: ''
+weight: 0
+message: null
+redirect: null

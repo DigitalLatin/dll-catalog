@@ -1,0 +1,22 @@
+uuid: 2825ea82-a824-4d7e-8370-9ffab2c8df40
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_manuscript
+label: 'Content - Manuscript'
+type: 'canonical_entities:node'
+pattern: 'dll-manuscriptcontent/[node:field_dll_identifier]'
+selection_criteria:
+  ec06db6e-06d6-4bcc-b27b-e51134e3732d:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: ec06db6e-06d6-4bcc-b27b-e51134e3732d
+    context_mapping:
+      node: node
+    bundles:
+      manuscript: manuscript
+selection_logic: and
+weight: 0
+relationships: {  }

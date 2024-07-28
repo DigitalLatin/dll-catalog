@@ -1,0 +1,19 @@
+uuid: 268b0def-59f7-475d-8bd8-a20c0644c908
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subject
+    - node.type.metadata
+id: node.metadata.field_subject
+field_name: field_subject
+entity_type: node
+bundle: metadata
+label: Subject
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

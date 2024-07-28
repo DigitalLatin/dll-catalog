@@ -1,0 +1,21 @@
+uuid: 87603d52-44cf-424c-97cf-6ac2689b70f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_item_id
+    - node.type.repository_item
+  module:
+    - serial
+id: node.repository_item.field_item_id
+field_name: field_item_id
+entity_type: node
+bundle: repository_item
+label: 'Item ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: serial

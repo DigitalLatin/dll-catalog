@@ -1,0 +1,22 @@
+uuid: 1514b13a-2bec-491f-86f1-8b71fbdfa028
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_web_page
+label: 'Content - Web Page'
+type: 'canonical_entities:node'
+pattern: 'dll-web-page/[node:field_dll_identifier]'
+selection_criteria:
+  fe8b7517-d978-4c5c-8833-bd697c235abf:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: fe8b7517-d978-4c5c-8833-bd697c235abf
+    context_mapping:
+      node: node
+    bundles:
+      web_page: web_page
+selection_logic: and
+weight: 0
+relationships: {  }

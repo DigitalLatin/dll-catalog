@@ -1,0 +1,19 @@
+uuid: f308bee2-6538-4465-8511-9077560b9c1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_repository_source
+    - node.type.metadata
+id: node.metadata.field_repository_source
+field_name: field_repository_source
+entity_type: node
+bundle: metadata
+label: 'Repository Source'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

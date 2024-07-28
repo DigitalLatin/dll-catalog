@@ -1,0 +1,22 @@
+uuid: 4257cfa7-b9c9-4e0b-877e-d7b4adbfa270
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dll_catalog
+_core:
+  default_config_hash: XAl8OEr9axZJmOl-1W4MFRMHTV_SEbbdO56nMS2cRVQ
+id: dll_catalog_content
+theme: dll_catalog
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

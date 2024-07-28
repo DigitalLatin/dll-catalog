@@ -1,0 +1,19 @@
+uuid: 3b6150db-4ee9-4288-9ccc-61a34bb296e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cts_urn
+    - node.type.dll_work
+id: node.dll_work.field_cts_urn
+field_name: field_cts_urn
+entity_type: node
+bundle: dll_work
+label: 'CTS URN'
+description: 'Enter the CTS URN, if one exists. The pattern is urn:cts:latinLit: followed by the phi, stoa, or DLL number of the author and the work (e.g., urn:cts:latinLit:stoa0007:stoa001).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

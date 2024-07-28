@@ -1,0 +1,65 @@
+uuid: 61196ffe-4bf8-44dc-b57c-e83b383134df
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.manuscript.comment_node_manuscript
+    - field.field.node.manuscript.field_alternative_id
+    - field.field.node.manuscript.field_contents
+    - field.field.node.manuscript.field_dll_authors
+    - field.field.node.manuscript.field_dll_works
+    - field.field.node.manuscript.field_hand_note
+    - field.field.node.manuscript.field_id_number
+    - field.field.node.manuscript.field_length_mm_
+    - field.field.node.manuscript.field_link_to_the_images_of_the_
+    - field.field.node.manuscript.field_manuscript_date
+    - field.field.node.manuscript.field_not_after
+    - field.field.node.manuscript.field_not_before
+    - field.field.node.manuscript.field_notes_ms
+    - field.field.node.manuscript.field_number_of_leaves
+    - field.field.node.manuscript.field_object_description
+    - field.field.node.manuscript.field_other_sigla
+    - field.field.node.manuscript.field_siglum
+    - field.field.node.manuscript.field_width_mm_
+    - node.type.manuscript
+  module:
+    - user
+id: node.manuscript.search_result
+targetEntityType: node
+bundle: manuscript
+mode: search_result
+content:
+  field_manuscript_date:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_manuscript: true
+  field_alternative_id: true
+  field_contents: true
+  field_dll_authors: true
+  field_dll_works: true
+  field_hand_note: true
+  field_id_number: true
+  field_length_mm_: true
+  field_link_to_the_images_of_the_: true
+  field_not_after: true
+  field_not_before: true
+  field_notes_ms: true
+  field_number_of_leaves: true
+  field_object_description: true
+  field_other_sigla: true
+  field_siglum: true
+  field_width_mm_: true
+  langcode: true
+  search_api_excerpt: true

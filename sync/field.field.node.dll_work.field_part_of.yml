@@ -1,0 +1,29 @@
+uuid: 2d5dd37d-073c-45a0-8991-35dbe83a0e03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_part_of
+    - node.type.dll_work
+id: node.dll_work.field_part_of
+field_name: field_part_of
+entity_type: node
+bundle: dll_work
+label: 'Part Of'
+description: "If this work is a part of a larger work, enter the name of the larger work here. For example, Cornelius Nepos' life of Themistocles is part of his larger work De Viris Illustribus."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      dll_work: dll_work
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

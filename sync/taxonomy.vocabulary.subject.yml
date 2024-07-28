@@ -1,0 +1,9 @@
+uuid: e8e75836-189e-460c-a4f0-62327502c7d5
+langcode: en
+status: true
+dependencies: {  }
+name: Subject
+vid: subject
+description: 'Migrated terms from the production site, in case we want to switch to using a taxonomy.'
+weight: 0
+new_revision: false

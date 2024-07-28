@@ -1,0 +1,21 @@
+uuid: 06cfe813-7d7f-49ac-aed1-44e5a9ddd030
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dll_page_link
+    - node.type.dll_work
+  module:
+    - computed_field
+id: node.dll_work.field_dll_page_link
+field_name: field_dll_page_link
+entity_type: node
+bundle: dll_work
+label: 'DLL Page Link'
+description: 'The value of this field is calculated by a computed field controlled by the DLL Page Link module. It must be re-computed every time new content is added. Go to Structure > Re-compute computed fields.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: computed_string

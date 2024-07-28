@@ -1,0 +1,20 @@
+uuid: 722e35f6-7278-459f-b2d4-4c2a41284005
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_ancient_geographic_identit
+field_name: field_ancient_geographic_identit
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

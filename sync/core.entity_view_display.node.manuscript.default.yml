@@ -1,0 +1,196 @@
+uuid: 5b16f455-4081-4fef-add5-dc649f6f5aa9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_manuscript.default
+    - field.field.node.manuscript.comment_node_manuscript
+    - field.field.node.manuscript.field_alternative_id
+    - field.field.node.manuscript.field_contents
+    - field.field.node.manuscript.field_dll_authors
+    - field.field.node.manuscript.field_dll_works
+    - field.field.node.manuscript.field_hand_note
+    - field.field.node.manuscript.field_id_number
+    - field.field.node.manuscript.field_length_mm_
+    - field.field.node.manuscript.field_link_to_the_images_of_the_
+    - field.field.node.manuscript.field_manuscript_date
+    - field.field.node.manuscript.field_not_after
+    - field.field.node.manuscript.field_not_before
+    - field.field.node.manuscript.field_notes_ms
+    - field.field.node.manuscript.field_number_of_leaves
+    - field.field.node.manuscript.field_object_description
+    - field.field.node.manuscript.field_other_sigla
+    - field.field.node.manuscript.field_siglum
+    - field.field.node.manuscript.field_width_mm_
+    - node.type.manuscript
+  module:
+    - comment
+    - link
+    - text
+    - user
+id: node.manuscript.default
+targetEntityType: node
+bundle: manuscript
+mode: default
+content:
+  comment_node_manuscript:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_alternative_id:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_contents:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_dll_authors:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_dll_works:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_hand_note:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_id_number:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_length_mm_:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_link_to_the_images_of_the_:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_manuscript_date:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_not_after:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_not_before:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_notes_ms:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_number_of_leaves:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_object_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_other_sigla:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_siglum:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_width_mm_:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,9 @@
+uuid: a3d5407c-015e-4370-9790-19565a8035ae
+langcode: en
+status: true
+dependencies: {  }
+name: Settlement
+vid: settlement
+description: 'A taxonomy for describing manuscripts.'
+weight: 0
+new_revision: false

@@ -1,0 +1,9 @@
+uuid: f7377ab4-c51d-4fb8-a92c-298d0db14e96
+langcode: en
+status: true
+dependencies: {  }
+name: Repository
+vid: repository
+description: 'Taxonomy for libraries and repositories where manuscripts are housed.'
+weight: 0
+new_revision: false

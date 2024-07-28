@@ -1,0 +1,8 @@
+uuid: b8fb75fd-7aca-429e-be7a-77515f46d985
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_author_authoritie
+label: 'Author Authorities comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,26 @@
+uuid: 1828ac68-1167-4520-a027-de0454e942a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - dll_catalog
+_core:
+  default_config_hash: 04PvzR_8ICVY9OUocg3e4c82M9_5f4OCo8OQRT-0qRk
+id: dll_catalog_breadcrumbs
+theme: dll_catalog
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

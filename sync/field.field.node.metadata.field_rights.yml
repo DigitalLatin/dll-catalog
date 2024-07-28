@@ -1,0 +1,19 @@
+uuid: 0578fea3-7588-4e64-a29a-109b3443306c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rights
+    - node.type.metadata
+id: node.metadata.field_rights
+field_name: field_rights
+entity_type: node
+bundle: metadata
+label: rights
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

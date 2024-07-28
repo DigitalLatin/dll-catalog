@@ -1,0 +1,19 @@
+uuid: ce9876be-2beb-4876-bc94-dcc7c0e8ae7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_creator
+    - node.type.repository_item
+id: node.repository_item.field_creator
+field_name: field_creator
+entity_type: node
+bundle: repository_item
+label: Creator
+description: "For Latin authors please use the DLL Authorized Authors file to locate the authorized form of the author's name. Use only the Library of Congress authorized name.\r\nFor editors, check the DLL Authorized Authors file for the name. If not found, search Library of Congress Name authority file (id.loc.gov). If not found, add in editor's name as found on the item and note that authority work is needed."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

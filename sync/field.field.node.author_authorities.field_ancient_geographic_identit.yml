@@ -1,0 +1,26 @@
+uuid: 0ceafad6-af2e-4823-99ab-5c516901d027
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ancient_geographic_identit
+    - node.type.author_authorities
+    - taxonomy.vocabulary.geographic_identity
+id: node.author_authorities.field_ancient_geographic_identit
+field_name: field_ancient_geographic_identit
+entity_type: node
+bundle: author_authorities
+label: 'Ancient Geographic Identity'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      geographic_identity: geographic_identity
+    sort:
+      field: _none
+field_type: entity_reference

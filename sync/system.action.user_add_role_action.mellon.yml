@@ -1,0 +1,14 @@
+uuid: 7227f3d2-5b45-4c12-9586-4d699465497d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.mellon
+  module:
+    - user
+id: user_add_role_action.mellon
+label: 'Add the Mellon role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: mellon

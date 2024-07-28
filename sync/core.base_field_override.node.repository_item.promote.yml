@@ -1,0 +1,22 @@
+uuid: df35ade4-71c0-4666-95d5-a4fe095c39e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.repository_item
+id: node.repository_item.promote
+field_name: promote
+entity_type: node
+bundle: repository_item
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

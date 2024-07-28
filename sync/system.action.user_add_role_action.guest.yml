@@ -1,0 +1,14 @@
+uuid: 7f47cc91-76e5-4bd6-8e52-02bba2f3a4d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.guest
+  module:
+    - user
+id: user_add_role_action.guest
+label: 'Add the Guest role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: guest

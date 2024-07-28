@@ -1,0 +1,19 @@
+uuid: 10fb0f26-38a0-4873-8cb4-4a6493ad8463
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_coverage
+    - node.type.metadata
+id: node.metadata.field_coverage
+field_name: field_coverage
+entity_type: node
+bundle: metadata
+label: coverage
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

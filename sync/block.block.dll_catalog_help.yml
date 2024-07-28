@@ -1,0 +1,22 @@
+uuid: 100ccebe-dc6c-4cd2-a17f-8e51f533544d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - dll_catalog
+_core:
+  default_config_hash: h0SBEDOm8FY605ZRpb4wQG0AapmoQCzvPdgece39n9Q
+id: dll_catalog_help
+theme: dll_catalog
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

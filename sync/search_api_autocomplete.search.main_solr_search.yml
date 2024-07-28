@@ -1,0 +1,29 @@
+uuid: 0632f156-ff7b-4ce2-8be2-937c1073aa34
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.dll_catalog_search
+    - views.view.main_solr_search
+  module:
+    - views
+    - search_api_autocomplete
+id: main_solr_search
+label: 'Main Solr Search'
+index_id: dll_catalog_search
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:main_solr_search':
+    displays:
+      default: true
+      selected: {  }
+options: {  }

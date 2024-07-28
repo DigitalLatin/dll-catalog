@@ -1,0 +1,19 @@
+uuid: 62f92a38-ec22-4735-ba58-ca7d7729c750
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_phi_number
+    - node.type.author_authorities
+id: node.author_authorities.field_phi_number
+field_name: field_phi_number
+entity_type: node
+bundle: author_authorities
+label: 'PHI Number'
+description: 'Enter the Packard Humanities Institute (PHI) number for this author, if one exists. PHI numbers are for classical authors only. PHI numbers can be found in a variety of places, but http://latin.packhum.org/browse is the official site.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,21 @@
+uuid: 37ec57a4-56a6-470d-9352-8d0a5f316904
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_repository_item
+    - field.field.comment.comment_node_repository_item.comment_body
+id: comment.comment_node_repository_item.default
+targetEntityType: comment
+bundle: comment_node_repository_item
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_body: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,20 @@
+uuid: 2291bc30-a75a-49e4-9a67-c7abcd1502f9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - dll_catalog
+_core:
+  default_config_hash: w0-v1P-LTIBO2qUV8LKURSAwVq-dE6_JZbCf2b6E-HU
+id: dll_catalog_local_actions
+theme: dll_catalog
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }
