@@ -713,7 +713,7 @@ display:
     display_options:
       exposed_block: true
       display_extenders: {  }
-      path: browse/item-records
+      path: dll-item-record
     cache_metadata:
       max-age: -1
       contexts:

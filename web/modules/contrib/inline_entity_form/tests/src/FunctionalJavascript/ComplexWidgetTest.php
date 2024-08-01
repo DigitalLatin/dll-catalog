@@ -701,7 +701,7 @@ class ComplexWidgetTest extends InlineEntityFormTestBase {
       'title' => 'Some title',
       'multi' => array_values($referenceNodes),
     ]);
-    /** @var NodeInterface $node */
+    /** @var \Drupal\node\Entity\NodeInterface $node */
     $parent_node = $this->drupalGetNodeByTitle('Some title');
 
     // Edit the parent node.
@@ -720,6 +720,9 @@ class ComplexWidgetTest extends InlineEntityFormTestBase {
     $user_role->revokePermission('delete any ief_reference_type content');
     $user_role->save();
 
+    // Reloading page post updating permission to ensure session is updated.
+    $this->drupalGet('node/' . $parent_node->id() . '/edit');
+
     // Without delete permission, the checkbox to delete the entity when
     // removing the reference should not be visible.
     $delete_checkbox_xpath = $this->getXpathForNthInputByLabelText('Delete this node from the system.', 1);
@@ -731,7 +734,9 @@ class ComplexWidgetTest extends InlineEntityFormTestBase {
     // user and reload the page.
     $user_role->grantPermission('delete any ief_reference_type content');
     $user_role->save();
-    $this->getSession()->reload();
+
+    // Reloading page post updating permission to ensure session is updated.
+    $this->drupalGet('node/' . $parent_node->id() . '/edit');
 
     // Delete the reference to the first entity, but keep it in the system.
     $assert_session->elementExists('xpath', '(//input[@value="Remove"])[1]')->press();
@@ -757,6 +762,10 @@ class ComplexWidgetTest extends InlineEntityFormTestBase {
     // reload the page.
     $user_role->revokePermission('delete any ief_reference_type content');
     $user_role->save();
+
+    // Reloading page post updating permission to ensure session is updated.
+    $this->drupalGet('node/' . $parent_node->id() . '/edit');
+
     $this->updateSetting('removed_reference', 'keep');
     $this->drupalGet('node/' . $parent_node->id() . '/edit');
     $assert_session->pageTextNotContains($title1);
@@ -794,7 +803,9 @@ class ComplexWidgetTest extends InlineEntityFormTestBase {
     // user and reload the page.
     $user_role->grantPermission('delete any ief_reference_type content');
     $user_role->save();
-    $this->getSession()->reload();
+
+    // Reloading page post updating permission to ensure session is updated.
+    $this->drupalGet('node/' . $parent_node->id() . '/edit');
 
     // Now unreference the fourth entity and check if it disappeared.
     $assert_session->elementsCount('css', 'tr.ief-row-entity', 2);
@@ -1211,7 +1222,7 @@ class ComplexWidgetTest extends InlineEntityFormTestBase {
   /**
    * Data provider: FALSE, TRUE.
    */
-  public function simpleFalseTrueDataProvider() {
+  public static function simpleFalseTrueDataProvider() {
     return [
       [FALSE],
       [TRUE],

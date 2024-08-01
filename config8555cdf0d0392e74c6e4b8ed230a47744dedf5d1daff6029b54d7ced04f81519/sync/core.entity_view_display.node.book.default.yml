@@ -3,12 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_book.default
     - field.field.node.book.body
-    - field.field.node.book.comment_node_book
     - node.type.book
   module:
-    - comment
     - text
     - user
 id: node.book.default
@@ -22,15 +19,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
-  comment_node_book:
-    type: comment_default
-    label: hidden
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 20
     region: content
   links:
     settings: {  }

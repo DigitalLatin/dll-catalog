@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.web_page.comment_node_web_page
     - field.field.node.web_page.field_access_date
     - field.field.node.web_page.field_creator
     - field.field.node.web_page.field_dll_creator
@@ -20,7 +19,6 @@ dependencies:
     - field.field.node.web_page.field_work_reference
     - node.type.web_page
   module:
-    - comment
     - computed_field
     - link
     - path
@@ -29,12 +27,6 @@ targetEntityType: node
 bundle: web_page
 mode: default
 content:
-  comment_node_web_page:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10

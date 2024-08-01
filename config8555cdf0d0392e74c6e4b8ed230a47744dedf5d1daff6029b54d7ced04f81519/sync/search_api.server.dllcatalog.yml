@@ -38,30 +38,26 @@ backend_config:
   server_prefix: ''
   domain: generic
   environment: default
-  connector: solr_cloud_basic_auth
+  connector: basic_auth
   connector_config:
     scheme: http
-    host: solr
+    host: 172.17.0.2
     port: 8983
     path: /
-    core: dllcatalog
+    core: dllcatsolr
     timeout: 5
     index_timeout: 5
     optimize_timeout: 10
     finalize_timeout: 30
     skip_schema_check: false
-    solr_version: ''
+    solr_version: '9'
     http_method: AUTO
     commit_within: 1000
     jmx: false
     jts: false
     solr_install_dir: ''
-    checkpoints_collection: ''
-    stats_cache: org.apache.solr.search.stats.LRUStatsCache
-    distrib: true
-    context: solr
     username: solr
-    password: SolrRocks
+    password: FSO3dKgn0oB4fcputiHQNGhdy6OTnOH9
   optimize: false
   fallback_multiple: false
   disabled_field_types: {  }

@@ -3,9 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_metadata.default
     - field.field.node.metadata.body
-    - field.field.node.metadata.comment_node_metadata
     - field.field.node.metadata.field_contributor
     - field.field.node.metadata.field_coverage
     - field.field.node.metadata.field_creator
@@ -27,7 +25,6 @@ dependencies:
     - field.field.node.metadata.field_work_reference
     - node.type.metadata
   module:
-    - comment
     - text
     - user
 id: node.metadata.default
@@ -41,15 +38,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
-  comment_node_metadata:
-    type: comment_default
-    label: hidden
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 20
     region: content
   field_contributor:
     type: string

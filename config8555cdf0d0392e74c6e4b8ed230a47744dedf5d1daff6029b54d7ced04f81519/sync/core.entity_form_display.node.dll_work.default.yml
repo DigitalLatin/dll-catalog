@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.dll_work.comment_node_dll_work
     - field.field.node.dll_work.field_alternative_title
     - field.field.node.dll_work.field_attributed_to
     - field.field.node.dll_work.field_author
@@ -29,7 +28,6 @@ dependencies:
     - field.field.node.dll_work.field_work_name
     - node.type.dll_work
   module:
-    - comment
     - computed_field
     - link
     - path
@@ -39,12 +37,6 @@ targetEntityType: node
 bundle: dll_work
 mode: default
 content:
-  comment_node_dll_work:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10

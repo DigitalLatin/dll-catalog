@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.solr_search
-    - field.field.node.web_page.comment_node_web_page
     - field.field.node.web_page.field_access_date
     - field.field.node.web_page.field_creator
     - field.field.node.web_page.field_dll_creator
@@ -85,7 +84,6 @@ content:
     weight: 6
     region: content
 hidden:
-  comment_node_web_page: true
   field_access_date: true
   field_creator: true
   field_dll_number: true

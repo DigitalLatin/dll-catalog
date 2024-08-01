@@ -46,16 +46,16 @@ class JsonLdRequestSubscriber implements EventSubscriberInterface {
  */
 public function onRequest(RequestEvent $event) {
   $request = $event->getRequest();
-  $this->logger->info('Request received with query parameters: @params', ['@params' => $request->query->all()]);
+  //$this->logger->info('Request received with query parameters: @params', ['@params' => $request->query->all()]);
 
   if ($request->query->get('format') === 'json-ld') {
-    $this->logger->info('format=json-ld detected');
+    //$this->logger->info('format=json-ld detected');
     $node = $this->getNodeFromRequest($request);
     if ($node) {
-      $this->logger->info('Node found: @nid', ['@nid' => $node->id()]);
-      $this->logger->info('Node bundle: @bundle', ['@bundle' => $node->bundle()]);
+      //$this->logger->info('Node found: @nid', ['@nid' => $node->id()]);
+      //$this->logger->info('Node bundle: @bundle', ['@bundle' => $node->bundle()]);
       $response_data = $this->jsonLdFormatter->format($node);
-      $this->logger->info('Formatted JSON-LD response: @response', ['@response' => json_encode($response_data)]);
+      //$this->logger->info('Formatted JSON-LD response: @response', ['@response' => json_encode($response_data)]);
 
       // Create the JSON response
       $response = new JsonResponse($response_data);
@@ -63,17 +63,17 @@ public function onRequest(RequestEvent $event) {
       // Set the response
       $event->setResponse($response);
     } else {
-      $this->logger->warning('No node found for the given request.');
+      //$this->logger->warning('No node found for the given request.');
     }
   } else {
-    $this->logger->info('format=json-ld not detected');
+    //$this->logger->info('format=json-ld not detected');
   }
 }
 
 
   protected function getNodeFromRequest($request) {
     $path = $request->getPathInfo();
-    $this->logger->info('Processing path: @path', ['@path' => $path]);
+    //$this->logger->info('Processing path: @path', ['@path' => $path]);
 
     $alias = $this->aliasManager->getPathByAlias($path);
     if (strpos($alias, '/node/') === 0) {

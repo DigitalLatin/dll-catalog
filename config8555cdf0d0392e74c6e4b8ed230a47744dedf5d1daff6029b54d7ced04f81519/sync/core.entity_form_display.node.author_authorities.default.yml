@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.author_authorities.comment_node_author_authoritie
     - field.field.node.author_authorities.field_also_known_as
     - field.field.node.author_authorities.field_ancient_geographic_identit
     - field.field.node.author_authorities.field_author_birth_date
@@ -44,7 +43,6 @@ dependencies:
     - field.field.node.author_authorities.field_worldcat_identity
     - node.type.author_authorities
   module:
-    - comment
     - computed_field
     - link
     - path
@@ -54,12 +52,6 @@ targetEntityType: node
 bundle: author_authorities
 mode: default
 content:
-  comment_node_author_authoritie:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10

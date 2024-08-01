@@ -5,17 +5,18 @@ namespace Drupal\inline_entity_form\Form;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\ContentEntityTypeInterface;
 use Drupal\Core\Entity\Entity\EntityFormDisplay;
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityFieldManagerInterface;
+use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Field\WidgetBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Render\Element;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Theme\ThemeManagerInterface;
 use Drupal\inline_entity_form\InlineFormInterface;
+use Drupal\rat\v1\RenderArray;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -106,10 +107,9 @@ class EntityInlineForm implements InlineFormInterface {
    * {@inheritdoc}
    */
   public function getEntityTypeLabels() {
-    $lowercase_label = $this->entityType->getSingularLabel();
     return [
-      'singular' => $lowercase_label,
-      'plural' => $this->t('@entity_type entities', ['@entity_type' => $lowercase_label]),
+      'singular' => $this->entityType->getSingularLabel(),
+      'plural' => $this->entityType->getPluralLabel(),
     ];
   }
 
@@ -191,13 +191,15 @@ class EntityInlineForm implements InlineFormInterface {
     // Inline entities inherit the parent language.
     $langcode_key = $this->entityType->getKey('langcode');
     if ($langcode_key && isset($entity_form[$langcode_key])) {
-      $entity_form[$langcode_key]['#access'] = FALSE;
+      // Safely restrict access. Entity cacheability already set.
+      RenderArray::alter($entity_form[$langcode_key])->restrictAccess(FALSE, NULL);
     }
     if (!empty($entity_form['#translating'])) {
       // Hide the non-translatable fields.
       foreach ($entity->getFieldDefinitions() as $field_name => $definition) {
         if (isset($entity_form[$field_name]) && $field_name != $langcode_key) {
-          $entity_form[$field_name]['#access'] = $definition->isTranslatable();
+          // Safely restrict access. Field definition cacheability already set.
+          RenderArray::alter($entity_form[$field_name])->restrictAccess($definition->isTranslatable(), NULL);
         }
       }
     }
@@ -206,7 +208,8 @@ class EntityInlineForm implements InlineFormInterface {
     // disabled in UI and does not make sense in inline entity form context.
     if (($this->entityType instanceof ContentEntityTypeInterface)) {
       if ($log_message_key = $this->entityType->getRevisionMetadataKey('revision_log_message')) {
-        $entity_form[$log_message_key]['#access'] = FALSE;
+        // Safely restrict access. Entity type cacheability already set.
+        RenderArray::alter($entity_form[$log_message_key])->restrictAccess(FALSE, NULL);
       }
     }
 

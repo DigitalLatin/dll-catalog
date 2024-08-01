@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.dll_work.comment_node_dll_work
     - field.field.node.dll_work.field_alternative_title
     - field.field.node.dll_work.field_attributed_to
     - field.field.node.dll_work.field_author
@@ -57,7 +56,6 @@ content:
     weight: 100
     region: content
 hidden:
-  comment_node_dll_work: true
   field_alternative_title: true
   field_attributed_to: true
   field_cts_urn: true

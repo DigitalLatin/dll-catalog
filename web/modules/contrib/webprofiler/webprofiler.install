@@ -1,0 +1,17 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * @file
+ * Drupal Webprofiler.
+ */
+use Drupal\Core\PhpStorage\PhpStorageFactory;
+
+/**
+ * Clear old config entity storage decorators.
+ */
+function webprofiler_update_8001(): void {
+  $storage = PhpStorageFactory::get('webprofiler');
+  $storage->deleteAll();
+}

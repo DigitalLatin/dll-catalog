@@ -4,10 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.book.body
-    - field.field.node.book.comment_node_book
     - node.type.book
   module:
-    - comment
     - path
     - text
 id: node.book.default
@@ -24,12 +22,6 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
-  comment_node_book:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp

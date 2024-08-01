@@ -14,10 +14,7 @@ function dll_json_ld_entity_view(array &$build, \Drupal\Core\Entity\EntityInterf
         
         // Add cache context for specific content types.
         $build['#cache']['contexts'][] = 'url.query_args:format';
-
-        // Ensure your module's code runs and attaches necessary data.
-        \Drupal::logger('dll_json_ld')->info('Running hook_entity_view for bundle: @bundle', ['@bundle' => $entity->bundle()]);
-
+   
         break;
     }
   }

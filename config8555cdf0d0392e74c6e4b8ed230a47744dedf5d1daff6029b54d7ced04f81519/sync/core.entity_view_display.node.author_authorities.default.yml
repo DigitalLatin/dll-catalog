@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.author_authorities.comment_node_author_authoritie
     - field.field.node.author_authorities.field_also_known_as
     - field.field.node.author_authorities.field_ancient_geographic_identit
     - field.field.node.author_authorities.field_author_birth_date
@@ -380,7 +379,6 @@ content:
     weight: 34
     region: content
 hidden:
-  comment_node_author_authoritie: true
   field_dll_author_number: true
   field_dll_number: true
   field_editor: true

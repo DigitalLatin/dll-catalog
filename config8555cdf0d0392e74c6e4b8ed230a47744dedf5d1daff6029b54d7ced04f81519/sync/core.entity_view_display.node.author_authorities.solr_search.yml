@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.solr_search
-    - field.field.node.author_authorities.comment_node_author_authoritie
     - field.field.node.author_authorities.field_also_known_as
     - field.field.node.author_authorities.field_ancient_geographic_identit
     - field.field.node.author_authorities.field_author_birth_date
@@ -105,7 +104,6 @@ content:
     weight: 6
     region: content
 hidden:
-  comment_node_author_authoritie: true
   field_also_known_as: true
   field_ancient_geographic_identit: true
   field_author_birth_date: true

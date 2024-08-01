@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.search_result
-    - field.field.node.manuscript.comment_node_manuscript
     - field.field.node.manuscript.field_alternative_id
     - field.field.node.manuscript.field_contents
     - field.field.node.manuscript.field_dll_authors
@@ -44,7 +43,6 @@ content:
     weight: 100
     region: content
 hidden:
-  comment_node_manuscript: true
   field_alternative_id: true
   field_contents: true
   field_dll_authors: true

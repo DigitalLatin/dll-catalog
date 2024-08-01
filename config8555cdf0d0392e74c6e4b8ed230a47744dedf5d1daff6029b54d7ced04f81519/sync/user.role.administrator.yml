@@ -11,10 +11,8 @@ dependencies:
     - node.type.dll_work
     - node.type.manuscript
     - node.type.page
-    - node.type.panel
     - node.type.repository_item
   module:
-    - announcements_feed
     - block
     - contact
     - contextual
@@ -37,7 +35,6 @@ weight: 7
 is_admin: true
 permissions:
   - 'access administration pages'
-  - 'access announcements'
   - 'access content'
   - 'access content overview'
   - 'access contextual links'
@@ -74,7 +71,6 @@ permissions:
   - 'create dll_work content'
   - 'create manuscript content'
   - 'create page content'
-  - 'create panel content'
   - 'create repository_item content'
   - 'create url aliases'
   - 'customize shortcut links'
@@ -83,28 +79,24 @@ permissions:
   - 'delete any dll_work content'
   - 'delete any manuscript content'
   - 'delete any page content'
-  - 'delete any panel content'
   - 'delete any repository_item content'
   - 'delete own article content'
   - 'delete own author_authorities content'
   - 'delete own dll_work content'
   - 'delete own manuscript content'
   - 'delete own page content'
-  - 'delete own panel content'
   - 'delete own repository_item content'
   - 'edit any article content'
   - 'edit any author_authorities content'
   - 'edit any dll_work content'
   - 'edit any manuscript content'
   - 'edit any page content'
-  - 'edit any panel content'
   - 'edit any repository_item content'
   - 'edit own article content'
   - 'edit own author_authorities content'
   - 'edit own dll_work content'
   - 'edit own manuscript content'
   - 'edit own page content'
-  - 'edit own panel content'
   - 'edit own repository_item content'
   - 'notify of path changes'
   - 'select account cancellation method'

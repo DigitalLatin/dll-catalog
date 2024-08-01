@@ -3,8 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_repository_item.default
-    - field.field.node.repository_item.comment_node_repository_item
     - field.field.node.repository_item.field_contributor
     - field.field.node.repository_item.field_coverage
     - field.field.node.repository_item.field_creator
@@ -34,7 +32,6 @@ dependencies:
     - field.field.node.repository_item.field_work_reference
     - node.type.repository_item
   module:
-    - comment
     - computed_field
     - link
     - user
@@ -43,15 +40,6 @@ targetEntityType: node
 bundle: repository_item
 mode: default
 content:
-  comment_node_repository_item:
-    type: comment_default
-    label: hidden
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 20
-    region: content
   field_contributor:
     type: string
     label: above

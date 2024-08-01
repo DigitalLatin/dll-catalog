@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.repository_item.comment_node_repository_item
     - field.field.node.repository_item.field_contributor
     - field.field.node.repository_item.field_coverage
     - field.field.node.repository_item.field_creator
@@ -46,7 +45,6 @@ content:
     weight: 100
     region: content
 hidden:
-  comment_node_repository_item: true
   field_contributor: true
   field_coverage: true
   field_creator: true

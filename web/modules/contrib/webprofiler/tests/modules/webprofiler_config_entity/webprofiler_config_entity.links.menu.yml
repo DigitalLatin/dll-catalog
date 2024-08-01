@@ -1,0 +1,5 @@
+entity.testconfig.overview:
+  title: TestConfigs
+  parent: system.admin_structure
+  description: 'List of testconfigs to extend site functionality.'
+  route_name: entity.testconfig.collection

@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.dll_work.comment_node_dll_work
     - field.field.node.dll_work.field_alternative_title
     - field.field.node.dll_work.field_attributed_to
     - field.field.node.dll_work.field_author
@@ -224,7 +223,6 @@ content:
     weight: 22
     region: content
 hidden:
-  comment_node_dll_work: true
   field_dll_number: true
   langcode: true
   search_api_excerpt: true

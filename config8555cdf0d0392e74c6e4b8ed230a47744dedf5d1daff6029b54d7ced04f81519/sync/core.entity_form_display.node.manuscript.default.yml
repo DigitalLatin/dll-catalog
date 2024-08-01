@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.manuscript.comment_node_manuscript
     - field.field.node.manuscript.field_alternative_id
     - field.field.node.manuscript.field_contents
     - field.field.node.manuscript.field_dll_authors
@@ -23,7 +22,6 @@ dependencies:
     - field.field.node.manuscript.field_width_mm_
     - node.type.manuscript
   module:
-    - comment
     - link
     - path
     - text
@@ -32,12 +30,6 @@ targetEntityType: node
 bundle: manuscript
 mode: default
 content:
-  comment_node_manuscript:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10

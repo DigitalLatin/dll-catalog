@@ -1,0 +1,14 @@
+webprofiler_config_entity.testconfig.*:
+  type: config_entity
+  label: TestConfig
+  mapping:
+    id:
+      type: string
+      label: ID
+    label:
+      type: label
+      label: Label
+    uuid:
+      type: string
+    description:
+      type: string

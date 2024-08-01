@@ -12,7 +12,7 @@
  *
  * @param array $entity_form
  *   Nested array of form elements that comprise the entity form.
- * @param $form_state
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
  *   The form state of the parent form.
  */
 function hook_inline_entity_form_entity_form_alter(array &$entity_form, \Drupal\Core\Form\FormStateInterface &$form_state) {
@@ -31,7 +31,7 @@ function hook_inline_entity_form_entity_form_alter(array &$entity_form, \Drupal\
  *
  * @param array $reference_form
  *   Nested array of form elements that comprise the reference form.
- * @param $form_state
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
  *   The form state of the parent form.
  */
 function hook_inline_entity_form_reference_form_alter(array &$reference_form, \Drupal\Core\Form\FormStateInterface &$form_state) {

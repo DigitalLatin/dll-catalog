@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.book.body
-    - field.field.node.book.comment_node_book
     - node.type.book
   module:
     - text
@@ -29,6 +28,5 @@ content:
     weight: 100
     region: content
 hidden:
-  comment_node_book: true
   langcode: true
   search_api_excerpt: true

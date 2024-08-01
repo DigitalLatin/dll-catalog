@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.metadata.body
-    - field.field.node.metadata.comment_node_metadata
     - field.field.node.metadata.field_contributor
     - field.field.node.metadata.field_coverage
     - field.field.node.metadata.field_creator
@@ -48,7 +47,6 @@ content:
     weight: 100
     region: content
 hidden:
-  comment_node_metadata: true
   field_contributor: true
   field_coverage: true
   field_creator: true

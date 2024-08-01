@@ -1,0 +1,31 @@
+entity.testconfig.collection:
+  path: '/admin/structure/testconfig'
+  defaults:
+    _entity_list: 'testconfig'
+    _title: 'TestConfig configuration'
+  requirements:
+    _permission: 'administer testconfig'
+
+entity.testconfig.add_form:
+  path: '/admin/structure/testconfig/add'
+  defaults:
+    _entity_form: 'testconfig.add'
+    _title: 'Add a testconfig'
+  requirements:
+    _permission: 'administer testconfig'
+
+entity.testconfig.edit_form:
+  path: '/admin/structure/testconfig/{testconfig}'
+  defaults:
+    _entity_form: 'testconfig.edit'
+    _title: 'Edit a testconfig'
+  requirements:
+    _permission: 'administer testconfig'
+
+entity.testconfig.delete_form:
+  path: '/admin/structure/testconfig/{testconfig}/delete'
+  defaults:
+    _entity_form: 'testconfig.delete'
+    _title: 'Delete a testconfig'
+  requirements:
+    _permission: 'administer testconfig'

@@ -1,0 +1,23 @@
+uuid: 8448ae37-9090-481e-a853-1d0ebbbd060a
+langcode: en
+status: true
+dependencies: {  }
+id: G-HL0C7SKFLR.66aba852bd43f9.87548267
+label: G-HL0C7SKFLR
+weight: 0
+tag_container_ids:
+  - G-HL0C7SKFLR
+advanced_settings:
+  consent_mode: false
+dimensions_metrics: {  }
+conditions: {  }
+events:
+  custom: {  }
+  generate_lead:
+    value: ''
+    currency: ''
+  login:
+    method: CMS
+  search: {  }
+  sign_up:
+    method: CMS

@@ -35,6 +35,7 @@
         "drupal/existing_values_autocomplete_widget": "2.x-dev",
         "drupal/facets": "^2.0",
         "drupal/fontawesome": "^2.26",
+        "drupal/google_tag": "^2.0",
         "drupal/inline_entity_form": "^3.0@RC",
         "drupal/job_scheduler": "^4.0",
         "drupal/jsonapi_extras": "^3.25",
@@ -50,6 +51,7 @@
         "drupal/views_bootstrap": "^5.3",
         "drupal/views_bulk_operations": "^4.2",
         "drupal/views_data_export": "^1.4",
+        "drupal/webprofiler": "^10.1",
         "drush/drush": "^12.5"
     },
     "conflict": {
@@ -81,9 +83,6 @@
             },
             "drupal/computed_field": {
                 "Provide a drupal 7 field migration plugin": "https://www.drupal.org/files/issues/2022-01-05/3255031-computed_field-migrate-7.patch"
-            },
-            "drupal/core": {
-                "Don't hide permissions local tasks on bundles when no permissions are defined": "https://www.drupal.org/files/issues/2023-09-01/3384600-5.patch"
             }
         },
         "installer-paths": {

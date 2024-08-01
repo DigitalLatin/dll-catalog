@@ -66,7 +66,7 @@ class ComplexWidgetRevisionsTest extends InlineEntityFormTestBase {
   /**
    * Data provider for ::testRevisionsAtDepth.
    */
-  public function revisionsAtDepthDataProvider(): array {
+  public static function revisionsAtDepthDataProvider(): array {
     return [
       [FALSE],
       [TRUE],

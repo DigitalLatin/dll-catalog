@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.metadata.body
-    - field.field.node.metadata.comment_node_metadata
     - field.field.node.metadata.field_contributor
     - field.field.node.metadata.field_coverage
     - field.field.node.metadata.field_creator
@@ -26,7 +25,6 @@ dependencies:
     - field.field.node.metadata.field_work_reference
     - node.type.metadata
   module:
-    - comment
     - path
     - text
 id: node.metadata.default
@@ -43,12 +41,6 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
-  comment_node_metadata:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
     third_party_settings: {  }
   created:
     type: datetime_timestamp

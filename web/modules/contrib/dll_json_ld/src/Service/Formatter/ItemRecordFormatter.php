@@ -24,7 +24,7 @@ class ItemRecordFormatter {
    *   The JSON-LD formatted data.
    */
   public function format(NodeInterface $node) {
-    \Drupal::logger('dll_json_ld')->info('Formatting Item Record node: @nid', ['@nid' => $node->id()]);
+    //\Drupal::logger('dll_json_ld')->info('Formatting Item Record node: @nid', ['@nid' => $node->id()]);
     return [
       '@context' => [
         '@base' => 'https://catalog.digitallatin.org',

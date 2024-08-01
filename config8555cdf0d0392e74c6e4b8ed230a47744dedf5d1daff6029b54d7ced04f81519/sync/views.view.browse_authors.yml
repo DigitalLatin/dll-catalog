@@ -188,7 +188,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="/dll-author/[field_dll_identifier]">{{ field_authorized_name__value }}</a>'
+            text: '<a href="/dll-author/{{ field_dll_identifier }}">{{ field_authorized_name__value }}</a>'
             make_link: false
             path: ''
             absolute: false
@@ -446,7 +446,7 @@ display:
     display_options:
       exposed_block: true
       display_extenders: {  }
-      path: browse/authors
+      path: dll-author
     cache_metadata:
       max-age: -1
       contexts:
