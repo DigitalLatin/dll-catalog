@@ -89,6 +89,7 @@
 	{{ title_suffix }}
 
 	<div{{content_attributes.addClass('node__content')}}>
+                <p>{{ node.createdtime | date('F j, Y') }}</p>
 		{{ content }}
 	</div>
 
