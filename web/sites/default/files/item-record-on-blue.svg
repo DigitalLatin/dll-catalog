@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>item-record-on-blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="exportable-assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-282.000000, -659.000000)">
+        <g id="item-record-on-blue" transform="translate(282.000000, 659.000000)">
+            <rect id="Rectangle-5" fill="#315375" x="0" y="0" width="35" height="35"></rect>
+            <g id="Page-1" transform="translate(10.000000, 8.000000)" fill="#FFFFFF">
+                <polygon id="Fill-1" points="9.59943081 0 0 0 0 20 16 20 16 6.67815325 9.59943081 6.67815325"></polygon>
+                <path d="M11,0 L11,5 L16,5 C15.2890774,4.28907737 14.4965476,3.49654761 13.6224107,2.6224107 C12.7482738,1.7482738 11.8741369,0.874136901 11,0 Z" id="Fill-2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'drupal/recommended-project',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'e2d8f4fd49a7cefe1404b9459ccdeabb7b916a26',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -148,7 +148,7 @@
         'digitallatin/dll_catalog' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'bf27c07b2d17e18a7775f0cc8e54ca48728f9208',
+            'reference' => 'dd8154dd9ff68a2d72a1beabec125a594a03abcb',
             'type' => 'drupal-custom-theme',
             'install_path' => __DIR__ . '/../../web/themes/custom/dll_catalog',
             'aliases' => array(
@@ -575,9 +575,9 @@
             'dev_requirement' => false,
         ),
         'drupal/recommended-project' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'e2d8f4fd49a7cefe1404b9459ccdeabb7b916a26',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -665,9 +665,9 @@
             'dev_requirement' => false,
         ),
         'drupal/views_bootstrap' => array(
-            'pretty_version' => '5.4.0',
-            'version' => '5.4.0.0',
-            'reference' => '5.4.0',
+            'pretty_version' => '5.4.1',
+            'version' => '5.4.1.0',
+            'reference' => '5.4.1',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../web/modules/contrib/views_bootstrap',
             'aliases' => array(),
