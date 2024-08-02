@@ -270,11 +270,21 @@ table {
     margin-top: 0.5rem;
 }
 
+// Float the search button
+#views-exposed-form-browse-authors-browse-authors .form--inline .form-item-search-api-fulltext,
+#views-exposed-form-browse-dll-work-records-browse-works .form--inline .form-item-search-api-fulltext,
+#views-exposed-form-browse-item-records-browse-item-records .form--inline .form-item-search-api-fulltext,
+#views-exposed-form-browse-web-pages-browse-web-pages .form--inline .form-item-search-api-fulltext {
+    float: left;
+    width: max-content;
+    text-align: left;
+}
+
 // Change the color of the reset button
-#views-exposed-form-browse-authors-browse-authors .btn:last-child,
-#views-exposed-form-browse-dll-work-records-browse-works .btn:last-child,
-#views-exposed-form-browse-item-records-browse-item-records .btn:last-child,
-#views-exposed-form-browse-web-pages-browse-web-pages .btn:last-child {
+#views-exposed-form-browse-authors-browse-authors .btn:nth-of-type(2),
+#views-exposed-form-browse-dll-work-records-browse-works .btn:nth-of-type(2),
+#views-exposed-form-browse-item-records-browse-item-records .btn:nth-of-type(2),
+#views-exposed-form-browse-web-pages-browse-web-pages .btn:nth-of-type(2) {
     background-color: grey;
 }
 
@@ -282,7 +292,7 @@ table {
     margin-bottom: 1rem;
 }
 
-// Styles for item record browse view
+// Styles for item record and web page browse view
 .view-browse-item-records .views-label,
 .view-browse-web-pages .views-label {
     font-weight: bold;
@@ -366,7 +376,7 @@ div.leaf a {
     padding: 4rem 3rem 4rem 13rem;
     @media screen and (max-width: 950px) {
         padding: 3rem 2rem 3rem 12rem;
-        font-size: 2rem;
+        font-size: 1.25rem;
     }
     display: block;
 
@@ -396,14 +406,6 @@ div.leaf a {
 
 .node--view-mode-full {
     margin-top: 1.5rem;
-}
-
-// Set the color for all headings
-h1,
-h2,
-h3,
-h4 {
-    color:#A33701;
 }
 
 // Add some space around the title
@@ -545,7 +547,7 @@ h4 {
 
 .node__meta {
     border-bottom: thin solid;
-    margin-bottom: 1.75rem;
+    margin-bottom: 0.75rem;
     padding: 0;
 }
 .node__submitted {
@@ -553,15 +555,22 @@ h4 {
     font-style: italic;
 }
 
+// Formatting for update page
 article.node--view-mode-teaser {
-    border: thin solid grey;
     padding: 2rem;
     margin-bottom: 1.5rem;
 }
 
-.view-id-updates ul > li:first-child {
-    margin-top: 2.5rem;
+.view-id-updates .list-group-item:nth-of-type(odd) {
+    background-color: #F6F7F8;
 }
+
+.page-node-type-article .region-content {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ======================================================================== 
     Search page
    ======================================================================== */
@@ -632,8 +641,23 @@ article.node--view-mode-teaser {
     Typography
    ======================================================================== */
 
+//Set the font family site-wide
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+
+// Set the color and font-family for all headings
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color:#A33701;
+    font-family: "Noto Sans Display", sans-serif;
+}
+
 .node-created {
-    font-style: italic;
+    font-style: italic; 
 }
 /* ======================================================================== 
     General styles

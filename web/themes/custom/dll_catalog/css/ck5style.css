@@ -12072,22 +12072,30 @@ a > .ck-content code {
 .ck-content #views-exposed-form-browse-web-pages-browse-web-pages #edit-search-api-fulltext--2--description {
   margin-top: 0.5rem;
 }
-.ck-content #views-exposed-form-browse-authors-browse-authors .btn:last-child, .ck-content #views-exposed-form-browse-authors-browse-authors button.link:last-child, .ck-content #views-exposed-form-browse-authors-browse-authors .button:last-child, .ck-content #views-exposed-form-browse-authors-browse-authors .node-preview-container .node-preview-backlink:last-child, .ck-content .node-preview-container #views-exposed-form-browse-authors-browse-authors .node-preview-backlink:last-child,
-.ck-content #views-exposed-form-browse-dll-work-records-browse-works .btn:last-child,
-.ck-content #views-exposed-form-browse-dll-work-records-browse-works button.link:last-child,
-.ck-content #views-exposed-form-browse-dll-work-records-browse-works .button:last-child,
-.ck-content #views-exposed-form-browse-dll-work-records-browse-works .node-preview-container .node-preview-backlink:last-child,
-.ck-content .node-preview-container #views-exposed-form-browse-dll-work-records-browse-works .node-preview-backlink:last-child,
-.ck-content #views-exposed-form-browse-item-records-browse-item-records .btn:last-child,
-.ck-content #views-exposed-form-browse-item-records-browse-item-records button.link:last-child,
-.ck-content #views-exposed-form-browse-item-records-browse-item-records .button:last-child,
-.ck-content #views-exposed-form-browse-item-records-browse-item-records .node-preview-container .node-preview-backlink:last-child,
-.ck-content .node-preview-container #views-exposed-form-browse-item-records-browse-item-records .node-preview-backlink:last-child,
-.ck-content #views-exposed-form-browse-web-pages-browse-web-pages .btn:last-child,
-.ck-content #views-exposed-form-browse-web-pages-browse-web-pages button.link:last-child,
-.ck-content #views-exposed-form-browse-web-pages-browse-web-pages .button:last-child,
-.ck-content #views-exposed-form-browse-web-pages-browse-web-pages .node-preview-container .node-preview-backlink:last-child,
-.ck-content .node-preview-container #views-exposed-form-browse-web-pages-browse-web-pages .node-preview-backlink:last-child {
+.ck-content #views-exposed-form-browse-authors-browse-authors .form--inline .form-item-search-api-fulltext,
+.ck-content #views-exposed-form-browse-dll-work-records-browse-works .form--inline .form-item-search-api-fulltext,
+.ck-content #views-exposed-form-browse-item-records-browse-item-records .form--inline .form-item-search-api-fulltext,
+.ck-content #views-exposed-form-browse-web-pages-browse-web-pages .form--inline .form-item-search-api-fulltext {
+  float: left;
+  width: max-content;
+  text-align: left;
+}
+.ck-content #views-exposed-form-browse-authors-browse-authors .btn:nth-of-type(2), .ck-content #views-exposed-form-browse-authors-browse-authors button.link:nth-of-type(2), .ck-content #views-exposed-form-browse-authors-browse-authors .button:nth-of-type(2), .ck-content #views-exposed-form-browse-authors-browse-authors .node-preview-container .node-preview-backlink:nth-of-type(2), .ck-content .node-preview-container #views-exposed-form-browse-authors-browse-authors .node-preview-backlink:nth-of-type(2),
+.ck-content #views-exposed-form-browse-dll-work-records-browse-works .btn:nth-of-type(2),
+.ck-content #views-exposed-form-browse-dll-work-records-browse-works button.link:nth-of-type(2),
+.ck-content #views-exposed-form-browse-dll-work-records-browse-works .button:nth-of-type(2),
+.ck-content #views-exposed-form-browse-dll-work-records-browse-works .node-preview-container .node-preview-backlink:nth-of-type(2),
+.ck-content .node-preview-container #views-exposed-form-browse-dll-work-records-browse-works .node-preview-backlink:nth-of-type(2),
+.ck-content #views-exposed-form-browse-item-records-browse-item-records .btn:nth-of-type(2),
+.ck-content #views-exposed-form-browse-item-records-browse-item-records button.link:nth-of-type(2),
+.ck-content #views-exposed-form-browse-item-records-browse-item-records .button:nth-of-type(2),
+.ck-content #views-exposed-form-browse-item-records-browse-item-records .node-preview-container .node-preview-backlink:nth-of-type(2),
+.ck-content .node-preview-container #views-exposed-form-browse-item-records-browse-item-records .node-preview-backlink:nth-of-type(2),
+.ck-content #views-exposed-form-browse-web-pages-browse-web-pages .btn:nth-of-type(2),
+.ck-content #views-exposed-form-browse-web-pages-browse-web-pages button.link:nth-of-type(2),
+.ck-content #views-exposed-form-browse-web-pages-browse-web-pages .button:nth-of-type(2),
+.ck-content #views-exposed-form-browse-web-pages-browse-web-pages .node-preview-container .node-preview-backlink:nth-of-type(2),
+.ck-content .node-preview-container #views-exposed-form-browse-web-pages-browse-web-pages .node-preview-backlink:nth-of-type(2) {
   background-color: grey;
 }
 .ck-content .browse .views-row {
@@ -12171,7 +12179,7 @@ a > .ck-content code {
 @media screen and (max-width: 950px) {
   .ck-content div.leaf a {
     padding: 3rem 2rem 3rem 12rem;
-    font-size: 2rem;
+    font-size: 1.25rem;
   }
 }
 .ck-content div.leaf a:before {
@@ -12193,15 +12201,6 @@ a > .ck-content code {
 }
 .ck-content .node--view-mode-full {
   margin-top: 1.5rem;
-}
-.ck-content h1, .ck-content .h1,
-.ck-content h2,
-.ck-content .h2,
-.ck-content h3,
-.ck-content .h3,
-.ck-content h4,
-.ck-content .h4 {
-  color: #A33701;
 }
 .ck-content #author-authority-title,
 .ck-content #dll-work-title,
@@ -12317,7 +12316,7 @@ a > .ck-content code {
 }
 .ck-content .node__meta {
   border-bottom: thin solid;
-  margin-bottom: 1.75rem;
+  margin-bottom: 0.75rem;
   padding: 0;
 }
 .ck-content .node__submitted {
@@ -12325,12 +12324,16 @@ a > .ck-content code {
   font-style: italic;
 }
 .ck-content article.node--view-mode-teaser {
-  border: thin solid grey;
   padding: 2rem;
   margin-bottom: 1.5rem;
 }
-.ck-content .view-id-updates ul > li:first-child {
-  margin-top: 2.5rem;
+.ck-content .view-id-updates .list-group-item:nth-of-type(odd) {
+  background-color: #F6F7F8;
+}
+.ck-content .page-node-type-article .region-content {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .ck-content .block-views-exposed-filter-blockmain-solr-search-search h1, .ck-content .block-views-exposed-filter-blockmain-solr-search-search .h1 {
   text-align: center;
@@ -12374,6 +12377,21 @@ a > .ck-content code {
 }
 .ck-content #views-bootstrap-main-solr-search-search--2 article {
   padding: 1rem;
+}
+.ck-content body {
+  font-family: "Noto Sans", sans-serif;
+}
+.ck-content h1, .ck-content .h1,
+.ck-content h2,
+.ck-content .h2,
+.ck-content h3,
+.ck-content .h3,
+.ck-content h4,
+.ck-content .h4,
+.ck-content h5,
+.ck-content .h5 {
+  color: #A33701;
+  font-family: "Noto Sans Display", sans-serif;
 }
 .ck-content .node-created {
   font-style: italic;
