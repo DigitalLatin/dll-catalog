@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'drupal/recommended-project',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '151536fbb789bec91bb3f763c8bfdc1083eeea94',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => null,
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -143,6 +143,17 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../dflydev/dot-access-data',
             'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'digitallatin/dll_catalog' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'bf27c07b2d17e18a7775f0cc8e54ca48728f9208',
+            'type' => 'drupal-custom-theme',
+            'install_path' => __DIR__ . '/../../web/themes/custom/dll_catalog',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
             'dev_requirement' => false,
         ),
         'digitallatin/dll_json_ld' => array(
@@ -564,9 +575,9 @@
             'dev_requirement' => false,
         ),
         'drupal/recommended-project' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '151536fbb789bec91bb3f763c8bfdc1083eeea94',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => null,
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

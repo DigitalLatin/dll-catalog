@@ -83,13 +83,13 @@
 	{{ title_prefix }}
 	{% if label and not page %}
 		<h2{{title_attributes}}>
-			<a href="{{ url }}" rel="bookmark">{{ label }}</a>
+			<a href="{{ url }}" rel="bookmark">{{ label }}</a> {{ node.date }}
 		</h2>
 	{% endif %}
 	{{ title_suffix }}
 
 	<div{{content_attributes.addClass('node__content')}}>
-                <p>{{ node.createdtime | date('F j, Y') }}</p>
+		<p class="node-created">{{ node.createdtime | date('F j, Y') }}</p>
 		{{ content }}
 	</div>
 

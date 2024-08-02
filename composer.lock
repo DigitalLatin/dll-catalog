@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "962cd70a98690149283ac4f6f7cc1ec4",
+    "content-hash": "f6de626f54185f85e2f2dc5ad05c1874",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -987,6 +987,38 @@
                 "source": "https://github.com/dflydev/dflydev-dot-access-data/tree/v3.0.3"
             },
             "time": "2024-07-08T12:26:09+00:00"
+        },
+        {
+            "name": "digitallatin/dll_catalog",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalLatin/dll_catalog.git",
+                "reference": "bf27c07b2d17e18a7775f0cc8e54ca48728f9208"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalLatin/dll_catalog/zipball/bf27c07b2d17e18a7775f0cc8e54ca48728f9208",
+                "reference": "bf27c07b2d17e18a7775f0cc8e54ca48728f9208",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "drupal-custom-theme",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel J. Huskey",
+                    "email": "samueljhuskey@gmail.com"
+                }
+            ],
+            "description": "Custom subtheme for the Digital Latin Library Catalog, based on Bootstrap5.",
+            "support": {
+                "source": "https://github.com/DigitalLatin/dll_catalog/tree/main",
+                "issues": "https://github.com/DigitalLatin/dll_catalog/issues"
+            },
+            "time": "2024-08-02T01:10:52+00:00"
         },
         {
             "name": "digitallatin/dll_json_ld",
@@ -9592,8 +9624,9 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
+        "digitallatin/dll_catalog": 20,
         "digitallatin/dll_json_ld": 20,
         "drupal/existing_values_autocomplete_widget": 20,
         "drupal/inline_entity_form": 5,

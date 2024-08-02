@@ -25,8 +25,8 @@
     "require": {
         "composer/installers": "^2.0",
         "cweagans/composer-patches": "^1.7",
+        "digitallatin/dll_catalog": "dev-main",
         "digitallatin/dll_json_ld": "dev-main",
-        "digitallatin/dll_catalog": "stable-main",
         "drupal/auto_entitylabel": "^3.2",
         "drupal/bootstrap5": "^4.0",
         "drupal/computed_field": "^3.0",
@@ -62,7 +62,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {

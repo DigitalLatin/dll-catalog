@@ -1028,6 +1028,41 @@
             "install-path": "../dflydev/dot-access-data"
         },
         {
+            "name": "digitallatin/dll_catalog",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DigitalLatin/dll_catalog.git",
+                "reference": "bf27c07b2d17e18a7775f0cc8e54ca48728f9208"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DigitalLatin/dll_catalog/zipball/bf27c07b2d17e18a7775f0cc8e54ca48728f9208",
+                "reference": "bf27c07b2d17e18a7775f0cc8e54ca48728f9208",
+                "shasum": ""
+            },
+            "time": "2024-08-02T01:10:52+00:00",
+            "default-branch": true,
+            "type": "drupal-custom-theme",
+            "installation-source": "dist",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Samuel J. Huskey",
+                    "email": "samueljhuskey@gmail.com"
+                }
+            ],
+            "description": "Custom subtheme for the Digital Latin Library Catalog, based on Bootstrap5.",
+            "support": {
+                "source": "https://github.com/DigitalLatin/dll_catalog/tree/main",
+                "issues": "https://github.com/DigitalLatin/dll_catalog/issues"
+            },
+            "install-path": "../../web/themes/custom/dll_catalog"
+        },
+        {
             "name": "digitallatin/dll_json_ld",
             "version": "dev-main",
             "version_normalized": "dev-main",

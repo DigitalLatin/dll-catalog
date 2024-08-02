@@ -53,6 +53,9 @@
       Search page
      ======================================================================== */
   /* ======================================================================== 
+      Typography
+     ======================================================================== */
+  /* ======================================================================== 
       General styles
      ======================================================================== */
 }
@@ -12189,7 +12192,7 @@ a > .ck-content code {
   }
 }
 .ck-content .node--view-mode-full {
-  margin: 2.75rem 0 1.5rem 0;
+  margin-top: 1.5rem;
 }
 .ck-content h1, .ck-content .h1,
 .ck-content h2,
@@ -12371,6 +12374,9 @@ a > .ck-content code {
 }
 .ck-content #views-bootstrap-main-solr-search-search--2 article {
   padding: 1rem;
+}
+.ck-content .node-created {
+  font-style: italic;
 }
 .ck-content .structured-data {
   font-size: smaller;
