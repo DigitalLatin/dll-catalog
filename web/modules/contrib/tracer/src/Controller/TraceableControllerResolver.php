@@ -28,7 +28,7 @@ class TraceableControllerResolver implements ControllerResolverInterface {
   }
 
   /**
-   * {@inheritdoc}
+   * Trace the time spent in the getController method.
    */
   public function getController(Request $request): callable|FALSE {
     $span = $this->tracer->start('get_controller', $request->getUri());

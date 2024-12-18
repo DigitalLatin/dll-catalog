@@ -101,13 +101,13 @@ class ThemeDataCollector extends DataCollector implements HasPanelInterface, Lat
     ];
 
     $this->data['twig_extensions'] = [
-      'filters' => array_map(function (TwigFilter $filter) {
+      'filters' => \array_map(function (TwigFilter $filter) {
         return [
           'name' => $filter->getName(),
           'callable' => $this->getCallableContext($filter->getCallable()),
         ];
       }, $this->twig->getFilters()),
-      'functions' => array_map(function (TwigFunction $function) {
+      'functions' => \array_map(function (TwigFunction $function) {
         return [
           'name' => $function->getName(),
           'callable' => $this->getCallableContext($function->getCallable()),
@@ -131,7 +131,7 @@ class ThemeDataCollector extends DataCollector implements HasPanelInterface, Lat
    * {@inheritdoc}
    */
   public function lateCollect(): void {
-    $this->data['twig'] = serialize($this->profile);
+    $this->data['twig'] = \serialize($this->profile);
   }
 
   /**
@@ -231,7 +231,7 @@ class ThemeDataCollector extends DataCollector implements HasPanelInterface, Lat
    *   The number of twig filters.
    */
   public function getTwigFiltersCount(): int {
-    return count($this->data['twig_extensions']['filters']);
+    return \count($this->data['twig_extensions']['filters']);
   }
 
   /**
@@ -241,7 +241,7 @@ class ThemeDataCollector extends DataCollector implements HasPanelInterface, Lat
    *   The number of twig functions.
    */
   public function getTwigFunctionsCount(): int {
-    return count($this->data['twig_extensions']['functions']);
+    return \count($this->data['twig_extensions']['functions']);
   }
 
   /**
@@ -261,7 +261,7 @@ class ThemeDataCollector extends DataCollector implements HasPanelInterface, Lat
    *   The number of SDC components.
    */
   public function getComponentsCount(): int {
-    return count($this->data['components']);
+    return \count($this->data['components']);
   }
 
   /**
@@ -269,10 +269,10 @@ class ThemeDataCollector extends DataCollector implements HasPanelInterface, Lat
    */
   public function getPanel(): array {
     $filters = $this->data['twig_extensions']['filters'];
-    ksort($filters);
+    \ksort($filters);
 
     $functions = $this->data['twig_extensions']['functions'];
-    ksort($functions);
+    \ksort($functions);
 
     $tabs = [];
 
@@ -412,7 +412,7 @@ class ThemeDataCollector extends DataCollector implements HasPanelInterface, Lat
    *   The twig profile, deserialized from data, if needed.
    */
   private function getProfile(): Profile {
-    return $this->profile ??= unserialize(
+    return $this->profile ??= \unserialize(
       $this->data['twig'],
       ['allowed_classes' => ['\Twig\Profiler\Profile', Profile::class]],
     );

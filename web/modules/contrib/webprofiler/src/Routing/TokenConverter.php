@@ -42,8 +42,8 @@ class TokenConverter implements ParamConverterInterface {
    */
   public function applies($definition, $name, Route $route): bool {
     if (
-      is_array($definition) &&
-      array_key_exists('type', $definition) &&
+      \is_array($definition) &&
+      \array_key_exists('type', $definition) &&
       $definition['type'] === 'webprofiler:token'
     ) {
       return TRUE;

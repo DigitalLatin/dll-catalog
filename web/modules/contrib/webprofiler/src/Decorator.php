@@ -55,14 +55,14 @@ class Decorator {
   public function isCallable(string $method, bool $checkSelf = FALSE): bool|object {
     // Check the original object.
     $object = $this->getOriginalObject();
-    if (is_callable([$object, $method])) {
+    if (\is_callable([$object, $method])) {
       return $object;
     }
 
     // Check Decorators.
     $object = $checkSelf ? $this : $this->object;
     while ($object instanceof Decorator) {
-      if (is_callable([$object, $method])) {
+      if (\is_callable([$object, $method])) {
         return $object;
       }
 
@@ -87,11 +87,11 @@ class Decorator {
    */
   public function __call(string $method, array $args): mixed {
     if ($object = $this->isCallable($method)) {
-      return call_user_func_array([$object, $method], $args);
+      return \call_user_func_array([$object, $method], $args);
     }
 
     throw new \Exception(
-      'Undefined method - ' . get_class($this->getOriginalObject()) . '::' . $method,
+      'Undefined method - ' . \get_class($this->getOriginalObject()) . '::' . $method,
     );
   }
 
@@ -107,7 +107,7 @@ class Decorator {
    */
   public function __get(string $property): mixed {
     $object = $this->getOriginalObject();
-    if (property_exists($object, $property)) {
+    if (\property_exists($object, $property)) {
       // @phpstan-ignore-next-line
       return $object->$property;
     }

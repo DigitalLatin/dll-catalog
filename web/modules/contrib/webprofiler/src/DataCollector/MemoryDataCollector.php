@@ -35,7 +35,7 @@ class MemoryDataCollector extends DataCollector implements LateDataCollectorInte
   public function reset(): void {
     $this->data = [
       'memory' => 0,
-      'memory_limit' => $this->convertToBytes(ini_get('memory_limit')),
+      'memory_limit' => $this->convertToBytes(\ini_get('memory_limit')),
     ];
   }
 
@@ -70,7 +70,7 @@ class MemoryDataCollector extends DataCollector implements LateDataCollectorInte
    * Save the memory used value.
    */
   public function updateMemoryUsage(): void {
-    $this->data['memory'] = memory_get_peak_usage(TRUE);
+    $this->data['memory'] = \memory_get_peak_usage(TRUE);
   }
 
   /**

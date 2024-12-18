@@ -38,6 +38,22 @@ class AutoEntityLabelManager implements AutoEntityLabelManagerInterface {
   const PREFILLED = 3;
 
   /**
+   * Create the automatic label before the first save.
+   *
+   * Only applies to new entities (for existing entities the label is always
+   * created before the first save).
+   */
+  const BEFORE_SAVE = 0;
+
+  /**
+   * Create the automatic label after the first save.
+   *
+   * Only applies to new entities (for existing entities the label is always
+   * created before the first save).
+   */
+  const AFTER_SAVE = 1;
+
+  /**
    * The content entity.
    *
    * @var \Drupal\Core\Entity\ContentEntityInterface
@@ -359,6 +375,18 @@ class AutoEntityLabelManager implements AutoEntityLabelManagerInterface {
     }
 
     return $label;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getNewContentBehavior() {
+    $behavior = $this->getConfig('new_content_behavior');
+    // Set the default to AFTER_SAVE. Preserves the original module behavior.
+    if ($behavior == NULL) {
+      return self::BEFORE_SAVE;
+    }
+    return $behavior;
   }
 
   /**

@@ -52,7 +52,7 @@ class StateDataCollector extends DataCollector implements HasPanelInterface {
    *   The number of state keys.
    */
   public function getStateKeysCount(): int {
-    return count($this->data['state_get']);
+    return \count($this->data['state_get']);
   }
 
   /**
@@ -61,9 +61,9 @@ class StateDataCollector extends DataCollector implements HasPanelInterface {
   public function getPanel(): array {
     $data = $this->data['state_get'];
 
-    array_walk(
+    \array_walk(
       $data,
-      function (&$key, $data): void {
+      static function (&$key, $data): void {
         $key = [
           $data,
           $key,

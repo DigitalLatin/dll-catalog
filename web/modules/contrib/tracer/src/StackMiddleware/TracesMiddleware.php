@@ -29,7 +29,7 @@ class TracesMiddleware implements HttpKernelInterface {
   }
 
   /**
-   * {@inheritdoc}
+   * Wrap the HttpKernelInterface::handle() method to trace the request.
    */
   public function handle(Request $request, int $type = self::MAIN_REQUEST, bool $catch = TRUE): Response {
     $rootSpan = $this->tracer->start('root', 'root');

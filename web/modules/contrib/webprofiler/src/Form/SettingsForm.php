@@ -214,7 +214,7 @@ class SettingsForm extends ConfigFormBase {
       }
     }
 
-    asort($options);
+    \asort($options);
 
     return $options;
   }

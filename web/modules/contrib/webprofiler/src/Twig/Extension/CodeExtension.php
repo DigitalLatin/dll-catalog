@@ -63,10 +63,10 @@ class CodeExtension extends AbstractExtension {
    *   The short version of a class name.
    */
   public function abbrClass(string $class): string {
-    $parts = explode('\\', $class);
-    $short = array_pop($parts);
+    $parts = \explode('\\', $class);
+    $short = \array_pop($parts);
 
-    return sprintf('<abbr title="%s">%s</abbr>', $class, $short);
+    return \sprintf('<abbr title="%s">%s</abbr>', $class, $short);
   }
 
   /**

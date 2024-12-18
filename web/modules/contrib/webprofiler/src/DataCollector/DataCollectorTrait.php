@@ -23,7 +23,7 @@ trait DataCollectorTrait {
    *   Array of information about a method of a class.
    */
   public function getMethodData($class, string $method): ?MethodData {
-    $class = is_object($class) ? get_class($class) : $class;
+    $class = \is_object($class) ? \get_class($class) : $class;
     $data = NULL;
 
     try {
@@ -55,17 +55,17 @@ trait DataCollectorTrait {
   private function getCallableContext(callable $callable): string {
     switch (TRUE) {
       case \is_string($callable) && \strpos($callable, '::'):
-        $parts = explode('::', $callable);
-        return sprintf('class: %s, static method: %s', $parts[0], $parts[1]);
+        $parts = \explode('::', $callable);
+        return \sprintf('class: %s, static method: %s', $parts[0], $parts[1]);
 
       case \is_string($callable):
-        return sprintf('function: %s', $callable);
+        return \sprintf('function: %s', $callable);
 
       case \is_array($callable) && \is_object($callable[0]):
-        return sprintf('class: %s, method: %s', \get_class($callable[0]), $callable[1]);
+        return \sprintf('class: %s, method: %s', \get_class($callable[0]), $callable[1]);
 
       case \is_array($callable):
-        return sprintf('class: %s, static method: %s', $callable[0], $callable[1]);
+        return \sprintf('class: %s, static method: %s', $callable[0], $callable[1]);
 
       case $callable instanceof \Closure:
         try {
@@ -77,7 +77,7 @@ trait DataCollectorTrait {
           return 'closure';
         }
 
-        return sprintf(
+        return \sprintf(
             'closure this: %s, closure scope: %s, static variables: %s',
             $closureThis ? \get_class($closureThis) : $reflectedFunction->name,
             $closureClass != NULL ? $closureClass->getName() : $reflectedFunction->name,
@@ -85,7 +85,7 @@ trait DataCollectorTrait {
           );
 
       case \is_object($callable):
-        return sprintf('invokable: %s', \get_class($callable));
+        return \sprintf('invokable: %s', \get_class($callable));
 
       default:
         return 'unknown';
@@ -111,7 +111,7 @@ trait DataCollectorTrait {
       }
     }
 
-    return implode(', ', $data);
+    return \implode(', ', $data);
   }
 
   /**
@@ -128,19 +128,19 @@ trait DataCollectorTrait {
       return -1;
     }
 
-    $value = strtolower($value);
-    $max = strtolower(ltrim($value, '+'));
-    if (str_starts_with($max, '0x')) {
-      $max = intval($max, 16);
+    $value = \strtolower($value);
+    $max = \strtolower(\ltrim($value, '+'));
+    if (\str_starts_with($max, '0x')) {
+      $max = \intval($max, 16);
     }
-    elseif (str_starts_with($max, '0')) {
-      $max = intval($max, 8);
+    elseif (\str_starts_with($max, '0')) {
+      $max = \intval($max, 8);
     }
     else {
-      $max = intval($max);
+      $max = \intval($max);
     }
 
-    $max *= match (substr($value, -1)) {
+    $max *= match (\substr($value, -1)) {
       't' => 1024 * 1024 * 1024 * 1024,
       'g' => 1024 * 1024 * 1024,
       'm' => 1024 * 1024,

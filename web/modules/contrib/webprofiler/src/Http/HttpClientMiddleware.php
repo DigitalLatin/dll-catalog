@@ -55,7 +55,7 @@ class HttpClientMiddleware {
       return function (RequestInterface $request, array $options) use ($handler): PromiseInterface {
         // If on_stats callback is already set then save it
         // and call it after ours.
-        $next = $options['on_stats'] ?? function (TransferStats $stats): void {
+        $next = $options['on_stats'] ?? static function (TransferStats $stats): void {
         };
 
         $options['on_stats'] = function (TransferStats $stats) use ($next): void {

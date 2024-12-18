@@ -37,7 +37,7 @@ class TraceableProfilerExtension extends ProfilerExtension {
   }
 
   /**
-   * {@inheritdoc}
+   * Start tracing a template.
    */
   public function enter(Profile $profile): void {
     if ($profile->isTemplate()) {
@@ -48,7 +48,7 @@ class TraceableProfilerExtension extends ProfilerExtension {
   }
 
   /**
-   * {@inheritdoc}
+   * Stop tracing a template.
    */
   public function leave(Profile $profile): void {
     parent::leave($profile);

@@ -83,7 +83,7 @@ class ToolbarListener implements EventSubscriberInterface {
         );
       }
       catch (\Exception $e) {
-        $response->headers->set('X-Debug-Error', $e::class . ': ' . preg_replace('/\s+/', ' ', $e->getMessage()));
+        $response->headers->set('X-Debug-Error', $e::class . ': ' . \preg_replace('/\s+/', ' ', $e->getMessage()));
       }
     }
 
@@ -116,9 +116,9 @@ class ToolbarListener implements EventSubscriberInterface {
 
     if (!$response->headers->has('X-Debug-Token')
       || $response->isRedirection()
-      || ($response->headers->has('Content-Type') && !str_contains($response->headers->get('Content-Type'), 'html'))
+      || ($response->headers->has('Content-Type') && !\str_contains($response->headers->get('Content-Type'), 'html'))
       || 'html' !== $request->getRequestFormat()
-      || FALSE !== stripos($response->headers->get('Content-Disposition', ''), 'attachment;')
+      || FALSE !== \stripos($response->headers->get('Content-Disposition', ''), 'attachment;')
     ) {
       return;
     }
@@ -144,7 +144,7 @@ class ToolbarListener implements EventSubscriberInterface {
       return;
     }
 
-    $pos = strripos($content, '</body>');
+    $pos = \strripos($content, '</body>');
 
     if (FALSE !== $pos) {
       $toolbarJs = [
@@ -155,8 +155,8 @@ class ToolbarListener implements EventSubscriberInterface {
         '#csp_style_nonce' => $nonces['csp_style_nonce'] ?? NULL,
       ];
 
-      $toolbar = "\n" . str_replace("\n", '', (string) $this->renderer->renderRoot($toolbarJs)) . "\n";
-      $content = substr($content, 0, $pos) . $toolbar . substr($content, $pos);
+      $toolbar = "\n" . \str_replace("\n", '', (string) $this->renderer->renderRoot($toolbarJs)) . "\n";
+      $content = \substr($content, 0, $pos) . $toolbar . \substr($content, $pos);
       $response->setContent($content);
     }
   }

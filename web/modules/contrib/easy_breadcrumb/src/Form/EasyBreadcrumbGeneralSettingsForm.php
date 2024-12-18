@@ -221,7 +221,7 @@ class EasyBreadcrumbGeneralSettingsForm extends ConfigFormBase {
       '#type' => 'textarea',
       '#title' => $this->t('Paths to be excluded while generating segments'),
       '#description' => $this->t('Enter a line separated list of paths to be excluded while generating the segments.
-			Paths may use simple regex, i.e.: report\/2[0-9][0-9][0-9].'),
+      Slashes must be escaped i.e.: ( foo/bar should be foo\/bar ) Paths may use simple regex, i.e.: report\/2[0-9][0-9][0-9].'),
       '#default_value' => $excluded_paths,
     ];
 
@@ -265,7 +265,7 @@ class EasyBreadcrumbGeneralSettingsForm extends ConfigFormBase {
     $details_advanced[EasyBreadcrumbConstants::CUSTOM_PATHS] = [
       '#type' => 'textarea',
       '#title' => $this->t('Paths to replace with custom breadcrumbs'),
-      '#description' => $this->t('Enter a line separated list of internal paths followed by breadcrumb pattern. Separate crumbs from their path with a vertical bar ("|"). Separate crumbs with double-colon ("::"). Omit the URL to display an unlinked crumb. Fields will be trimmed to remove extra start/end spaces, so you can use them to help format your input, if desired. Replaced Titles will not be processed on custom paths. Excluded paths listed here will have breadcrumbs added. Examples (with and without extra spacing):<br><code>/news/archive/site_launched  ::  News | /news  ::  Archive | /news/archive  ::  Site Launched<br>/your/path::LinkedCrumb1|url1::LinkedCrumb2|url2::UnlinkedCrumb3</code><br><p>It is also possible to express the path to be matched as a <a href="https://www.php.net/manual/en/book.pcre.php" target="_blank">regex expression</a>. "regex!" must be added to the start of the path to match in order for it to be interpreted as regex:<br><code>regex!/news/archive/\d{4} ::  News | /news  ::  Archive | /news/archive</code><p>Expressions can even include matching groups which can be referenced in the path of a segment path:<br><code>regex!/groups/([^/]*)/info :: Groups | /groups :: Group | /groups/$1</code></p><p>To use the current page title as a title component, use <code>&lt;title&gt;</code></p>'),
+      '#description' => $this->t('Enter a line separated list of internal paths followed by breadcrumb pattern. Separate crumbs from their path with a vertical bar ("|"). Separate crumbs with double-colon ("::"). Omit the URL to display an unlinked crumb. Fields will be trimmed to remove extra start/end spaces, so you can use them to help format your input, if desired. Replaced Titles will not be processed on custom paths. Excluded paths listed here will have breadcrumbs added. Examples (with and without extra spacing):<br><code>/news/archive/site_launched  ::  News | /news  ::  Archive | /news/archive  ::  Site Launched<br>/your/path::LinkedCrumb1|url1::LinkedCrumb2|url2::UnlinkedCrumb3</code><br><p>It is also possible to express the path to be matched as a <a href="https://www.php.net/manual/en/book.pcre.php" target="_blank">regex expression</a>. "regex!" must be added to the start of the path to match in order for it to be interpreted as regex:<br><code>regex!/news/archive/\d{4} ::  News | /news  ::  Archive | /news/archive</code><p>Expressions can even include matching groups which can be referenced in the path of a segment path:<br><code>regex!/groups/([^/]*)/info :: Groups | /groups :: Group | /groups/$1</code></p><p>To use the current page title as a title component, use <code>&lt;title&gt;</code> (Must have <strong>"Use the real page title when available"</strong> enabled)</p>'),
       '#default_value' => $custom_paths,
     ];
 
@@ -312,7 +312,7 @@ class EasyBreadcrumbGeneralSettingsForm extends ConfigFormBase {
     $details_advanced[EasyBreadcrumbConstants::HIDE_SINGLE_HOME_ITEM] = [
       '#type' => 'checkbox',
       '#title' => $this->t("Hide link to home page if it's the only breadcrumb item"),
-      '#description' => $this->t('Hide the breadcrumb when it only links to the home page and nothing more. <br> <strong>Note: If the homepage path is a "/" then this feature has an uncertain behavior.</strong>'),
+      '#description' => $this->t('Hide the breadcrumb when it only links to the home page and nothing more.'),
       '#default_value' => $config->get(EasyBreadcrumbConstants::HIDE_SINGLE_HOME_ITEM),
     ];
 

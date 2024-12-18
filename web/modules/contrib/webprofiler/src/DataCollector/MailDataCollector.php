@@ -46,7 +46,7 @@ class MailDataCollector extends DataCollector implements HasPanelInterface {
    *   The mail plugin used to send the message.
    */
   public function addMessage(array $message, MailInterface $mail): void {
-    $class = get_class($mail);
+    $class = \get_class($mail);
     $method = $this->getMethodData($class, 'mail');
 
     $this->messages[] = [
@@ -62,7 +62,7 @@ class MailDataCollector extends DataCollector implements HasPanelInterface {
    *   The number of messages sent.
    */
   public function getMailSent(): int {
-    return count($this->data['mail']);
+    return \count($this->data['mail']);
   }
 
   /**
@@ -95,7 +95,7 @@ class MailDataCollector extends DataCollector implements HasPanelInterface {
           $this->t('To'),
           $this->t('Data'),
         ],
-        '#rows' => array_map(
+        '#rows' => \array_map(
           function ($key) {
             return [
               [

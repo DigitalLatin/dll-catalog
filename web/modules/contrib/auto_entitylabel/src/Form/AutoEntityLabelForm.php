@@ -264,6 +264,28 @@ class AutoEntityLabelForm extends ConfigFormBase {
       ],
     ];
 
+    $newActionOptions = [
+      AutoEntityLabelManager::BEFORE_SAVE => $this->t('Create label before first save'),
+      AutoEntityLabelManager::AFTER_SAVE => $this->t('Create label after first save'),
+    ];
+    $newActionDescriptions = [
+      AutoEntityLabelManager::BEFORE_SAVE => [
+        '#description' => $this->t('Create the label before saving the content. This option is faster but does not support all tokens (ie the id token).'),
+      ],
+      AutoEntityLabelManager::AFTER_SAVE => [
+        '#description' => $this->t('Create the label after saving the content. All tokens are supported however the content will be saved twice. This may interfere with other modules.'),
+      ],
+    ];
+
+    $form['auto_entitylabel']['new_content_behavior'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('New content behavior'),
+      '#description' => $this->t('Select when to create the automatic label for new content of type %type', ['%type' => $this->entityBundle]),
+      '#default_value' => $config->get('new_content_behavior') ?: AutoEntityLabelManager::BEFORE_SAVE,
+      '#options' => $newActionOptions,
+    ];
+    $form['auto_entitylabel']['new_content_behavior'] += $newActionDescriptions;
+
     $form['#attached']['library'][] = 'auto_entitylabel/auto_entitylabel.admin';
 
     $form['auto_entitylabel']['save'] = [
@@ -296,6 +318,7 @@ class AutoEntityLabelForm extends ConfigFormBase {
         'pattern',
         'escape',
         'preserve_titles',
+        'new_content_behavior',
         'save',
         'chunk',
       ] as $key) {
@@ -365,20 +388,10 @@ class AutoEntityLabelForm extends ConfigFormBase {
    *   An array with IDs.
    */
   public function getIds($entity_type, $bundle) {
+    $type_definition = $this->entityTypeManager->getDefinition($bundle);
+    $bundle_field = $type_definition->getKey('bundle');
     $query = $this->entityTypeManager->getStorage($bundle)->getQuery()->accessCheck(TRUE);
-    switch ($bundle) {
-      case 'taxonomy_term':
-        return $query->condition('vid', $entity_type, 'IN')->execute();
-
-      case 'media':
-        return $query->condition('bundle', $entity_type, 'IN')->execute();
-
-      case 'comment':
-        return $query->condition('comment_type', $entity_type, 'IN')->execute();
-
-      default:
-        return $query->condition('type', $entity_type, 'IN')->execute();
-    }
+    return $query->condition($bundle_field, $entity_type, 'IN')->execute();
   }
 
 }

@@ -6,7 +6,7 @@ package: Testing
 dependencies:
   - webprofiler:webprofiler
 
-# Information added by Drupal.org packaging script on 2024-05-06
-version: '10.1.8'
+# Information added by Drupal.org packaging script on 2024-08-12
+version: '10.1.10'
 project: 'webprofiler'
-datestamp: 1714980019
+datestamp: 1723465179

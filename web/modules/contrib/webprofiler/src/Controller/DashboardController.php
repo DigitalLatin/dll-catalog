@@ -80,7 +80,7 @@ class DashboardController extends ControllerBase {
       return [];
     }
 
-    $collectors = array_filter($profile->getCollectors(), function (DataCollectorInterface $el) {
+    $collectors = \array_filter($profile->getCollectors(), static function (DataCollectorInterface $el) {
       return $el instanceof HasPanelInterface;
     });
 

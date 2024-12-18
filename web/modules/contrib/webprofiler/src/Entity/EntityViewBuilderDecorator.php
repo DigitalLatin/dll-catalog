@@ -52,7 +52,7 @@ class EntityViewBuilderDecorator extends EntityDecorator implements EntityHandle
    * {@inheritdoc}
    */
   public function viewMultiple(array $entities = [], $view_mode = 'full', $langcode = NULL) {
-    $this->entities = array_merge($this->entities, $entities);
+    $this->entities = \array_merge($this->entities, $entities);
 
     return $this->getOriginalObject()
       ->viewMultiple($entities, $view_mode, $langcode);
@@ -90,7 +90,7 @@ class EntityViewBuilderDecorator extends EntityDecorator implements EntityHandle
    * {@inheritdoc}
    */
   public static function createInstance(ContainerInterface $container, EntityTypeInterface $entity_type) {
-    assert($entity_type instanceof EntityViewBuilderInterface);
+    \assert($entity_type instanceof EntityViewBuilderInterface);
 
     return new static(
       $entity_type,

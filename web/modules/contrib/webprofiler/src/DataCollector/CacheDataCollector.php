@@ -187,7 +187,7 @@ class CacheDataCollector extends DataCollector implements HasPanelInterface {
    */
   public function getPanel(): array {
     $tabs = [];
-    foreach (array_keys($this->data['cache']) as $bin) {
+    foreach (\array_keys($this->data['cache']) as $bin) {
       $tabs[] = [
         'label' => $bin,
         'content' => $this->renderTable($this->data['cache'][$bin]),
@@ -220,7 +220,7 @@ class CacheDataCollector extends DataCollector implements HasPanelInterface {
           $this->t('Miss'),
           $this->t('Tags'),
         ],
-        '#rows' => array_map(function (array $cache) {
+        '#rows' => \array_map(function (array $cache) {
           return [
             $cache['cache']['cid'],
             $cache['count'][CacheDataCollector::WEBPROFILER_CACHE_HIT],
@@ -230,7 +230,7 @@ class CacheDataCollector extends DataCollector implements HasPanelInterface {
                 '#type' => 'inline_template',
                 '#template' => '{{ data|raw }}',
                 '#context' => [
-                  'data' => count($cache['cache']['tags']) > 0 ? $this->dumpData($this->cloneVar($cache['cache']['tags'])) : '',
+                  'data' => \count($cache['cache']['tags']) > 0 ? $this->dumpData($this->cloneVar($cache['cache']['tags'])) : '',
                 ],
               ],
             ],

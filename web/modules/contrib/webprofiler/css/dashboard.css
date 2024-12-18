@@ -96,7 +96,6 @@
   box-shadow: var(--card-box-shadow);
 }
 
-
 .webprofiler__card__title {
   padding: 5px 10px;
   color: #fff;
@@ -156,24 +155,29 @@
   padding: 15px;
   border: 1px solid #e0e0e0;
   background-color: #fff;
-  box-shadow: 0 0 1px rgba(128, 128, 128, .2);
+  box-shadow: 0 0 1px rgba(128, 128, 128, 0.2);
   font-size: 12px;
   line-height: 1.7;
 }
+
 #twig-dump span {
   padding: 1px 2px;
   border-radius: 2px;
 }
+
 #twig-dump .status-error {
   color: #b0413e;
   background: transparent;
 }
+
 #twig-dump .status-warning {
   background: rgba(240, 181, 24, 0.3);
 }
+
 #twig-dump .status-success {
   background: rgba(100, 189, 99, 0.2);
 }
+
 #twig-dump .status-info {
   background: #ddf;
 }

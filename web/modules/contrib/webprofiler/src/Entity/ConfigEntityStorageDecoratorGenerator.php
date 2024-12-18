@@ -65,7 +65,7 @@ class ConfigEntityStorageDecoratorGenerator implements DecoratorGeneratorInterfa
     if (!isset($decorators)) {
       $classes = $this->getClasses();
 
-      $decorators = array_map(function ($class) {
+      $decorators = \array_map(static function ($class) {
         return $class['decoratorClass'];
       }, $classes);
     }
@@ -104,7 +104,7 @@ class ConfigEntityStorageDecoratorGenerator implements DecoratorGeneratorInterfa
             'id' => $definition->id(),
             'namespace' => $namespace,
             'class' => $class->name->name,
-            'interface' => '\\' . implode('\\', $class->implements[0]->getParts()),
+            'interface' => '\\' . \implode('\\', $class->implements[0]->getParts()),
             'decoratorClass' => $namespace . '\\' . $class->name->name . 'Decorator',
             'uses' => $uses,
           ];
@@ -152,7 +152,7 @@ class ConfigEntityStorageDecoratorGenerator implements DecoratorGeneratorInterfa
    *   Array of statements.
    */
   private function getAst(string $classPath): ?array {
-    $code = file_get_contents($classPath);
+    $code = \file_get_contents($classPath);
     $parser = (new ParserFactory())->createForHostVersion();
 
     return $parser->parse($code);
@@ -201,7 +201,7 @@ class ConfigEntityStorageDecoratorGenerator implements DecoratorGeneratorInterfa
     $nodeFinder = new NodeFinder();
 
     /** @var \PhpParser\Node\Stmt\ClassMethod[] $nodes */
-    $nodes = $nodeFinder->find($ast, function (Node $node) {
+    $nodes = $nodeFinder->find($ast, static function (Node $node) {
       return $node instanceof ClassMethod;
     });
 
@@ -276,7 +276,7 @@ class ConfigEntityStorageDecoratorGenerator implements DecoratorGeneratorInterfa
     $generated_body = $factory->methodCall(
       new Node\Expr\PropertyFetch(new Node\Expr\Variable('this'), 'getOriginalObject()'),
       $method->name->name,
-      array_map(function ($param) {
+      \array_map(static function ($param) {
         return new Node\Expr\Variable($param->var->name);
       }, $method->getParams()),
     );
@@ -368,11 +368,11 @@ class ConfigEntityStorageDecoratorGenerator implements DecoratorGeneratorInterfa
     /** @var \PhpParser\Node\Stmt\Class_[] $nodes */
     $nodes = $visitor->getFoundNodes();
 
-    if (count($nodes) == 0) {
+    if (\count($nodes) == 0) {
       return NULL;
     }
 
-    return reset($nodes);
+    return \reset($nodes);
   }
 
   /**
@@ -387,7 +387,7 @@ class ConfigEntityStorageDecoratorGenerator implements DecoratorGeneratorInterfa
   private function getUses(string $classPath): array {
     $ast = $this->getAst($classPath);
 
-    $visitor = new FindingVisitor(function (Node $node) {
+    $visitor = new FindingVisitor(static function (Node $node) {
       return $node instanceof Node\Stmt\Use_;
     });
 
@@ -399,7 +399,7 @@ class ConfigEntityStorageDecoratorGenerator implements DecoratorGeneratorInterfa
     /** @var \PhpParser\Node\Stmt\Use_[] $nodes */
     $nodes = $visitor->getFoundNodes();
 
-    return array_map(function (Node\Stmt\Use_ $node) {
+    return \array_map(static function (Node\Stmt\Use_ $node) {
       return $node->uses[0]->name->toString();
     }, $nodes);
   }

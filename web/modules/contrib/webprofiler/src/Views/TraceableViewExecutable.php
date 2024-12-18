@@ -35,7 +35,7 @@ class TraceableViewExecutable extends ViewExecutable {
    *   The execute_time.
    */
   public function getExecuteTime(): float {
-    return property_exists($this, 'execute_time') ? $this->execute_time : 0.0;
+    return \property_exists($this, 'execute_time') ? $this->execute_time : 0.0;
   }
 
   /**
@@ -52,11 +52,11 @@ class TraceableViewExecutable extends ViewExecutable {
    * {@inheritdoc}
    */
   public function render($display_id = NULL) {
-    $start = microtime(TRUE);
+    $start = \microtime(TRUE);
 
     $output = parent::render($display_id);
 
-    $this->renderTime = microtime(TRUE) - $start;
+    $this->renderTime = \microtime(TRUE) - $start;
 
     return $output;
   }

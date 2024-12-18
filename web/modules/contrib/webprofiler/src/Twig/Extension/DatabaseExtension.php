@@ -33,8 +33,8 @@ class DatabaseExtension extends AbstractExtension {
    *   The type of the query.
    */
   public function queryType(string $query): string {
-    $parts = explode(' ', $query);
-    return strtoupper($parts[0]);
+    $parts = \explode(' ', $query);
+    return \strtoupper($parts[0]);
   }
 
   /**
@@ -53,11 +53,11 @@ class DatabaseExtension extends AbstractExtension {
 
     if (isset($query['args'])) {
       foreach ((array) $query['args'] as $key => $val) {
-        $quoted[$key] = is_null($val) ? 'NULL' : $conn->quote($val);
+        $quoted[$key] = \is_null($val) ? 'NULL' : $conn->quote($val);
       }
     }
 
-    return strtr($query['query'], $quoted);
+    return \strtr($query['query'], $quoted);
   }
 
 }

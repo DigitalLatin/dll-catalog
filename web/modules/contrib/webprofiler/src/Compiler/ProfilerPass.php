@@ -33,14 +33,14 @@ class ProfilerPass implements CompilerPassInterface {
       $template = NULL;
 
       $collectorClass = $container->findDefinition($id)->getClass();
-      $isTemplateAware = is_subclass_of($collectorClass, TemplateAwareDataCollectorInterface::class);
+      $isTemplateAware = \is_subclass_of($collectorClass, TemplateAwareDataCollectorInterface::class);
       if (isset($attributes[0]['template']) || $isTemplateAware) {
         $idForTemplate = $attributes[0]['id'] ?? $collectorClass;
         if (!$idForTemplate) {
-          throw new InvalidArgumentException(sprintf('Data collector service "%s" must have an id attribute in order to specify a template.', $id));
+          throw new InvalidArgumentException(\sprintf('Data collector service "%s" must have an id attribute in order to specify a template.', $id));
         }
         if (!isset($attributes[0]['label'])) {
-          throw new InvalidArgumentException(sprintf('Data collector service "%s" must have a label attribute', $id));
+          throw new InvalidArgumentException(\sprintf('Data collector service "%s" must have a label attribute', $id));
         }
         $template =
           [

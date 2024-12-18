@@ -6,6 +6,10 @@ parameters:
       -
         message: "#Usage of deprecated trait Symfony\\\\Component\\\\DependencyInjection\\\\ContainerAwareTrait#"
         reportUnmatched: false
+      -
+        message: "#Call to an undefined method Drupal\\\\Core\\\\Render\\\\RendererInterface::renderInIsolation\\(\\)#"
+        path: src/DataCollector/DevelDataCollector.php
+        reportUnmatched: false
     level: 5
     paths:
       - src

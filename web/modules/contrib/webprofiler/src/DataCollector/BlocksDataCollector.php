@@ -45,7 +45,7 @@ class BlocksDataCollector extends DataCollector implements HasPanelInterface {
   public function collect(Request $request, Response $response, \Throwable $exception = NULL): void {
     $storage = $this->entityManager->getStorage('block');
 
-    assert($this->entityManager instanceof EntityTypeManagerWrapper);
+    \assert($this->entityManager instanceof EntityTypeManagerWrapper);
     $loaded = $this->entityManager->getLoaded('config', 'block');
     $rendered = $this->entityManager->getRendered('block');
 
@@ -82,7 +82,7 @@ class BlocksDataCollector extends DataCollector implements HasPanelInterface {
    *   The number of rendered blocks.
    */
   public function getRenderedBlocksCount(): int {
-    return count($this->getRenderedBlocks());
+    return \count($this->getRenderedBlocks());
   }
 
   /**
@@ -102,7 +102,7 @@ class BlocksDataCollector extends DataCollector implements HasPanelInterface {
    *   The number of rendered blocks.
    */
   public function getLoadedBlocksCount(): int {
-    return count($this->getLoadedBlocks());
+    return \count($this->getLoadedBlocks());
   }
 
   /**
@@ -183,7 +183,7 @@ class BlocksDataCollector extends DataCollector implements HasPanelInterface {
    *   The render array of the list of blocks.
    */
   private function renderBlocks(array $blocks, string $label): array {
-    if (count($blocks) == 0) {
+    if (\count($blocks) == 0) {
       return [
         $label => [
           '#markup' => '<p>' . $this->t('No @label blocks collected',

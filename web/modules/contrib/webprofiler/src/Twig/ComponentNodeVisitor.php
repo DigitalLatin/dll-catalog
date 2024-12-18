@@ -67,7 +67,7 @@ final class ComponentNodeVisitor implements NodeVisitorInterface {
    */
   protected function getComponent(Node $node): ?Component {
     $component_id = $node->getTemplateName();
-    if (!preg_match('/^[a-z]([a-zA-Z0-9_-]*[a-zA-Z0-9])*:[a-z]([a-zA-Z0-9_-]*[a-zA-Z0-9])*$/', $component_id)) {
+    if (!\preg_match('/^[a-z]([a-zA-Z0-9_-]*[a-zA-Z0-9])*:[a-z]([a-zA-Z0-9_-]*[a-zA-Z0-9])*$/', $component_id)) {
       return NULL;
     }
     try {

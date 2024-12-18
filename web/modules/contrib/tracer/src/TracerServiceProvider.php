@@ -14,9 +14,10 @@ use Symfony\Component\DependencyInjection\Reference;
 class TracerServiceProvider extends ServiceProviderBase {
 
   /**
-   * {@inheritdoc}
+   * Alter the container to replace services.
    */
   public function alter(ContainerBuilder $container): void {
+    // Replace the event dispatcher service with a traceable one.
     $container->getDefinition('event_dispatcher')
       ->setClass('Drupal\tracer\EventDispatcher\TraceableEventDispatcher')
       ->addMethodCall('setTracer',

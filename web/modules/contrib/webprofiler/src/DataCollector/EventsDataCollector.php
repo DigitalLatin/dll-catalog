@@ -71,7 +71,7 @@ class EventsDataCollector extends DataCollector implements LateDataCollectorInte
       $not_called_listeners = $this->eventDispatcher->getNotCalledListeners();
       foreach ($not_called_listeners as $not_called_events) {
         foreach ($not_called_events as $not_priority) {
-          $count_not_called += count($not_priority);
+          $count_not_called += \count($not_priority);
         }
       }
 
@@ -162,7 +162,7 @@ class EventsDataCollector extends DataCollector implements LateDataCollectorInte
    *   The render array of the list of blocks.
    */
   private function renderListeners(array $listeners, string $label, bool $called): array {
-    if (count($listeners) == 0) {
+    if (\count($listeners) == 0) {
       return [
         $label => [
           '#markup' => '<p>' . $this->t('No @label listeners collected',
@@ -239,7 +239,7 @@ class EventsDataCollector extends DataCollector implements LateDataCollectorInte
     }
 
     return [
-      '#markup' => sprintf('%s::%s', $subscriber['service'][0], $subscriber['service'][1]),
+      '#markup' => \sprintf('%s::%s', $subscriber['service'][0], $subscriber['service'][1]),
     ];
   }
 

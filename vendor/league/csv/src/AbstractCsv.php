@@ -13,7 +13,9 @@ declare(strict_types=1);
 
 namespace League\Csv;
 
+use Deprecated;
 use Generator;
+use InvalidArgumentException;
 use RuntimeException;
 use SplFileObject;
 use Stringable;
@@ -241,12 +243,12 @@ abstract class AbstractCsv implements ByteSequence
      *
      * Returns the number of characters read from the handle and passed through to the output.
      *
-     * @throws Exception
+     * @throws InvalidArgumentException|Exception
      */
-    public function output(?string $filename = null): int
+    public function download(?string $filename = null): int
     {
         if (null !== $filename) {
-            $this->sendHeaders($filename);
+            HttpHeaders::forFileDownload($filename, 'text/csv');
         }
 
         $this->document->rewind();
@@ -257,7 +259,6 @@ abstract class AbstractCsv implements ByteSequence
 
         $stream = Stream::createFromString($this->getOutputBOM());
         $stream->rewind();
-
         $res1 = $stream->fpassthru();
         if (false === $res1) {
             throw new RuntimeException('Unable to output the document.');
@@ -272,41 +273,6 @@ abstract class AbstractCsv implements ByteSequence
     }
 
     /**
-     * Send the CSV headers.
-     *
-     * Adapted from Symfony\Component\HttpFoundation\ResponseHeaderBag::makeDisposition
-     *
-     * @throws Exception if the submitted header is invalid according to RFC 6266
-     *
-     * @see https://tools.ietf.org/html/rfc6266#section-4.3
-     */
-    protected function sendHeaders(string $filename): void
-    {
-        if (strlen($filename) !== strcspn($filename, '\\/')) {
-            throw InvalidArgument::dueToInvalidHeaderFilename($filename);
-        }
-
-        $flag = FILTER_FLAG_STRIP_LOW;
-        if (1 === preg_match('/[^\x20-\x7E]/', $filename)) {
-            $flag |= FILTER_FLAG_STRIP_HIGH;
-        }
-
-        /** @var string $filtered_name */
-        $filtered_name = filter_var($filename, FILTER_UNSAFE_RAW, $flag);
-        $filename_fallback = str_replace('%', '', $filtered_name);
-
-        $disposition = sprintf('attachment; filename="%s"', str_replace('"', '\\"', $filename_fallback));
-        if ($filename !== $filename_fallback) {
-            $disposition .= sprintf("; filename*=utf-8''%s", rawurlencode($filename));
-        }
-
-        header('Content-Type: text/csv');
-        header('Content-Transfer-Encoding: binary');
-        header('Content-Description: File Transfer');
-        header('Content-Disposition: '.$disposition);
-    }
-
-    /**
      * Sets the field delimiter.
      *
      * @throws InvalidArgument If the Csv control character is not one character only.
@@ -317,9 +283,7 @@ abstract class AbstractCsv implements ByteSequence
             return $this;
         }
 
-        if (1 !== strlen($delimiter)) {
-            throw InvalidArgument::dueToInvalidDelimiterCharacter($delimiter, __METHOD__);
-        }
+        1 === strlen($delimiter) || throw InvalidArgument::dueToInvalidDelimiterCharacter($delimiter, __METHOD__);
 
         $this->delimiter = $delimiter;
         $this->resetProperties();
@@ -338,9 +302,7 @@ abstract class AbstractCsv implements ByteSequence
             return $this;
         }
 
-        if (1 !== strlen($enclosure)) {
-            throw InvalidArgument::dueToInvalidEnclosureCharacter($enclosure, __METHOD__);
-        }
+        1 === strlen($enclosure) || throw InvalidArgument::dueToInvalidEnclosureCharacter($enclosure, __METHOD__);
 
         $this->enclosure = $enclosure;
         $this->resetProperties();
@@ -418,9 +380,7 @@ abstract class AbstractCsv implements ByteSequence
      */
     public function addStreamFilter(string $filtername, null|array $params = null): static
     {
-        if (!$this->document instanceof Stream) {
-            throw UnavailableFeature::dueToUnsupportedStreamFilterApi(get_class($this->document));
-        }
+        $this->document instanceof Stream || throw UnavailableFeature::dueToUnsupportedStreamFilterApi(get_class($this->document));
 
         $this->document->appendFilter($filtername, static::STREAM_FILTER_MODE, $params);
         $this->stream_filters[$filtername] = true;
@@ -440,6 +400,7 @@ abstract class AbstractCsv implements ByteSequence
      *
      * Returns the stream filter mode.
      */
+    #[Deprecated(message:'use League\Csv\AbstractCsv::supportsStreamFilterOnRead() or League\Csv\AbstractCsv::supportsStreamFilterOnWrite() instead', since:'league/csv:9.7.0')]
     public function getStreamFilterMode(): int
     {
         return static::STREAM_FILTER_MODE;
@@ -455,6 +416,7 @@ abstract class AbstractCsv implements ByteSequence
      *
      * Tells whether the stream filter capabilities can be used.
      */
+    #[Deprecated(message:'use League\Csv\AbstractCsv::supportsStreamFilterOnRead() or League\Csv\AbstractCsv::supportsStreamFilterOnWrite() instead', since:'league/csv:9.7.0')]
     public function supportsStreamFilter(): bool
     {
         return $this->document instanceof Stream;
@@ -469,6 +431,7 @@ abstract class AbstractCsv implements ByteSequence
      * @see AbstractCsv::toString
      * @codeCoverageIgnore
      */
+    #[Deprecated(message:'use League\Csv\AbstractCsv::toString() instead', since:'league/csv:9.7.0')]
     public function getContent(): string
     {
         return $this->toString();
@@ -483,8 +446,74 @@ abstract class AbstractCsv implements ByteSequence
      *
      * Retrieves the CSV content
      */
+    #[Deprecated(message:'use League\Csv\AbstractCsv::toString() instead', since:'league/csv:9.1.0')]
     public function __toString(): string
     {
         return $this->toString();
+    }
+
+    /**
+     * DEPRECATION WARNING! This method will be removed in the next major point release.
+     *
+     * @throws Exception if the submitted header is invalid according to RFC 6266
+     *
+     * @see HttpHeaders::forFileDownload()
+     * @codeCoverageIgnore
+     *
+     * Send the CSV headers.
+     *
+     * Adapted from Symfony\Component\HttpFoundation\ResponseHeaderBag::makeDisposition
+     *
+     * @deprecated since version 9.17.0
+     * @see https://tools.ietf.org/html/rfc6266#section-4.3
+     */
+    #[Deprecated(message:'the method no longer affect the outcome of the class, use League\Csv\HttpHeaders::forFileDownload instead', since:'league/csv:9.17.0')]
+    protected function sendHeaders(string $filename): void
+    {
+        if (strlen($filename) !== strcspn($filename, '\\/')) {
+            throw InvalidArgument::dueToInvalidHeaderFilename($filename);
+        }
+
+        $flag = FILTER_FLAG_STRIP_LOW;
+        if (1 === preg_match('/[^\x20-\x7E]/', $filename)) {
+            $flag |= FILTER_FLAG_STRIP_HIGH;
+        }
+
+        /** @var string $filtered_name */
+        $filtered_name = filter_var($filename, FILTER_UNSAFE_RAW, $flag);
+        $filename_fallback = str_replace('%', '', $filtered_name);
+
+        $disposition = sprintf('attachment; filename="%s"', str_replace('"', '\\"', $filename_fallback));
+        if ($filename !== $filename_fallback) {
+            $disposition .= sprintf("; filename*=utf-8''%s", rawurlencode($filename));
+        }
+
+        header('Content-Type: text/csv');
+        header('Content-Transfer-Encoding: binary');
+        header('Content-Description: File Transfer');
+        header('Content-Disposition: '.$disposition);
+    }
+
+    /**
+     * DEPRECATION WARNING! This method will be removed in the next major point release.
+     *
+     * @codeCoverageIgnore
+     * @deprecated since version 9.18.0
+     * @see AbstractCsv::download()
+     *
+     * Outputs all data on the CSV file.
+     *
+     * Returns the number of characters read from the handle and passed through to the output.
+     *
+     * @throws Exception
+     */
+    #[Deprecated(message:'use League\Csv\AbstractCsv::download() instead', since:'league/csv:9.18.0')]
+    public function output(?string $filename = null): int
+    {
+        try {
+            return $this->download($filename);
+        } catch (InvalidArgumentException $exception) {
+            throw new InvalidArgument($exception->getMessage());
+        }
     }
 }

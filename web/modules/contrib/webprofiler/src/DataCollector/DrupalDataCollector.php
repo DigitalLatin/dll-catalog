@@ -44,16 +44,16 @@ class DrupalDataCollector extends DataCollector implements LateDataCollectorInte
       'webprofiler_config_url' => (new Url('webprofiler.settings', [], ['query' => $this->redirectDestination->getAsArray()]))->toString(),
       'php_version' => \PHP_VERSION,
       'php_architecture' => \PHP_INT_SIZE * 8,
-      'php_timezone' => date_default_timezone_get(),
+      'php_timezone' => \date_default_timezone_get(),
       'xdebug_enabled' => \extension_loaded('xdebug'),
-      'apcu_enabled' => \extension_loaded('apcu') && filter_var(ini_get('apc.enabled'), \FILTER_VALIDATE_BOOLEAN),
-      'zend_opcache_enabled' => \extension_loaded('Zend OPcache') && filter_var(ini_get('opcache.enable'), \FILTER_VALIDATE_BOOLEAN),
+      'apcu_enabled' => \extension_loaded('apcu') && \filter_var(\ini_get('apc.enabled'), \FILTER_VALIDATE_BOOLEAN),
+      'zend_opcache_enabled' => \extension_loaded('Zend OPcache') && \filter_var(\ini_get('opcache.enable'), \FILTER_VALIDATE_BOOLEAN),
       'sapi_name' => \PHP_SAPI,
     ];
 
     $this->addGitInfo($this->data);
 
-    if (preg_match('~^(\d+(?:\.\d+)*)(.+)?$~', $this->data['php_version'], $matches)) {
+    if (\preg_match('~^(\d+(?:\.\d+)*)(.+)?$~', $this->data['php_version'], $matches)) {
       $this->data['php_version'] = $matches[1];
 
       if (isset($matches[2])) {
@@ -63,7 +63,7 @@ class DrupalDataCollector extends DataCollector implements LateDataCollectorInte
 
     // If OpenTelemetry is present, add the TraceId to collected data.
     $abstract_span_class = '\OpenTelemetry\API\Trace\AbstractSpan';
-    if (class_exists($abstract_span_class)) {
+    if (\class_exists($abstract_span_class)) {
       $this->data['trace_id'] = $abstract_span_class::getCurrent()->getContext()->getTraceId();
     }
   }

@@ -51,7 +51,7 @@ class ServicesDataCollector extends DataCollector implements HasPanelInterface {
         $tracedData = $this->container->getTracedData();
       }
 
-      foreach (array_keys($this->getServices()) as $id) {
+      foreach (\array_keys($this->getServices()) as $id) {
         $this->data['services'][$id]['initialized'] = $this->container->initialized($id);
         $this->data['services'][$id]['time'] = $tracedData[$id] ?? NULL;
       }
@@ -85,7 +85,7 @@ class ServicesDataCollector extends DataCollector implements HasPanelInterface {
    *   The number of services.
    */
   public function getServicesCount(): int {
-    return count($this->getServices());
+    return \count($this->getServices());
   }
 
   /**
@@ -95,7 +95,7 @@ class ServicesDataCollector extends DataCollector implements HasPanelInterface {
    *   Array of services that are initialized.
    */
   public function getInitializedServices(): array {
-    return array_filter($this->getServices(), function ($item) {
+    return \array_filter($this->getServices(), static function ($item) {
       return $item['initialized'];
     });
   }
@@ -107,7 +107,7 @@ class ServicesDataCollector extends DataCollector implements HasPanelInterface {
    *   The number of services that are initialized.
    */
   public function getInitializedServicesCount(): int {
-    return count($this->getInitializedServices());
+    return \count($this->getInitializedServices());
   }
 
   /**
@@ -117,8 +117,8 @@ class ServicesDataCollector extends DataCollector implements HasPanelInterface {
    *   All services but the ones from Webprofiler itself.
    */
   public function getInitializedServicesWithoutWebprofiler(): array {
-    return array_filter($this->getInitializedServices(), function ($item) {
-      return !str_starts_with($item['value']['id'], 'webprofiler');
+    return \array_filter($this->getInitializedServices(), static function ($item) {
+      return !\str_starts_with($item['value']['id'], 'webprofiler');
     });
   }
 
@@ -129,7 +129,7 @@ class ServicesDataCollector extends DataCollector implements HasPanelInterface {
    *   The number of services but the ones from Webprofiler itself.
    */
   public function getInitializedServicesWithoutWebprofilerCount(): int {
-    return count($this->getInitializedServicesWithoutWebprofiler());
+    return \count($this->getInitializedServicesWithoutWebprofiler());
   }
 
   /**
@@ -168,7 +168,7 @@ class ServicesDataCollector extends DataCollector implements HasPanelInterface {
    *   Only services that are middlewares.
    */
   private function extractMiddlewares(array $data): array {
-    $middlewares = array_filter($data['services'], function ($service) {
+    $middlewares = \array_filter($data['services'], static function ($service) {
       return isset($service['value']['tags']['http_middleware']);
     });
 
@@ -176,7 +176,7 @@ class ServicesDataCollector extends DataCollector implements HasPanelInterface {
       $service['value']['handle_method'] = $this->getMethodData($service['value']['class'], 'handle');
     }
 
-    uasort($middlewares, function ($a, $b) {
+    \uasort($middlewares, static function ($a, $b) {
       $va = $a['value']['tags']['http_middleware'][0]['priority'];
       $vb = $b['value']['tags']['http_middleware'][0]['priority'];
 
@@ -199,7 +199,7 @@ class ServicesDataCollector extends DataCollector implements HasPanelInterface {
    *   The rendered tags as a string.
    */
   private function renderTags(array $tags): string {
-    return implode(', ', array_keys(array_filter($tags, function ($tag) {
+    return \implode(', ', \array_keys(\array_filter($tags, static function ($tag) {
       return $tag != '_provider';
     }, ARRAY_FILTER_USE_KEY)));
   }
@@ -214,7 +214,7 @@ class ServicesDataCollector extends DataCollector implements HasPanelInterface {
    *   The rendered provider as a string.
    */
   private function renderProvider(array $tags): string {
-    $tags = array_filter($tags, function ($tag) {
+    $tags = \array_filter($tags, static function ($tag) {
       return $tag == '_provider';
     }, ARRAY_FILTER_USE_KEY);
 

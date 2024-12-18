@@ -40,7 +40,7 @@ class RoutingDataCollector extends DataCollector implements HasPanelInterface {
    */
   public function collect(Request $request, Response $response, \Throwable $exception = NULL): void {
     // If the data has already been collected, don't collect it again.
-    if ($this->data != NULL && count($this->data['routing']) > 0) {
+    if ($this->data != NULL && \count($this->data['routing']) > 0) {
       return;
     }
 
@@ -70,7 +70,7 @@ class RoutingDataCollector extends DataCollector implements HasPanelInterface {
    *   The number of routes.
    */
   public function getRoutesCount(): int {
-    return count($this->routing());
+    return \count($this->routing());
   }
 
   /**
@@ -96,7 +96,7 @@ class RoutingDataCollector extends DataCollector implements HasPanelInterface {
           $this->t('Title'),
           $this->t('Controller'),
         ],
-        '#rows' => array_map(
+        '#rows' => \array_map(
           function ($data) {
             return [
               $data['name'],
@@ -123,23 +123,23 @@ class RoutingDataCollector extends DataCollector implements HasPanelInterface {
    *   The controller data.
    */
   private function renderControllerData(array $data): TranslatableMarkup|string {
-    if (array_key_exists('_controller', $data)) {
+    if (\array_key_exists('_controller', $data)) {
       return $this->t('Controller: %controller', ['%controller' => $data['_controller']]);
     }
 
-    if (array_key_exists('_form', $data)) {
+    if (\array_key_exists('_form', $data)) {
       return $this->t('Form: %form', ['%form' => $data['_form']]);
     }
 
-    if (array_key_exists('_entity_form', $data)) {
+    if (\array_key_exists('_entity_form', $data)) {
       return $this->t('Entity form: %entity_form', ['%entity_form' => $data['_entity_form']]);
     }
 
-    if (array_key_exists('_entity_view', $data)) {
+    if (\array_key_exists('_entity_view', $data)) {
       return $this->t('Entity view: %entity_view', ['%entity_view' => $data['_entity_view']]);
     }
 
-    if (array_key_exists('_entity_list', $data)) {
+    if (\array_key_exists('_entity_list', $data)) {
       return $this->t('Entity list: %entity_list', ['%entity_list' => $data['_entity_list']]);
     }
 

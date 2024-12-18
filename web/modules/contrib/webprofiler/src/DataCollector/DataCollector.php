@@ -53,7 +53,7 @@ abstract class DataCollector implements DataCollectorInterface {
    */
   protected function getCasters(): array {
     return [
-      '*' => function ($v, array $a, Stub $s, $isNested) {
+      '*' => static function ($v, array $a, Stub $s, $isNested) {
         if (!$v instanceof Stub) {
           foreach ($a as $k => $v2) {
             if (\is_object($v2) && !$v2 instanceof \DateTimeInterface && !$v2 instanceof Stub) {

@@ -53,8 +53,8 @@ class LogsDataCollector extends DataCollector implements HasPanelInterface, Late
       $logger instanceof LoggerInterfacesAdapter and
       ($adapted_logger = $logger->getAdaptedLogger()) instanceof DebugLoggerInterface
     ) {
-      $this->data['logs'] = array_map(
-        function ($log) {
+      $this->data['logs'] = \array_map(
+        static function ($log) {
           unset($log['context']['exception']);
           unset($log['context']['backtrace']);
 
@@ -79,7 +79,7 @@ class LogsDataCollector extends DataCollector implements HasPanelInterface, Late
    *   The number of logs.
    */
   public function getLogsCount(): int {
-    return count($this->data['logs']);
+    return \count($this->data['logs']);
   }
 
   /**
@@ -95,7 +95,7 @@ class LogsDataCollector extends DataCollector implements HasPanelInterface, Late
           $this->t('Channel'),
           $this->t('Message'),
         ],
-        '#rows' => array_map(function ($log) {
+        '#rows' => \array_map(static function ($log) {
           return [
             $log['priorityName'],
             $log['channel'],

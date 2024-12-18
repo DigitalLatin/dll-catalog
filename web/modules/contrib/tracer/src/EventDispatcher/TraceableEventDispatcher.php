@@ -47,8 +47,8 @@ class TraceableEventDispatcher extends ContainerAwareEventDispatcher implements 
    * {@inheritdoc}
    */
   public function __construct(
-      ContainerInterface $container,
-      array $listeners = [],
+    ContainerInterface $container,
+    array $listeners = [],
   ) {
     parent::__construct($container, $listeners);
 
@@ -66,17 +66,17 @@ class TraceableEventDispatcher extends ContainerAwareEventDispatcher implements 
   }
 
   /**
-   * {@inheritdoc}
+   * Trace the start and stop of the event processing.
    */
   public function dispatch(object $event, ?string $eventName = NULL): object {
-    $event_name = $eventName ?? get_class($event);
+    $event_name = $eventName ?? \get_class($event);
 
     $this->beforeDispatch($event_name, $event);
 
     if (isset($this->listeners[$event_name])) {
       // Sort listeners if necessary.
       if (isset($this->unsorted[$event_name])) {
-        krsort($this->listeners[$event_name]);
+        \krsort($this->listeners[$event_name]);
         unset($this->unsorted[$event_name]);
       }
 
@@ -89,12 +89,12 @@ class TraceableEventDispatcher extends ContainerAwareEventDispatcher implements 
               $definition['service'][1],
             ];
           }
-          if (is_array($definition['callable']) && isset($definition['callable'][0]) && $definition['callable'][0] instanceof \Closure) {
+          if (\is_array($definition['callable']) && isset($definition['callable'][0]) && $definition['callable'][0] instanceof \Closure) {
             $definition['callable'][0] = $definition['callable'][0]();
           }
 
           $span = $this->tracer->start('event', $event_name, ['priority' => $priority]);
-          call_user_func($definition['callable'], $event, $event_name, $this);
+          \call_user_func($definition['callable'], $event, $event_name, $this);
           $this->tracer->stop($span);
 
           $this->addCalledListener($definition, $event_name, $priority);
@@ -187,7 +187,7 @@ class TraceableEventDispatcher extends ContainerAwareEventDispatcher implements 
       ];
     }
     else {
-      $class = is_string($definition['callable'][0]) ? $definition['callable'][0] : get_class($definition['callable'][0]);
+      $class = \is_string($definition['callable'][0]) ? $definition['callable'][0] : \get_class($definition['callable'][0]);
       $this->calledListeners[$event_name][$priority][] = [
         'class' => $class,
         'method' => $definition['callable'][1],
@@ -202,15 +202,15 @@ class TraceableEventDispatcher extends ContainerAwareEventDispatcher implements 
       }
       else {
         if ($this->isClosure($listener['callable'])) {
-          if (is_callable($listener['callable'], TRUE, $listenerCallableName) && is_callable($definition['callable'], TRUE, $definitionCallableName)) {
+          if (\is_callable($listener['callable'], TRUE, $listenerCallableName) && \is_callable($definition['callable'], TRUE, $definitionCallableName)) {
             if ($listenerCallableName == $definitionCallableName) {
               unset($this->notCalledListeners[$event_name][$priority][$key]);
             }
           }
         }
         else {
-          $listener_class = is_string($listener['callable'][0]) ? $listener['callable'][0] : get_class($listener['callable'][0]);
-          $definition_class = is_string($definition['callable'][0]) ? $definition['callable'][0] : get_class($definition['callable'][0]);
+          $listener_class = \is_string($listener['callable'][0]) ? $listener['callable'][0] : \get_class($listener['callable'][0]);
+          $definition_class = \is_string($definition['callable'][0]) ? $definition['callable'][0] : \get_class($definition['callable'][0]);
           if ($listener_class == $definition_class && $listener['callable'][1] == $definition['callable'][1]) {
             unset($this->notCalledListeners[$event_name][$priority][$key]);
           }

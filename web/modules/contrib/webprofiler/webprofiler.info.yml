@@ -2,7 +2,7 @@ name: WebProfiler
 type: module
 description: 'Drupal WebProfiler.'
 package: Development
-core_version_requirement: ">=10.1.2"
+core_version_requirement: ">=10.1.2 <11.0.0"
 configure: webprofiler.settings
 dependencies:
   - devel:devel
@@ -10,7 +10,7 @@ dependencies:
 tags:
   - developer
 
-# Information added by Drupal.org packaging script on 2024-05-06
-version: '10.1.8'
+# Information added by Drupal.org packaging script on 2024-08-12
+version: '10.1.10'
 project: 'webprofiler'
-datestamp: 1714980019
+datestamp: 1723465179

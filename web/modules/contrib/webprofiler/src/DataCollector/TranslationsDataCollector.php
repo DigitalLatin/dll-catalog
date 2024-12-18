@@ -62,7 +62,7 @@ class TranslationsDataCollector extends DataCollector implements HasPanelInterfa
    *   The number of translated strings.
    */
   public function getTranslatedCount(): int {
-    return count($this->data['translations']['translated']);
+    return \count($this->data['translations']['translated']);
   }
 
   /**
@@ -72,7 +72,7 @@ class TranslationsDataCollector extends DataCollector implements HasPanelInterfa
    *   The number of untranslated strings.
    */
   public function getUntranslatedCount(): int {
-    return count($this->data['translations']['untranslated']);
+    return \count($this->data['translations']['untranslated']);
   }
 
   /**
@@ -104,9 +104,9 @@ class TranslationsDataCollector extends DataCollector implements HasPanelInterfa
    *   The render array of the list of translated strings.
    */
   private function renderTranslated(array $translated): array {
-    array_walk(
+    \array_walk(
       $translated,
-      function (&$key, $data): void {
+      static function (&$key, $data): void {
         $key = [
           $data,
           $key,
@@ -154,9 +154,9 @@ class TranslationsDataCollector extends DataCollector implements HasPanelInterfa
    *   The render array of the list of untranslated strings.
    */
   private function renderUntranslated(array $untranslated): array {
-    array_walk(
+    \array_walk(
       $untranslated,
-      function (&$key, $data): void {
+      static function (&$key, $data): void {
         $key = [
           $data,
           [

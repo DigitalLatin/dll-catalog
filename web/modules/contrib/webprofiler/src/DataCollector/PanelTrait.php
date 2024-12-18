@@ -34,7 +34,7 @@ trait PanelTrait {
     ?string $label = NULL,
     callable $element_converter = NULL,
   ): array {
-    if (count($data) == 0) {
+    if (\count($data) == 0) {
       return [];
     }
 
@@ -135,7 +135,7 @@ trait PanelTrait {
    *   The rendered time value.
    */
   protected function renderTime(float $time, string $unit = 'ms'): string {
-    $time = round($time * 100, 2) / 100;
+    $time = \round($time * 100, 2) / 100;
 
     return $time . ' ' . $unit;
   }

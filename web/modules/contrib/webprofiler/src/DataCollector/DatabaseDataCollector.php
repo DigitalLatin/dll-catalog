@@ -103,7 +103,7 @@ class DatabaseDataCollector extends DataCollector implements HasPanelInterface {
    *   The number of execute queries.
    */
   public function getQueryCount(): int {
-    return count($this->data['queries']);
+    return \count($this->data['queries']);
   }
 
   /**
@@ -122,7 +122,7 @@ class DatabaseDataCollector extends DataCollector implements HasPanelInterface {
 
     $queries = $this->data['queries'];
     if ('duration' === $query_sort) {
-      usort($queries, function (array $a, array $b): int {
+      \usort($queries, static function (array $a, array $b): int {
         return $a['time'] <=> $b['time'];
       });
     }

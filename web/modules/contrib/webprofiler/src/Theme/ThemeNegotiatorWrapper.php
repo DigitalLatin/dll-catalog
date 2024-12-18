@@ -26,7 +26,7 @@ class ThemeNegotiatorWrapper extends ThemeNegotiator {
   public function determineActiveTheme(RouteMatchInterface $route_match) {
     foreach ($this->negotiators as $negotiator_id) {
       $negotiator = $this->classResolver->getInstanceFromDefinition($negotiator_id);
-      assert($negotiator instanceof ThemeNegotiatorInterface);
+      \assert($negotiator instanceof ThemeNegotiatorInterface);
 
       if ($negotiator->applies($route_match)) {
         $theme = $negotiator->determineActiveTheme($route_match);

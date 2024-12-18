@@ -178,9 +178,9 @@ class EntityTypeManagerWrapper extends EntityTypeManager implements EntityTypeMa
 
     $storage = PhpStorageFactory::get('webprofiler');
     if ($handler instanceof ConfigEntityStorageInterface) {
-      if (array_key_exists($entity_type, $decorators)) {
+      if (\array_key_exists($entity_type, $decorators)) {
         $storage->load($entity_type);
-        if (!class_exists($decorators[$entity_type])) {
+        if (!\class_exists($decorators[$entity_type])) {
           try {
             $decoratorGenerator->generate();
             $storage->load($entity_type);

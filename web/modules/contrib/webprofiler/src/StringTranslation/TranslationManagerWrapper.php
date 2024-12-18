@@ -30,7 +30,7 @@ class TranslationManagerWrapper extends TranslationManager {
    */
   protected function doTranslate($string, array $options = []): string {
     // If a NULL langcode has been provided, unset it.
-    if (!isset($options['langcode']) && array_key_exists('langcode', $options)) {
+    if (!isset($options['langcode']) && \array_key_exists('langcode', $options)) {
       unset($options['langcode']);
     }
 

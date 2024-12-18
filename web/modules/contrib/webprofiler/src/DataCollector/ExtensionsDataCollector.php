@@ -51,7 +51,7 @@ class ExtensionsDataCollector extends DataCollector implements HasPanelInterface
     $modules = $this->moduleHandler->getModuleList();
     $themes = $this->themeHandler->listInfo();
 
-    $this->data['count'] = count($modules) + count($themes);
+    $this->data['count'] = \count($modules) + \count($themes);
     $this->data['modules'] = $this->extractData($modules);
     $this->data['themes'] = $this->extractData($themes);
   }
@@ -66,7 +66,7 @@ class ExtensionsDataCollector extends DataCollector implements HasPanelInterface
    *   The extracted data.
    */
   private function extractData(array $extensions): array {
-    return array_map(function (Extension $extension) {
+    return \array_map(function (Extension $extension) {
       return [
         'name' => $extension->getName(),
         'path' => $extension->getPath(),
@@ -101,7 +101,7 @@ class ExtensionsDataCollector extends DataCollector implements HasPanelInterface
    *   The total number of active modules.
    */
   public function getModulesCount(): int {
-    return count($this->data['modules']);
+    return \count($this->data['modules']);
   }
 
   /**
@@ -111,7 +111,7 @@ class ExtensionsDataCollector extends DataCollector implements HasPanelInterface
    *   The total number of active themes.
    */
   public function getThemesCount(): int {
-    return count($this->data['themes']);
+    return \count($this->data['themes']);
   }
 
   /**
@@ -154,7 +154,7 @@ class ExtensionsDataCollector extends DataCollector implements HasPanelInterface
           $this->t('Experimental'),
           $this->t('Obsolete'),
         ],
-        '#rows' => array_map(function (array $extension) {
+        '#rows' => \array_map(function (array $extension) {
           return [
             $extension['name'],
             $extension['path'],

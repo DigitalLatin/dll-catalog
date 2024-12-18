@@ -55,14 +55,14 @@ class ReportController extends ControllerBase {
 
     $ip = $request->query->get('ip');
     $url = $request->query->get('url');
-    $limit = intval($request->get('limit', 10));
+    $limit = \intval($request->get('limit', 10));
     $method = $request->query->get('method');
     $method = $method != '- any -' ? $method : NULL;
 
     $profiles = $this->profiler->find($ip, $url, $limit, $method, '', '');
 
     $rows = [];
-    if (count($profiles) > 0) {
+    if (\count($profiles) > 0) {
       foreach ($profiles as $profile) {
         $row = [];
         $row[] = Link::fromTextAndUrl($profile['token'], new Url('webprofiler.dashboard', ['token' => $profile['token']]))

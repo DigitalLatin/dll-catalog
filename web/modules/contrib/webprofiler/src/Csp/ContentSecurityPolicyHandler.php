@@ -126,7 +126,7 @@ class ContentSecurityPolicyHandler {
    * Updates Content-Security-Policy headers in a response.
    */
   private function updateCspHeaders(Response $response, array $nonces = []): array {
-    $nonces = array_replace([
+    $nonces = \array_replace([
       'csp_script_nonce' => $this->generateNonce(),
       'csp_style_nonce' => $this->generateNonce(),
     ], $nonces);
@@ -165,7 +165,7 @@ class ContentSecurityPolicyHandler {
         if (!\in_array('\'unsafe-inline\'', $headers[$header][$type], TRUE)) {
           $headers[$header][$type][] = '\'unsafe-inline\'';
         }
-        $headers[$header][$type][] = sprintf('\'nonce-%s\'', $nonces[$tokenName]);
+        $headers[$header][$type][] = \sprintf('\'nonce-%s\'', $nonces[$tokenName]);
       }
     }
 
@@ -191,8 +191,8 @@ class ContentSecurityPolicyHandler {
    * Converts a directive set array into Content-Security-Policy header.
    */
   private function generateCspHeader(array $directives): string {
-    return array_reduce(array_keys($directives), function ($res, $name) use ($directives) {
-      return ('' !== $res ? $res . '; ' : '') . sprintf('%s %s', $name, implode(' ', $directives[$name]));
+    return \array_reduce(\array_keys($directives), static function ($res, $name) use ($directives) {
+      return ('' !== $res ? $res . '; ' : '') . \sprintf('%s %s', $name, \implode(' ', $directives[$name]));
     }, '');
   }
 
@@ -202,12 +202,12 @@ class ContentSecurityPolicyHandler {
   private function parseDirectives(string $header): array {
     $directives = [];
 
-    foreach (explode(';', $header) as $directive) {
-      $parts = explode(' ', trim($directive));
-      if (count($parts) <= 1) {
+    foreach (\explode(';', $header) as $directive) {
+      $parts = \explode(' ', \trim($directive));
+      if (\count($parts) <= 1) {
         continue;
       }
-      $name = array_shift($parts);
+      $name = \array_shift($parts);
       $directives[$name] = $parts;
     }
 
@@ -233,13 +233,13 @@ class ContentSecurityPolicyHandler {
    */
   private function hasHashOrNonce(array $directives): bool {
     foreach ($directives as $directive) {
-      if (!str_ends_with($directive, '\'')) {
+      if (!\str_ends_with($directive, '\'')) {
         continue;
       }
-      if (str_starts_with($directive, '\'nonce-')) {
+      if (\str_starts_with($directive, '\'nonce-')) {
         return TRUE;
       }
-      if (\in_array(substr($directive, 0, 8), [
+      if (\in_array(\substr($directive, 0, 8), [
         '\'sha256-',
         '\'sha384-',
         '\'sha512-',

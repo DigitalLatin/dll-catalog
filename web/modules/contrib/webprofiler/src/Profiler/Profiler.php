@@ -66,7 +66,7 @@ class Profiler extends SymfonyProfiler {
       parent::add($collector);
     }
     else {
-      if (is_array($activeToolbarItems) && array_key_exists($collector->getName(), $activeToolbarItems) && $activeToolbarItems[$collector->getName()] !== '0') {
+      if (\is_array($activeToolbarItems) && \array_key_exists($collector->getName(), $activeToolbarItems) && $activeToolbarItems[$collector->getName()] !== '0') {
         parent::add($collector);
       }
     }

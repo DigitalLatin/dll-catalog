@@ -136,7 +136,7 @@ class ProfilerListener implements EventSubscriberInterface {
       $request = $request->duplicate(
         NULL,
         NULL,
-        array_merge(
+        \array_merge(
           $request->attributes->all(),
           ['big_pipe' => $response->headers->get('X-Drupal-BigPipe-Placeholder')],
         ),

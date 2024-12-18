@@ -6,7 +6,7 @@ core_version_requirement: ^10
 tags:
   - developer
 
-# Information added by Drupal.org packaging script on 2024-04-11
-version: '1.0.2'
+# Information added by Drupal.org packaging script on 2024-08-12
+version: '1.0.4'
 project: 'tracer'
-datestamp: 1712822479
+datestamp: 1723457573

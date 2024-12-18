@@ -44,7 +44,7 @@ trait DumpTrait {
    */
   public function dumpData(Data $data, int $maxDepth = 0): array|string {
     $dumper = new HtmlDumper();
-    $dumper->setOutput($this->output = fopen('php://memory', 'r+b'));
+    $dumper->setOutput($this->output = \fopen('php://memory', 'r+b'));
     $dumper->setTheme('light');
 
     $file_link_formatter = \Drupal::service('webprofiler.file_link_formatter');
@@ -54,11 +54,11 @@ trait DumpTrait {
       'maxDepth' => $maxDepth,
     ]);
 
-    $dump = stream_get_contents($this->output, -1, 0);
-    rewind($this->output);
-    ftruncate($this->output, 0);
+    $dump = \stream_get_contents($this->output, -1, 0);
+    \rewind($this->output);
+    \ftruncate($this->output, 0);
 
-    return str_replace("\n</pre", '</pre', rtrim($dump));
+    return \str_replace("\n</pre", '</pre', \rtrim($dump));
   }
 
   /**
@@ -91,7 +91,7 @@ trait DumpTrait {
    */
   protected function getCasters(): array {
     return [
-      '*' => function ($v, array $a, Stub $s, $isNested) {
+      '*' => static function ($v, array $a, Stub $s, $isNested) {
         if (!$v instanceof Stub) {
           foreach ($a as $k => $v2) {
             if (\is_object($v2) && !$v2 instanceof \DateTimeInterface && !$v2 instanceof Stub) {

@@ -87,11 +87,11 @@ class AssetsDataCollector extends DataCollector implements HasPanelInterface {
    *   A list of libraries.
    */
   public function setLibraries(array $libraries): void {
-    sort($libraries);
+    \sort($libraries);
 
     $data = [];
     foreach ($libraries as $library) {
-      [$extension, $name] = explode('/', $library);
+      [$extension, $name] = \explode('/', $library);
       $definition = $this->libraryDiscovery->getLibraryByName($extension, $name);
       $data[$library] = $definition;
     }
@@ -116,7 +116,7 @@ class AssetsDataCollector extends DataCollector implements HasPanelInterface {
    *   The number of css files used in page.
    */
   public function getCssCount(): int {
-    return count($this->data['css']);
+    return \count($this->data['css']);
   }
 
   /**
@@ -126,7 +126,7 @@ class AssetsDataCollector extends DataCollector implements HasPanelInterface {
    *   The number of javascript files used in page.
    */
   public function getJsCount(): int {
-    return count($this->data['js']) - 1;
+    return \count($this->data['js']) - 1;
   }
 
   /**
@@ -136,7 +136,7 @@ class AssetsDataCollector extends DataCollector implements HasPanelInterface {
    *   The number of libraries used in page.
    */
   public function getLibrariesCount(): int {
-    return count($this->data['libraries']);
+    return \count($this->data['libraries']);
   }
 
   /**
@@ -186,7 +186,7 @@ class AssetsDataCollector extends DataCollector implements HasPanelInterface {
           $this->t('Type'),
           $this->t('Media'),
         ],
-        '#rows' => array_map(function ($asset) {
+        '#rows' => \array_map(static function ($asset) {
           return [
             $asset['data'],
             $asset['version'],
@@ -224,14 +224,14 @@ class AssetsDataCollector extends DataCollector implements HasPanelInterface {
           $this->t('Type'),
           $this->t('Scope'),
         ],
-        '#rows' => array_map(function ($asset) {
+        '#rows' => \array_map(static function ($asset) {
           return [
             $asset['data'],
             $asset['version'],
             $asset['type'],
             $asset['scope'],
           ];
-        }, array_filter($data, function ($asset) {
+        }, \array_filter($data, static function ($asset) {
           return $asset['type'] !== 'setting';
         })),
         '#attributes' => [
@@ -258,7 +258,7 @@ class AssetsDataCollector extends DataCollector implements HasPanelInterface {
       '#type' => 'inline_template',
       '#template' => '{{ data|raw }}',
       '#context' => [
-        'data' => array_key_exists('drupalSettings', $settings) ? $this->dumpData($this->cloneVar($settings['drupalSettings'])) : 'n/a',
+        'data' => \array_key_exists('drupalSettings', $settings) ? $this->dumpData($this->cloneVar($settings['drupalSettings'])) : 'n/a',
       ],
     ];
   }

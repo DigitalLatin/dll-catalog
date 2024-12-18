@@ -60,14 +60,14 @@ class DebugProcessor implements DebugLoggerInterface, ResetInterface {
    */
   public function __invoke(array|LogRecord $record): array|LogRecord {
     $request = $this->requestStack?->getCurrentRequest();
-    $key = $request != NULL ? spl_object_id($request) : '';
+    $key = $request != NULL ? \spl_object_id($request) : '';
 
     $timestamp = $timestampRfc3339 = FALSE;
     if ($record['datetime'] instanceof \DateTimeInterface) {
       $timestamp = $record['datetime']->getTimestamp();
       $timestampRfc3339 = $record['datetime']->format(\DateTimeInterface::RFC3339_EXTENDED);
     }
-    elseif (FALSE !== $timestamp = strtotime($record['datetime'])) {
+    elseif (FALSE !== $timestamp = \strtotime($record['datetime'])) {
       $timestampRfc3339 = (new \DateTimeImmutable($record['datetime']))->format(\DateTimeInterface::RFC3339_EXTENDED);
     }
 
@@ -120,14 +120,14 @@ class DebugProcessor implements DebugLoggerInterface, ResetInterface {
    */
   public function getLogs(Request $request = NULL): array {
     if (NULL !== $request) {
-      return $this->records[spl_object_id($request)] ?? [];
+      return $this->records[\spl_object_id($request)] ?? [];
     }
 
     if (0 === \count($this->records)) {
       return [];
     }
 
-    return array_merge(...array_values($this->records));
+    return \array_merge(...\array_values($this->records));
   }
 
   /**
@@ -135,10 +135,10 @@ class DebugProcessor implements DebugLoggerInterface, ResetInterface {
    */
   public function countErrors(Request $request = NULL): int {
     if (NULL !== $request) {
-      return $this->errorCount[spl_object_id($request)] ?? 0;
+      return $this->errorCount[\spl_object_id($request)] ?? 0;
     }
 
-    return array_sum($this->errorCount);
+    return \array_sum($this->errorCount);
   }
 
   /**

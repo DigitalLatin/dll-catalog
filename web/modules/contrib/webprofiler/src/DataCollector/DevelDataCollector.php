@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Drupal\webprofiler\DataCollector;
 
+use Drupal\Component\Utility\DeprecationHelper;
 use Drupal\Core\Link;
 use Drupal\Core\Menu\MenuLinkTreeInterface;
 use Drupal\Core\Menu\MenuTreeParameters;
@@ -107,7 +108,13 @@ class DevelDataCollector extends DataCollector {
       // Build and render the link.
       $link = Link::fromTextAndUrl($item_link->getTitle(), $url);
       $renderable = $link->toRenderable();
-      $rendered = $this->renderer->renderPlain($renderable);
+
+      $rendered = DeprecationHelper::backwardsCompatibleCall(
+        currentVersion: \Drupal::VERSION,
+        deprecatedVersion: '10.3',
+        currentCallable: fn() => $this->renderer->renderInIsolation($renderable),
+        deprecatedCallable: fn() => $this->renderer->renderPlain($renderable),
+      );
 
       $links[] = Markup::create($rendered);
     }

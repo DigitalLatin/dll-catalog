@@ -20,8 +20,8 @@
         "drupal/tracer": "^1.0",
         "league/commonmark": "~2.4",
         "nikic/php-parser": "^5.0 || ^4.18",
-        "symfony/stopwatch": "^6",
-        "symfony/var-dumper": "^6"
+        "symfony/stopwatch": "^6 || ^7",
+        "symfony/var-dumper": "^6 || ^7"
     },
     "require-dev": {
         "drupal/monolog": "^3.0",
