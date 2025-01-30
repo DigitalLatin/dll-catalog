@@ -4,10 +4,15 @@ status: true
 dependencies:
   config:
     - filter.format.filtered_html
+    - search_api_autocomplete.search.browse_authors
+    - search_api_autocomplete.search.browse_dll_work_records
+    - search_api_autocomplete.search.browse_item_records
+    - search_api_autocomplete.search.browse_web_pages
     - search_api_autocomplete.search.main_solr_search
   module:
     - filter
     - fontawesome
+    - media
     - search_api_autocomplete
     - system
 _core:
@@ -19,5 +24,10 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access fontawesome additional settings'
+  - 'use search_api_autocomplete for browse_authors'
+  - 'use search_api_autocomplete for browse_dll_work_records'
+  - 'use search_api_autocomplete for browse_item_records'
+  - 'use search_api_autocomplete for browse_web_pages'
   - 'use search_api_autocomplete for main_solr_search'
   - 'use text format filtered_html'
+  - 'view media'

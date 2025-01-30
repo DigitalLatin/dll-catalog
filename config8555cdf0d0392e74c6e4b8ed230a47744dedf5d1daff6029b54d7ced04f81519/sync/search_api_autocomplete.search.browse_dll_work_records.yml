@@ -1,0 +1,28 @@
+uuid: e0ed842d-c49a-404e-9a16-f4198697c11c
+langcode: en
+status: false
+dependencies:
+  config:
+    - search_api.index.works
+    - views.view.browse_dll_work_records
+  module:
+    - views
+id: browse_dll_work_records
+label: 'Browse DLL Work Records'
+index_id: works
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:browse_dll_work_records':
+    displays:
+      default: true
+      selected: {  }
+options: {  }

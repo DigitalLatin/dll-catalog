@@ -24,7 +24,6 @@ settings:
     sort:
       field: title
       direction: ASC
-    behaviors:
-      views-select-list:
-        status: 0
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

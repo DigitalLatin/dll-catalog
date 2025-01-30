@@ -223,7 +223,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: search_api_fulltext
-          operator: and
+          operator: or
           value: ''
           group: 1
           exposed: true
@@ -265,8 +265,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: terms
-          min_length: 1
+          parse_mode: direct
+          min_length: null
           fields: {  }
       style:
         type: views_bootstrap_list_group
@@ -293,6 +293,7 @@ display:
           query_tags: {  }
       relationships: {  }
       css_class: search-index
+      use_ajax: false
       header:
         result:
           id: result

@@ -7,7 +7,6 @@ dependencies:
     - views.view.main_solr_search
   module:
     - views
-    - search_api_autocomplete
 id: main_solr_search
 label: 'Main Solr Search'
 index_id: dll_catalog_search

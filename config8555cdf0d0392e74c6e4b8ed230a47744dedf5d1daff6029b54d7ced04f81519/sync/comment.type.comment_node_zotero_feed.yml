@@ -1,8 +1,0 @@
-uuid: 39653b54-bfe7-4d35-86f9-c3a8ac0111e5
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_zotero_feed
-label: 'Zotero feed comment'
-target_entity_type_id: node
-description: null

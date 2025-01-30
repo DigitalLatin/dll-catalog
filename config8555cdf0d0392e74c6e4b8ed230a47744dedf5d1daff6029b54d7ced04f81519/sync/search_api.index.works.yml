@@ -11,9 +11,8 @@ dependencies:
     - field.storage.node.field_work_name
     - search_api.server.dllcatalog
   module:
-    - search_api_solr
     - node
-    - search_api
+    - search_api_solr
 third_party_settings:
   search_api_solr:
     finalize: false

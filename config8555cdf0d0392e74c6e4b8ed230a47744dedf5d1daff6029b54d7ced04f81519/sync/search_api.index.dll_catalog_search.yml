@@ -3,24 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_authorized_name
+    - core.entity_view_mode.node.search_result
+    - field.storage.node.field_alternative_title
+    - field.storage.node.field_author
     - field.storage.node.field_author_name_english
     - field.storage.node.field_author_name_latin
+    - field.storage.node.field_authorized_name
     - field.storage.node.field_creator
-    - field.storage.node.field_author
-    - field.storage.node.field_other_alternative_name_for
     - field.storage.node.field_dll_creator
-    - field.storage.node.field_work_reference
+    - field.storage.node.field_other_alternative_name_for
     - field.storage.node.field_record_title
     - field.storage.node.field_short_title
     - field.storage.node.field_time_period
     - field.storage.node.field_work_name
+    - field.storage.node.field_work_reference
     - search_api.server.dllcatalog
-    - core.entity_view_mode.node.search_result
   module:
-    - search_api_solr
     - node
-    - search_api
+    - search_api_solr
 third_party_settings:
   search_api_solr:
     finalize: false
@@ -73,11 +73,22 @@ name: 'DLL Catalog Search'
 description: 'Site-wide searching of the four major content types.'
 read_only: false
 field_settings:
+  field_alternative_title:
+    label: 'DLL Work Reference » Content » Alternative Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_work_reference:entity:field_alternative_title'
+    type: 'solr_text_custom:edgestring'
+    dependencies:
+      config:
+        - field.storage.node.field_alternative_title
+        - field.storage.node.field_work_reference
+      module:
+        - node
   field_author_name_english:
     label: 'Author Name English'
     datasource_id: 'entity:node'
     property_path: field_author_name_english
-    type: text
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author_name_english
@@ -85,7 +96,7 @@ field_settings:
     label: 'Creator » Content » Author Name English'
     datasource_id: 'entity:node'
     property_path: 'field_author:entity:field_author_name_english'
-    type: text
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author
@@ -96,7 +107,7 @@ field_settings:
     label: 'DLL Work Reference » Content » Author Name English'
     datasource_id: 'entity:node'
     property_path: 'field_work_reference:entity:field_author_name_english'
-    type: string
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author_name_english
@@ -107,7 +118,7 @@ field_settings:
     label: 'DLL Work Reference » Content » Creator » Content » Author Name English'
     datasource_id: 'entity:node'
     property_path: 'field_work_reference:entity:field_author:entity:field_author_name_english'
-    type: string
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author
@@ -119,7 +130,7 @@ field_settings:
     label: 'DLL Work Reference » Content » Creator » Content » Work Reference » Content » Author Name English'
     datasource_id: 'entity:node'
     property_path: 'field_work_reference:entity:field_author:entity:field_work_reference:entity:field_author_name_english'
-    type: string
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author
@@ -131,7 +142,7 @@ field_settings:
     label: 'Author Name Latin'
     datasource_id: 'entity:node'
     property_path: field_author_name_latin
-    type: text
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author_name_latin
@@ -139,7 +150,7 @@ field_settings:
     label: 'Creator » Content » Author Name Latin'
     datasource_id: 'entity:node'
     property_path: 'field_author:entity:field_author_name_latin'
-    type: text
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author
@@ -150,7 +161,7 @@ field_settings:
     label: 'DLL Work Reference » Content » Author Name Latin'
     datasource_id: 'entity:node'
     property_path: 'field_work_reference:entity:field_author_name_latin'
-    type: string
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author_name_latin
@@ -161,7 +172,7 @@ field_settings:
     label: 'DLL Work Reference » Content » Creator » Content » Author Name Latin'
     datasource_id: 'entity:node'
     property_path: 'field_work_reference:entity:field_author:entity:field_author_name_latin'
-    type: string
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author
@@ -173,7 +184,7 @@ field_settings:
     label: 'DLL Work Reference » Content » Creator » Content » Work Reference » Content » Author Name Latin'
     datasource_id: 'entity:node'
     property_path: 'field_work_reference:entity:field_author:entity:field_work_reference:entity:field_author_name_latin'
-    type: string
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author
@@ -185,7 +196,7 @@ field_settings:
     label: 'Authorized Name'
     datasource_id: 'entity:node'
     property_path: field_authorized_name
-    type: string
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_authorized_name
@@ -193,7 +204,7 @@ field_settings:
     label: 'DLL Work Reference » Content » Authorized Name'
     datasource_id: 'entity:node'
     property_path: 'field_work_reference:entity:field_authorized_name'
-    type: string
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_authorized_name
@@ -204,7 +215,7 @@ field_settings:
     label: 'DLL Work Reference » Content » Creator » Content » Authorized Name'
     datasource_id: 'entity:node'
     property_path: 'field_work_reference:entity:field_author:entity:field_authorized_name'
-    type: string
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author
@@ -216,7 +227,7 @@ field_settings:
     label: 'DLL Work Reference » Content » Creator » Content » Work Reference » Content » Authorized Name'
     datasource_id: 'entity:node'
     property_path: 'field_work_reference:entity:field_author:entity:field_work_reference:entity:field_authorized_name'
-    type: string
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author
@@ -228,7 +239,7 @@ field_settings:
     label: Creator
     datasource_id: 'entity:node'
     property_path: field_creator
-    type: string
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_creator
@@ -244,7 +255,7 @@ field_settings:
     label: 'Creator » Content » Other Alternative Name Form(s)'
     datasource_id: 'entity:node'
     property_path: 'field_author:entity:field_other_alternative_name_for'
-    type: text
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author
@@ -255,7 +266,7 @@ field_settings:
     label: 'DLL Work Reference » Content » Creator » Content » Record title'
     datasource_id: 'entity:node'
     property_path: 'field_work_reference:entity:field_author:entity:field_record_title'
-    type: text
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author
@@ -267,7 +278,7 @@ field_settings:
     label: 'DLL Work Reference » Content » Creator » Content » Work Reference » Content » Record title'
     datasource_id: 'entity:node'
     property_path: 'field_work_reference:entity:field_author:entity:field_work_reference:entity:field_record_title'
-    type: text
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author
@@ -295,7 +306,7 @@ field_settings:
     label: 'Work Name'
     datasource_id: 'entity:node'
     property_path: field_work_name
-    type: text
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_work_name
@@ -332,7 +343,7 @@ field_settings:
     label: 'DLL Work Reference » Content » Creator » Content » Work Reference » Content » Title'
     datasource_id: 'entity:node'
     property_path: 'field_work_reference:entity:field_author:entity:field_work_reference:entity:title'
-    type: string
+    type: 'solr_text_custom:edgestring'
     dependencies:
       config:
         - field.storage.node.field_author
@@ -372,6 +383,39 @@ processor_settings:
   aggregated_field: {  }
   auto_aggregated_fulltext_field: {  }
   custom_value: {  }
+  double_quote_workaround:
+    weights:
+      postprocess_query: 0
+      preprocess_index: -15
+      preprocess_query: -15
+    all_fields: false
+    fields:
+      - field_author_name_english
+      - field_author_name_english_1
+      - field_author_name_english_2
+      - field_author_name_english_3
+      - field_author_name_english_4
+      - field_author_name_latin
+      - field_author_name_latin_1
+      - field_author_name_latin_2
+      - field_author_name_latin_3
+      - field_author_name_latin_4
+      - field_authorized_name
+      - field_authorized_name_1
+      - field_authorized_name_2
+      - field_authorized_name_3
+      - field_creator
+      - field_other_alternative_name_for
+      - field_record_title
+      - field_record_title_1
+      - field_short_title
+      - field_work_name
+      - rendered_item
+      - title
+      - title_1
+      - title_2
+      - type
+    replacement: '|9999999998|'
   entity_type: {  }
   highlight:
     weights:
@@ -384,6 +428,45 @@ processor_settings:
     exclude_fields: {  }
     highlight: always
     highlight_partial: false
+  html_filter:
+    weights:
+      preprocess_index: -15
+      preprocess_query: -15
+    all_fields: false
+    fields:
+      - field_author_name_english
+      - field_author_name_english_1
+      - field_author_name_english_2
+      - field_author_name_english_3
+      - field_author_name_english_4
+      - field_author_name_latin
+      - field_author_name_latin_1
+      - field_author_name_latin_2
+      - field_author_name_latin_3
+      - field_author_name_latin_4
+      - field_authorized_name
+      - field_authorized_name_1
+      - field_authorized_name_2
+      - field_authorized_name_3
+      - field_creator
+      - field_other_alternative_name_for
+      - field_record_title
+      - field_record_title_1
+      - field_short_title
+      - field_work_name
+      - rendered_item
+      - title
+      - title_1
+      - title_2
+      - type
+    title: true
+    alt: true
+    tags:
+      b: 2
+      h1: 5
+      h2: 3
+      h3: 2
+      strong: 2
   language_with_fallback: {  }
   rendered_item: {  }
   solr_date_range:

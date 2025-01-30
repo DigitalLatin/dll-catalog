@@ -4,12 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
-    - field.field.node.article.field_image
+    - field.field.node.article.field_header_image
     - field.field.node.article.field_tags
-    - image.style.large
     - node.type.article
   module:
-    - image
     - text
     - user
 _core:
@@ -26,17 +24,6 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_image:
-    type: image
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: large
-      image_loading:
-        attribute: lazy
-    third_party_settings: {  }
-    weight: 0
-    region: content
   field_tags:
     type: entity_reference_label
     label: above
@@ -51,5 +38,6 @@ content:
     weight: 4
     region: content
 hidden:
+  field_header_image: true
   langcode: true
   search_api_excerpt: true

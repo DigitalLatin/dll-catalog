@@ -1,0 +1,28 @@
+uuid: 21623278-eccf-49a3-8b94-a629d52b0b6a
+langcode: en
+status: false
+dependencies:
+  config:
+    - search_api.index.browse_authors
+    - views.view.browse_authors
+  module:
+    - views
+id: browse_authors
+label: 'Browse: Authors'
+index_id: browse_authors
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:browse_authors':
+    displays:
+      default: true
+      selected: {  }
+options: {  }

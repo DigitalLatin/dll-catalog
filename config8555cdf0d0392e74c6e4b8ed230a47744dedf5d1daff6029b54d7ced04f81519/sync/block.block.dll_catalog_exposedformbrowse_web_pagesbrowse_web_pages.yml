@@ -25,4 +25,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/browse/web-pages\r\n/browse/web-pages/*"
+    pages: /dll-web-page

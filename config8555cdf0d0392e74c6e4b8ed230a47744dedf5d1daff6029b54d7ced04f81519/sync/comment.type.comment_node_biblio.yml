@@ -1,8 +1,0 @@
-uuid: a9331892-6874-4dbf-8bef-bd800a13ddeb
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_biblio
-label: 'Biblio comment'
-target_entity_type_id: node
-description: null

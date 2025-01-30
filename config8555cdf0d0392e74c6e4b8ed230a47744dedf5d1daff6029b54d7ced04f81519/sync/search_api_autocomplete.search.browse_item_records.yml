@@ -1,0 +1,28 @@
+uuid: 6b7a4e1b-d385-41a6-88eb-21c684c3b57b
+langcode: en
+status: false
+dependencies:
+  config:
+    - search_api.index.item_records
+    - views.view.browse_item_records
+  module:
+    - views
+id: browse_item_records
+label: 'Browse Item Records'
+index_id: item_records
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:browse_item_records':
+    displays:
+      default: true
+      selected: {  }
+options: {  }

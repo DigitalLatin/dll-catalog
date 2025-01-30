@@ -25,4 +25,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/browse/works\r\n/browse/works/*"
+    pages: /dll-work

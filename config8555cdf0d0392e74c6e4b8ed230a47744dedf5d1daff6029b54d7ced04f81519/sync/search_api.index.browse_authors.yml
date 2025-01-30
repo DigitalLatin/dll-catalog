@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.search_index
     - field.storage.node.field_author_name_english
     - field.storage.node.field_author_name_latin
     - field.storage.node.field_author_name_native_languag
@@ -10,11 +11,9 @@ dependencies:
     - field.storage.node.field_dll_identifier
     - field.storage.node.field_other_alternative_name_for
     - search_api.server.dllcatalog
-    - core.entity_view_mode.node.search_index
   module:
-    - search_api_solr
     - node
-    - search_api
+    - search_api_solr
 third_party_settings:
   search_api_solr:
     finalize: false

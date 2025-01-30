@@ -1,8 +1,0 @@
-uuid: 51bda8fe-fc4c-47e9-8c99-1a4e44b2652f
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_manuscript
-label: 'Manuscript comment'
-target_entity_type_id: node
-description: null

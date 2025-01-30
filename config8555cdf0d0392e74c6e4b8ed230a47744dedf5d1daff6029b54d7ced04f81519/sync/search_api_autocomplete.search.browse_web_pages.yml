@@ -1,0 +1,28 @@
+uuid: 53ad4be8-627f-43f0-82fc-6b588e712404
+langcode: en
+status: false
+dependencies:
+  config:
+    - search_api.index.browse_web_pages
+    - views.view.browse_web_pages
+  module:
+    - views
+id: browse_web_pages
+label: 'Browse Web Pages'
+index_id: browse_web_pages
+suggester_settings:
+  live_results:
+    fields: {  }
+    highlight:
+      enabled: false
+      field: ''
+    suggest_keys: false
+    view_modes: {  }
+suggester_weights: {  }
+suggester_limits: {  }
+search_settings:
+  'views:browse_web_pages':
+    displays:
+      default: true
+      selected: {  }
+options: {  }
