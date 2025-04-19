@@ -216,7 +216,7 @@ abstract class BackendTestBase extends KernelTestBase {
    * @return \Drupal\search_api\Query\QueryInterface
    *   A search query on the test index.
    */
-  protected function buildSearch($keys = NULL, array $conditions = [], array $fields = NULL, $place_id_sort = TRUE) {
+  protected function buildSearch($keys = NULL, array $conditions = [], ?array $fields = NULL, $place_id_sort = TRUE) {
     static $i = 0;
 
     $query = $this->getIndex()->query();

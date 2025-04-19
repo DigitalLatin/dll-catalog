@@ -142,6 +142,7 @@ function search_api_views_plugins_cache_alter(array &$plugins) {
   $plugins['search_api_none']['base'] = $bases;
   $plugins['search_api_tag']['base'] = $bases;
   $plugins['search_api_time']['base'] = $bases;
+  $plugins['search_api_time_tag']['base'] = $bases;
 }
 
 /**
@@ -442,7 +443,7 @@ function _search_api_views_handler_mapping() {
  * @throws \Drupal\search_api\SearchApiException
  *   Thrown if the field's data definition could not be retrieved.
  */
-function _search_api_views_handler_adjustments($type, FieldInterface $field, array &$definitions, string $sub_type = NULL) {
+function _search_api_views_handler_adjustments($type, FieldInterface $field, array &$definitions, ?string $sub_type = NULL) {
   // By default, all fields can be empty (or at least have to be treated that
   // way by the Search API).
   if (!isset($definitions['filter']['allow empty'])) {
@@ -553,7 +554,7 @@ function _search_api_views_data_special_fields(array &$table, IndexInterface $in
   $table[$excerpt_field]['group'] = t('Search');
   $table[$excerpt_field]['title'] = t('Excerpt');
   $table[$excerpt_field]['help'] = t('The search result excerpted to show found search terms');
-  $table[$excerpt_field]['field']['id'] = 'search_api';
+  $table[$excerpt_field]['field']['id'] = 'search_api_text';
   $table[$excerpt_field]['field']['filter_type'] = 'xss';
   if ($excerpt_field != 'search_api_excerpt') {
     $table[$excerpt_field]['real field'] = 'search_api_excerpt';
@@ -955,7 +956,7 @@ function _search_api_views_get_field_handler_mapping() {
     ];
 
     $text_mapping = [
-      'id' => 'search_api',
+      'id' => 'search_api_text',
       'filter_type' => 'xss',
     ];
     $plain_mapping['field_item:text_long'] = $text_mapping;

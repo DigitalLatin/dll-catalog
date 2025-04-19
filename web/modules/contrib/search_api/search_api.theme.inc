@@ -7,7 +7,9 @@
 
 use Drupal\Component\Render\FormattableMarkup;
 use Drupal\Component\Utility\Html;
+use Drupal\Component\Utility\Xss;
 use Drupal\Core\Render\Element;
+use Drupal\Core\Render\Markup;
 use Drupal\Core\Url;
 use Drupal\search_api\Query\QueryInterface;
 use Drupal\search_api\SearchApiException;
@@ -140,7 +142,7 @@ function template_preprocess_search_api_server(array &$variables) {
 
   if (($description = $server->getDescription())) {
     // Sanitize the description and append to the output.
-    $variables['description'] = $description;
+    $variables['description'] = Markup::create(Xss::filterAdmin($description));
   }
 
   // Initialize the $rows variable which will hold the different parts of server
@@ -258,7 +260,7 @@ function template_preprocess_search_api_index(array &$variables) {
 
   if (($description = $index->getDescription())) {
     // Sanitize the description and append to the output.
-    $variables['description'] = $description;
+    $variables['description'] = Markup::create(Xss::filterAdmin($description));
   }
 
   // Initialize the $rows variable which will hold the different parts of server

@@ -454,14 +454,14 @@ class FieldsHelper implements FieldsHelperInterface {
   /**
    * {@inheritdoc}
    */
-  public function createItem(IndexInterface $index, $id, DatasourceInterface $datasource = NULL) {
+  public function createItem(IndexInterface $index, $id, ?DatasourceInterface $datasource = NULL) {
     return new Item($index, $id, $datasource);
   }
 
   /**
    * {@inheritdoc}
    */
-  public function createItemFromObject(IndexInterface $index, ComplexDataInterface $originalObject, $id = NULL, DatasourceInterface $datasource = NULL) {
+  public function createItemFromObject(IndexInterface $index, ComplexDataInterface $originalObject, $id = NULL, ?DatasourceInterface $datasource = NULL) {
     if (!isset($id)) {
       if (!isset($datasource)) {
         throw new \InvalidArgumentException('Need either an item ID or the datasource to create a search item from an object.');

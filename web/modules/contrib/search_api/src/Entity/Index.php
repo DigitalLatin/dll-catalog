@@ -3,6 +3,7 @@
 namespace Drupal\search_api\Entity;
 
 use Drupal\Component\Plugin\DependentPluginInterface;
+use Drupal\Component\Utility\DeprecationHelper;
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Config\Action\Attribute\ActionMethod;
@@ -104,6 +105,19 @@ class Index extends ConfigEntityBase implements IndexInterface {
    * @var int[]
    */
   protected static $batchTrackingIndexes = [];
+
+  /**
+   * Item IDs known to be unreliable that were generated in this request.
+   *
+   * The property is a two-dimensional array keyed by index ID and item IDs,
+   * with item IDs also as the values.
+   *
+   * @var string[][]
+   *
+   * @see static::loadItemsMultiple()
+   * @see static::registerUnreliableItemIds()
+   */
+  protected static array $unreliableItemIds = [];
 
   /**
    * The ID of the index.
@@ -520,7 +534,7 @@ class Index extends ConfigEntityBase implements IndexInterface {
   /**
    * {@inheritdoc}
    */
-  public function setServer(ServerInterface $server = NULL) {
+  public function setServer(?ServerInterface $server = NULL) {
     $this->serverInstance = $server;
     $this->server = $server?->id();
     return $this;
@@ -910,9 +924,12 @@ class Index extends ConfigEntityBase implements IndexInterface {
       // Extract the second-level values of the two-dimensional array (that is,
       // the combined item IDs) and log a warning reporting their absence.
       $missing_ids = array_reduce(array_map('array_values', $items_by_datasource), 'array_merge', []);
-      $args['%index'] = $this->label() ?? $this->id();
-      $args['@items'] = '"' . implode('", "', $missing_ids) . '"';
-      $this->getLogger()->warning('Could not load the following items on index %index: @items.', $args);
+      $missing_ids = array_diff($missing_ids, static::$unreliableItemIds[$this->id()] ?? []);
+      if ($missing_ids) {
+        $args['%index'] = $this->label() ?? $this->id();
+        $args['@items'] = '"' . implode('", "', $missing_ids) . '"';
+        $this->getLogger()->warning('Could not load the following items on index %index: @items.', $args);
+      }
       // If the corresponding setting is enabled, we also remove those items
       // from tracking so we don't keep trying to load them.
       if ($this->getOption('delete_on_fail', TRUE)) {
@@ -924,6 +941,15 @@ class Index extends ConfigEntityBase implements IndexInterface {
 
     // Return the loaded items.
     return $items;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function registerUnreliableItemIds(array $item_ids): void {
+    $item_ids = array_combine($item_ids, $item_ids);
+    static::$unreliableItemIds += [$this->id() => []];
+    static::$unreliableItemIds[$this->id()] += $item_ids;
   }
 
   /**
@@ -1022,6 +1048,19 @@ class Index extends ConfigEntityBase implements IndexInterface {
       // Return the IDs of all items that were either successfully indexed or
       // rejected before being handed to the server.
       $processed_ids = array_merge(array_values($rejected_ids), array_values($indexed_ids));
+
+      // Check whether any of the successfully indexed items were only indexed
+      // with warnings.
+      $items_with_warnings = [];
+      foreach ($indexed_ids as $item_id) {
+        $item = $items[$item_id] ?? NULL;
+        if ($item->hasWarnings()) {
+          $items_with_warnings[$item_id] = $item_id;
+        }
+      }
+      if ($items_with_warnings) {
+        $processed_ids = array_keys(array_diff_key(array_flip($processed_ids), $items_with_warnings));
+      }
 
       if ($processed_ids) {
         if ($this->hasValidTracker()) {
@@ -1424,9 +1463,19 @@ class Index extends ConfigEntityBase implements IndexInterface {
     }
 
     try {
-      // Fake an original for inserts to make code cleaner.
+      // Fake an original for inserts to make the code cleaner.
       /** @var \Drupal\search_api\IndexInterface $original */
-      $original = $update ? $this->original : static::create(['status' => FALSE]);
+      if ($update) {
+        $original = DeprecationHelper::backwardsCompatibleCall(
+          \Drupal::VERSION,
+          '11.2',
+          fn () => $this->getOriginal(),
+          fn () => $this->original,
+        );
+      }
+      else {
+        $original = static::create(['status' => FALSE]);
+      }
       $index_task_manager = \Drupal::getContainer()
         ->get('search_api.index_task_manager');
 
@@ -1452,7 +1501,11 @@ class Index extends ConfigEntityBase implements IndexInterface {
         }
       }
 
-      if (!$index_task_manager->isTrackingComplete($this)) {
+      // Do not try to track items when config is syncing.
+      if (
+        !\Drupal::service('config.installer')->isSyncing()
+        && !$index_task_manager->isTrackingComplete($this)
+      ) {
         // Give tests and site admins the possibility to disable the use of a
         // batch for tracking items. Also, do not use a batch if running in the
         // CLI.

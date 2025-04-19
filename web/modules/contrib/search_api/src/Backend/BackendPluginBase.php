@@ -281,7 +281,7 @@ abstract class BackendPluginBase extends ConfigurablePluginBase implements Backe
    * @return \Drupal\search_api\Item\FieldInterface[]
    *   An array of field objects for all "magic" fields, keyed by field IDs.
    */
-  protected function getSpecialFields(IndexInterface $index, ItemInterface $item = NULL) {
+  protected function getSpecialFields(IndexInterface $index, ?ItemInterface $item = NULL) {
     $field_info = [
       'type' => 'string',
       'original type' => 'string',

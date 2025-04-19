@@ -5,15 +5,18 @@ namespace Drupal\search_api\Plugin\search_api\processor;
 use Drupal\Component\Utility\DeprecationHelper;
 use Drupal\Core\Entity\Entity\EntityViewMode;
 use Drupal\Core\Link;
+use Drupal\Core\Logger\RfcLogLevel;
 use Drupal\Core\Render\RendererInterface;
 use Drupal\Core\Session\AccountSwitcherInterface;
 use Drupal\Core\Session\UserSession;
 use Drupal\Core\Url;
+use Drupal\Core\Utility\Error;
 use Drupal\search_api\Datasource\DatasourceInterface;
 use Drupal\search_api\Item\ItemInterface;
 use Drupal\search_api\LoggerTrait;
 use Drupal\search_api\Plugin\search_api\processor\Property\RenderedItemProperty;
 use Drupal\search_api\Processor\ProcessorPluginBase;
+use Drupal\search_api\Utility\PostRequestIndexingInterface;
 use Drupal\search_api\Utility\ThemeSwitcherInterface;
 use Drupal\user\RoleInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -60,6 +63,11 @@ class RenderedItem extends ProcessorPluginBase {
   protected $themeSwitcher;
 
   /**
+   * The post request indexing service.
+   */
+  protected PostRequestIndexingInterface $postRequestIndexing;
+
+  /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
@@ -69,6 +77,7 @@ class RenderedItem extends ProcessorPluginBase {
     $plugin->setAccountSwitcher($container->get('account_switcher'));
     $plugin->setRenderer($container->get('renderer'));
     $plugin->setThemeSwitcher($container->get('search_api.theme_switcher'));
+    $plugin->setPostRequestIndexing($container->get('search_api.post_request_indexing'));
     $plugin->setLogger($container->get('logger.channel.search_api'));
 
     return $plugin;
@@ -143,13 +152,36 @@ class RenderedItem extends ProcessorPluginBase {
     return $this;
   }
 
+  /**
+   * Retrieves the post request indexing service.
+   *
+   * @return \Drupal\search_api\Utility\PostRequestIndexingInterface
+   *   The post request indexing service.
+   */
+  public function getPostRequestIndexing(): PostRequestIndexingInterface {
+    return $this->postRequestIndexing ?? \Drupal::service('search_api.post_request_indexing');
+  }
+
+  /**
+   * Sets the post request indexing service.
+   *
+   * @param \Drupal\search_api\Utility\PostRequestIndexingInterface $post_request_indexing
+   *   The new post request indexing service.
+   *
+   * @return $this
+   */
+  public function setPostRequestIndexing(PostRequestIndexingInterface $post_request_indexing,): static {
+    $this->postRequestIndexing = $post_request_indexing;
+    return $this;
+  }
+
   // @todo Add a supportsIndex() implementation that checks whether there is
   //   actually any datasource present which supports viewing.
 
   /**
    * {@inheritdoc}
    */
-  public function getPropertyDefinitions(DatasourceInterface $datasource = NULL) {
+  public function getPropertyDefinitions(?DatasourceInterface $datasource = NULL) {
     $properties = [];
 
     if (!$datasource) {
@@ -242,7 +274,25 @@ class RenderedItem extends ProcessorPluginBase {
           '%view_mode' => $view_mode,
           '%index' => $this->index->label() ?? $this->index->id(),
         ];
-        $this->logException($e, '%type while trying to render item %item_id with view mode %view_mode for search index %index: @message in %function (line %line of %file).', $variables);
+        $variables += Error::decodeException($e);
+        $level = RfcLogLevel::ERROR;
+
+        // Special case: If this happened during post-request indexing (that is,
+        // via the "Index items immediately" functionality) there is a chance
+        // that this problem doesn't occur when indexing during cron. Therefore,
+        // add a warning to the item so it will not be marked as "indexed" in
+        // the tracker and will get reindexed during the next cron run.
+        if ($this->getPostRequestIndexing()->isIndexingActive()) {
+          $item->addWarning($this->t('%type while trying to render item %item_id with view mode %view_mode for search index %index: @message in %function (line %line of %file).', $variables));
+          // Only log a warning in this case instead of an error. If rendering
+          // still fails during cron then an error will be logged at that point.
+          $level = RfcLogLevel::WARNING;
+        }
+        $this->getLogger()->log(
+          $level,
+          '%type while trying to render item %item_id with view mode %view_mode for search index %index: @message in %function (line %line of %file).',
+          $variables,
+        );
       }
 
       // Restore the original user.

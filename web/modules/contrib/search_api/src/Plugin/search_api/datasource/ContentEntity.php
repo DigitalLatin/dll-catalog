@@ -735,7 +735,7 @@ class ContentEntity extends DatasourcePluginBase implements PluginFormInterface 
   /**
    * {@inheritdoc}
    */
-  public function getItemAccessResult(ComplexDataInterface $item, AccountInterface $account = NULL) {
+  public function getItemAccessResult(ComplexDataInterface $item, ?AccountInterface $account = NULL) {
     $entity = $this->getEntity($item);
     if ($entity) {
       return $this->getEntityTypeManager()
@@ -809,7 +809,7 @@ class ContentEntity extends DatasourcePluginBase implements PluginFormInterface 
    *   In case both bundles and languages are specified, they are combined with
    *   OR.
    */
-  public function getPartialItemIds($page = NULL, array $bundles = NULL, array $languages = NULL) {
+  public function getPartialItemIds($page = NULL, ?array $bundles = NULL, ?array $languages = NULL) {
     // These would be pretty pointless calls, but for the sake of completeness
     // we should check for them and return early. (Otherwise makes the rest of
     // the code more complicated.)
@@ -1133,7 +1133,7 @@ class ContentEntity extends DatasourcePluginBase implements PluginFormInterface 
   /**
    * {@inheritdoc}
    */
-  public function getAffectedItemsForEntityChange(EntityInterface $entity, array $foreign_entity_relationship_map, EntityInterface $original_entity = NULL): array {
+  public function getAffectedItemsForEntityChange(EntityInterface $entity, array $foreign_entity_relationship_map, ?EntityInterface $original_entity = NULL): array {
     if (!($entity instanceof ContentEntityInterface)) {
       return [];
     }
@@ -1212,8 +1212,14 @@ class ContentEntity extends DatasourcePluginBase implements PluginFormInterface 
         }
       }
     }
+    $ids_to_reindex = array_keys($ids_to_reindex);
 
-    return array_keys($ids_to_reindex);
+    if ($ids_to_reindex) {
+      $combined_ids = array_map($this->createCombinedId(...), $ids_to_reindex);
+      $this->getIndex()->registerUnreliableItemIds($combined_ids);
+    }
+
+    return $ids_to_reindex;
   }
 
   /**

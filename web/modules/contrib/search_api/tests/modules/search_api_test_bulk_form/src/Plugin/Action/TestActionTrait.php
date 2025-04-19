@@ -14,14 +14,14 @@ trait TestActionTrait {
   /**
    * {@inheritdoc}
    */
-  public function access($object, AccountInterface $account = NULL, $return_as_object = FALSE) {
+  public function access($object, ?AccountInterface $account = NULL, $return_as_object = FALSE) {
     return $return_as_object ? AccessResult::allowed() : TRUE;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function execute(EntityInterface $entity = NULL) {
+  public function execute(?EntityInterface $entity = NULL) {
     $key_value = \Drupal::keyValue('search_api_test');
     $result = $key_value->get('search_api_test_bulk_form', []);
     $result[] = [

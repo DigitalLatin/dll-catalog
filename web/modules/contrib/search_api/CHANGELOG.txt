@@ -1,3 +1,43 @@
+Search API 1.38 (2025-02-23):
+-----------------------------
+- #3505734 by drunken monkey: Fixed inconsistent processing of numbers in
+  database backend.
+- #3505316 by drunken monkey: Fixed reliance on deprecated .MODULE.inc files for
+  hooks.
+- #3274158 by drunken monkey: Fixed handling of exceptions in RenderedItem
+  processor during immediate indexing.
+- #3489598 by drunken monkey: Fixed incompatibility with older Drush versions.
+- #2874641 by drunken monkey, knurg, manuel.adan, ressa, joshmiller, Grayside,
+  borisson_: Added option to pick filter type for text fields in Views.
+- #3030868 by acbramley, drunken monkey: Fixed problems due to item tracking
+  during config sync.
+- #3497469 by drunken monkey: Fixed inconsistency in handling of HTML in entity
+  descriptions.
+- #3497473 by drunken monkey, scott_euser: Fixed failing pipelines.
+- #3495139 by tobias märz, drunken monkey: Added support for seeds to random
+  sorting with the Database backend.
+- #3495876 by dieterholvoet, drunken monkey: Removed VERSION from libraries.yml.
+- #3488844 by drunken monkey: Added improvement for properties with a single
+  child to the "Add fields" UI.
+- #3305392 by bradjones1, berdir, drunken monkey: Added the new getOriginal()
+  and setOriginal() interface methods to UnsavedIndexConfiguration.
+- #3492380 by nickdickinsonwilde, drunken monkey: Fixed implicit deprecation
+  warnings about nullable types in PHP 8.4.
+- #3494226 by drunken monkey: Fixed PHPStan warning.
+- #3486765 by drunken monkey: Fixed superfluous “Expand” buttons in “Add
+  fields” form.
+- #3472847 by drunken monkey: Removed our custom
+  ViewsDisplayCachingTest::assertViewsCacheTags() override.
+- #3492854 by borisson_, drunken monkey: Fixed GitLab CI configuration.
+- #3485287 by mably, drunken monkey: Fixed Views cache plugins to not include
+  the full serialized view.
+- #3414725 by prudloff, drunken monkey, kasperg: Added the “Time and
+  tag-based” Views cache plugin.
+- #3485260 by drunken monkey: Deprecated negative item scores/boosts.
+- #3483959 by drunken monkey: Fixed some deprecation warnings.
+- #3313569 by drunken monkey, dieterholvoet: Fixed warnings that items could not
+  be loaded when using “Index items immediately” on a multilingual site.
+
 Search API 1.37 (2024-11-27):
 -----------------------------
 - #3483584 by drunken monkey: Fixed Index::setDatasources() to match its

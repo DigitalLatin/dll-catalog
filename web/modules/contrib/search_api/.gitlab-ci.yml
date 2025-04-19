@@ -59,6 +59,10 @@ variables:
   # Use this to test against the maximum supported PHP version.
 #  OPT_IN_TEST_MAX_PHP: '1'
 
+phpunit:
+  variables:
+    SYMFONY_DEPRECATIONS_HELPER: "ignoreFile=$CI_PROJECT_DIR/.ignored-deprecations.txt"
+
 ###################################################################################
 #
 #                                        *
