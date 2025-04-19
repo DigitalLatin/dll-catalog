@@ -2,6 +2,9 @@
 web/sites/default/settings.php
 web/sites/default/settings.local.php
 web/sites/default/~settings.local.php
+web/sites/default/files/css/
+web/sites/default/files/js/
+web/sites/default/files/php/
 
 #ignore services.yml
 web/sites/default/services.yml
